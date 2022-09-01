@@ -41,11 +41,11 @@ public class Roulette extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Casino Roulette");
-        setMaximumSize(new java.awt.Dimension(1500, 682));
         setResizable(false);
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         maskPanel.setOpaque(false);
+        maskPanel.setLayout(null);
 
         _3_RedButton.setToolTipText("");
         _3_RedButton.setBorder(null);
@@ -60,6 +60,8 @@ public class Roulette extends javax.swing.JFrame {
                 _3_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_3_RedButton);
+        _3_RedButton.setBounds(543, 146, 30, 30);
 
         _3_6_Button.setToolTipText("");
         _3_6_Button.setBorder(null);
@@ -74,6 +76,8 @@ public class Roulette extends javax.swing.JFrame {
                 _3_6_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_3_6_Button);
+        _3_6_Button.setBounds(565, 146, 30, 30);
 
         _6_BlackButton.setToolTipText("");
         _6_BlackButton.setBorder(null);
@@ -88,6 +92,8 @@ public class Roulette extends javax.swing.JFrame {
                 _6_BlackButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_6_BlackButton);
+        _6_BlackButton.setBounds(586, 146, 30, 30);
 
         _6_9_Button.setToolTipText("");
         _6_9_Button.setBorder(null);
@@ -102,6 +108,8 @@ public class Roulette extends javax.swing.JFrame {
                 _6_9_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_6_9_Button);
+        _6_9_Button.setBounds(606, 146, 30, 30);
 
         _9_RedButton.setToolTipText("");
         _9_RedButton.setBorder(null);
@@ -116,6 +124,8 @@ public class Roulette extends javax.swing.JFrame {
                 _9_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_9_RedButton);
+        _9_RedButton.setBounds(628, 146, 30, 30);
 
         _9_12_Button.setToolTipText("");
         _9_12_Button.setBorder(null);
@@ -130,6 +140,8 @@ public class Roulette extends javax.swing.JFrame {
                 _9_12_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_9_12_Button);
+        _9_12_Button.setBounds(651, 146, 30, 30);
 
         _12_RedButton.setToolTipText("");
         _12_RedButton.setBorder(null);
@@ -144,6 +156,8 @@ public class Roulette extends javax.swing.JFrame {
                 _12_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_12_RedButton);
+        _12_RedButton.setBounds(671, 146, 30, 30);
 
         _12_15_Button.setToolTipText("");
         _12_15_Button.setBorder(null);
@@ -158,6 +172,8 @@ public class Roulette extends javax.swing.JFrame {
                 _12_15_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_12_15_Button);
+        _12_15_Button.setBounds(693, 146, 30, 30);
 
         _15_BlackButton.setToolTipText("");
         _15_BlackButton.setBorder(null);
@@ -172,6 +188,8 @@ public class Roulette extends javax.swing.JFrame {
                 _15_BlackButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_15_BlackButton);
+        _15_BlackButton.setBounds(713, 146, 30, 30);
 
         _15_18_Button.setToolTipText("");
         _15_18_Button.setBorder(null);
@@ -186,6 +204,8 @@ public class Roulette extends javax.swing.JFrame {
                 _15_18_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_15_18_Button);
+        _15_18_Button.setBounds(735, 146, 30, 30);
 
         _18_RedButton.setToolTipText("");
         _18_RedButton.setBorder(null);
@@ -200,6 +220,8 @@ public class Roulette extends javax.swing.JFrame {
                 _18_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_18_RedButton);
+        _18_RedButton.setBounds(756, 146, 30, 30);
 
         _18_21_Button.setToolTipText("");
         _18_21_Button.setBorder(null);
@@ -214,6 +236,8 @@ public class Roulette extends javax.swing.JFrame {
                 _18_21_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_18_21_Button);
+        _18_21_Button.setBounds(778, 146, 30, 30);
 
         _21_RedButton.setToolTipText("");
         _21_RedButton.setBorder(null);
@@ -228,6 +252,8 @@ public class Roulette extends javax.swing.JFrame {
                 _21_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_21_RedButton);
+        _21_RedButton.setBounds(798, 146, 30, 30);
 
         _21_24_Button.setToolTipText("");
         _21_24_Button.setBorder(null);
@@ -242,6 +268,8 @@ public class Roulette extends javax.swing.JFrame {
                 _21_24_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_21_24_Button);
+        _21_24_Button.setBounds(820, 146, 30, 30);
 
         _24_BlackButton.setToolTipText("");
         _24_BlackButton.setBorder(null);
@@ -256,6 +284,8 @@ public class Roulette extends javax.swing.JFrame {
                 _24_BlackButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_24_BlackButton);
+        _24_BlackButton.setBounds(841, 146, 30, 30);
 
         _24_27_Button.setToolTipText("");
         _24_27_Button.setBorder(null);
@@ -270,6 +300,8 @@ public class Roulette extends javax.swing.JFrame {
                 _24_27_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_24_27_Button);
+        _24_27_Button.setBounds(863, 146, 30, 30);
 
         _27_RedButton.setToolTipText("");
         _27_RedButton.setBorder(null);
@@ -284,6 +316,8 @@ public class Roulette extends javax.swing.JFrame {
                 _27_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_27_RedButton);
+        _27_RedButton.setBounds(883, 146, 30, 30);
 
         _27_30_Button.setToolTipText("");
         _27_30_Button.setBorder(null);
@@ -298,6 +332,8 @@ public class Roulette extends javax.swing.JFrame {
                 _27_30_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_27_30_Button);
+        _27_30_Button.setBounds(905, 146, 30, 30);
 
         _30_RedButton.setToolTipText("");
         _30_RedButton.setBorder(null);
@@ -312,6 +348,8 @@ public class Roulette extends javax.swing.JFrame {
                 _30_RedButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_30_RedButton);
+        _30_RedButton.setBounds(925, 146, 30, 30);
 
         _30_33_Button.setToolTipText("");
         _30_33_Button.setBorder(null);
@@ -326,6 +364,8 @@ public class Roulette extends javax.swing.JFrame {
                 _30_33_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_30_33_Button);
+        _30_33_Button.setBounds(948, 146, 30, 30);
 
         _33_BlackButton.setToolTipText("");
         _33_BlackButton.setBorder(null);
@@ -340,6 +380,8 @@ public class Roulette extends javax.swing.JFrame {
                 _33_BlackButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_33_BlackButton);
+        _33_BlackButton.setBounds(968, 146, 30, 30);
 
         _33_36_Button.setToolTipText("");
         _33_36_Button.setBorder(null);
@@ -354,6 +396,8 @@ public class Roulette extends javax.swing.JFrame {
                 _33_36_ButtonActionPerformed(evt);
             }
         });
+        maskPanel.add(_33_36_Button);
+        _33_36_Button.setBounds(990, 146, 30, 30);
 
         _36_RedButton.setToolTipText("");
         _36_RedButton.setBorder(null);
@@ -368,90 +412,8 @@ public class Roulette extends javax.swing.JFrame {
                 _36_RedButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout maskPanelLayout = new javax.swing.GroupLayout(maskPanel);
-        maskPanel.setLayout(maskPanelLayout);
-        maskPanelLayout.setHorizontalGroup(
-            maskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(maskPanelLayout.createSequentialGroup()
-                .addGap(687, 687, 687)
-                .addComponent(_3_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_3_6_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_6_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_6_9_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_9_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_9_12_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_12_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_12_15_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_15_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_15_18_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_18_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_18_21_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_21_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_21_24_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_24_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_24_27_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_27_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_27_30_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_30_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_30_33_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_33_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addComponent(_33_36_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(_36_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(210, Short.MAX_VALUE))
-        );
-        maskPanelLayout.setVerticalGroup(
-            maskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(maskPanelLayout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addGroup(maskPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(_36_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_33_36_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_30_33_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_30_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_33_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_27_30_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_27_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_24_27_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_21_24_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_21_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_24_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_18_21_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_18_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_15_18_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_12_15_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_12_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_15_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_9_12_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_9_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_6_9_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_3_6_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_3_RedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(_6_BlackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(470, Short.MAX_VALUE))
-        );
+        maskPanel.add(_36_RedButton);
+        _36_RedButton.setBounds(1010, 146, 30, 30);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
