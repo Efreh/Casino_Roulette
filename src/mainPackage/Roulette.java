@@ -3,10 +3,11 @@ package mainPackage;
 import mainPackage.*;
 import java.util.HashMap;
 import javax.swing.JButton;
+import java.util.ArrayList;
 
 public class Roulette extends javax.swing.JFrame {
 
-    String buttonIcon;
+    static String buttonIcon;
     static HashMap <JButton,Integer> buttonCounter = new HashMap<>();
 
     void setBtNIcon_setBtNCounter(JButton b) {
@@ -187,9 +188,8 @@ public class Roulette extends javax.swing.JFrame {
         b31of33v = new javax.swing.JButton();
         b31of36vv = new javax.swing.JButton();
         b34of36v = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        clearField = new javax.swing.JButton();
+        setChips = new javax.swing.JButton();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2801,32 +2801,32 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.add(b34of36v);
         b34of36v.setBounds(1010, 115, 30, 30);
 
-        jButton1.setText("red");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        clearField.setText("Clear field");
+        clearField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                clearFieldActionPerformed(evt);
             }
         });
-        maskPanel.add(jButton1);
-        jButton1.setBounds(830, 460, 49, 25);
+        maskPanel.add(clearField);
+        clearField.setBounds(580, 450, 90, 25);
 
-        jButton2.setText("blue");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/ChipsChoiser.png"))); // NOI18N
+        setChips.setToolTipText("");
+        setChips.setBorder(null);
+        setChips.setBorderPainted(false);
+        setChips.setContentAreaFilled(false);
+        setChips.setFocusable(false);
+        setChips.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        setChips.setMaximumSize(new java.awt.Dimension(30, 30));
+        setChips.setMinimumSize(new java.awt.Dimension(30, 30));
+        setChips.setName(""); // NOI18N
+        setChips.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                setChipsActionPerformed(evt);
             }
         });
-        maskPanel.add(jButton2);
-        jButton2.setBounds(900, 460, 55, 25);
-
-        jButton3.setText("jButton3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        maskPanel.add(jButton3);
-        jButton3.setBounds(450, 450, 77, 25);
+        maskPanel.add(setChips);
+        setChips.setBounds(460, 450, 50, 50);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2844,6 +2844,7 @@ public class Roulette extends javax.swing.JFrame {
         getContentPane().add(mainFountLabel, gridBagConstraints);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 // <editor-fold defaultstate="collapsed" desc="MORE BUTTON">
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
@@ -3458,17 +3459,17 @@ public class Roulette extends javax.swing.JFrame {
         setBtNIcon_setBtNCounter(b3rd12);
     }//GEN-LAST:event_b3rd12ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        buttonIcon = "/resourse/redChips.png";
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void clearFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFieldActionPerformed
+        ArrayList <JButton> arrBut = new ArrayList<>(buttonCounter.keySet());
+        for (int i = 0;i<arrBut.size();i++){
+            arrBut.get(i).setIcon(null);
+            arrBut.get(i).setText(null);
+        }
+    }//GEN-LAST:event_clearFieldActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        buttonIcon = "/resourse/blueChips.png";
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
         new SetChips().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_setChipsActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3636,11 +3637,10 @@ public class Roulette extends javax.swing.JFrame {
     private javax.swing.JButton bv5to6;
     private javax.swing.JButton bv7to8;
     private javax.swing.JButton bv8to9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton clearField;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
+    private javax.swing.JButton setChips;
     // End of variables declaration//GEN-END:variables
 // </editor-fold>
 }
