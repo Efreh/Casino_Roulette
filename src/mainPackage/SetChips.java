@@ -1,9 +1,7 @@
 package mainPackage;
 
-import mainPackage.*;
-
 public class SetChips extends javax.swing.JFrame {
-
+    
     public SetChips() {
         initComponents();
     }
@@ -138,23 +136,23 @@ public class SetChips extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
-    Roulette.buttonIcon = "/resourse/redChips.png";
-    dispose();
+        FieldButtonStav.setButtonIcon("/resourse/redChips.png");
+        dispose();
     }//GEN-LAST:event_bRedChipsActionPerformed
 
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
-    Roulette.buttonIcon = "/resourse/greenChips.png";
-    dispose();
+        FieldButtonStav.setButtonIcon("/resourse/greenChips.png");
+        dispose();
     }//GEN-LAST:event_bGreenChipsActionPerformed
-    
+
     private void bOrangeChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrangeChipsActionPerformed
-    Roulette.buttonIcon = "/resourse/orangeChips.png";
-    dispose();
+        FieldButtonStav.setButtonIcon("/resourse/orangeChips.png");
+        dispose();
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
-    Roulette.buttonIcon = "/resourse/blueChips.png";
-    dispose();
+        FieldButtonStav.setButtonIcon("/resourse/blueChips.png");
+        dispose();
     }//GEN-LAST:event_bBlueChipsActionPerformed
 
     public static void main(String args[]) {
