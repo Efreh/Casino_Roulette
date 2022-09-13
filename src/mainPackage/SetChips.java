@@ -1,7 +1,7 @@
 package mainPackage;
 
 public class SetChips extends javax.swing.JFrame {
-    
+
     public SetChips() {
         initComponents();
     }
@@ -136,29 +136,34 @@ public class SetChips extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/redChips.png");
+        f.manField.newField();
+        f.manField.currentField.setButtonIcon("/resourse/redChips.png");
         dispose();
     }//GEN-LAST:event_bRedChipsActionPerformed
 
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/greenChips.png");
-        dispose();
+        f.manField.newField();
+        f.manField.currentField.setButtonIcon("/resourse/greenChips.png");
+        setVisible(false);
     }//GEN-LAST:event_bGreenChipsActionPerformed
 
     private void bOrangeChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrangeChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/orangeChips.png");
-        dispose();
+        f.manField.currentField.setButtonIcon("/resourse/orangeChips.png");
+        f.
+        new SetChips().setVisible(false);
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/blueChips.png");
-        dispose();
+        f.manField.currentField.setButtonIcon("/resourse/blueChips.png");
+        new SetChips().setVisible(false);
     }//GEN-LAST:event_bBlueChipsActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SetChips().setVisible(true);
+                Roulette f = new Roulette();
+                
             }
         });
     }

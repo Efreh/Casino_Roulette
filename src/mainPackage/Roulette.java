@@ -3,6 +3,7 @@ package mainPackage;
 public class Roulette extends javax.swing.JFrame {
 
     FieldButtonStav field = new FieldButtonStav();
+    public FieldManager manField = new FieldManager();
     
     public Roulette() {
         initComponents();
@@ -2827,7 +2828,7 @@ public class Roulette extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 // <editor-fold defaultstate="collapsed" desc="MORE BUTTON">
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        field.setBtNIcon_setBtNCounter(b3);
+        manField.setIconCurrentField(b3);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed

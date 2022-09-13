@@ -1,15 +1,15 @@
 package mainPackage;
 
 import java.util.*;
+import javax.swing.JButton;
 
 public class FieldManager {
-    ArrayList fieldsArr = new ArrayList();
-    
-    void newField(){
+
+    FieldButtonStav currentField;
+    ArrayList<FieldButtonStav> fieldsArr = new ArrayList<>();
+
+    void newField() {
         fieldsArr.add(new FieldButtonStav());
-    }
-    
-    void setIconCurrentField(FieldButtonStav f){
-        
+        currentField = fieldsArr.get(fieldsArr.size() - 1);
     }
 }

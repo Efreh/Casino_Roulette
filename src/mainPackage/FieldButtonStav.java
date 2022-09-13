@@ -5,9 +5,9 @@ import java.util.*;
 
 public class FieldButtonStav {
 
-    private static String buttonIcon;
-    public static void setButtonIcon(String icon) {
-        FieldButtonStav.buttonIcon = icon;
+    private String buttonIcon;
+    public void setButtonIcon(String icon) {
+        buttonIcon = icon;
     }
 
     private HashMap<JButton, Integer> buttonCounter = new HashMap<>();
