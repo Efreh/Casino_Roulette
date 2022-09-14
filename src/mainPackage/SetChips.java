@@ -1,9 +1,15 @@
 package mainPackage;
 
 public class SetChips extends javax.swing.JFrame {
-    
+
+    FieldManager f;
     public SetChips() {
         initComponents();
+    }
+    
+    public SetChips(FieldManager f) {
+        initComponents();
+        this.f=f;
     }
 
     @SuppressWarnings("unchecked")
@@ -131,27 +137,33 @@ public class SetChips extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         getContentPane().add(FountPanel, gridBagConstraints);
 
+        getAccessibleContext().setAccessibleDescription("");
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/redChips.png");
+        f.newField();
+        f.setIconCurrentField("/resourse/redChips.png");
         dispose();
     }//GEN-LAST:event_bRedChipsActionPerformed
 
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/greenChips.png");
+        f.newField();
+        f.setIconCurrentField("/resourse/greenChips.png");
         dispose();
     }//GEN-LAST:event_bGreenChipsActionPerformed
 
     private void bOrangeChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrangeChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/orangeChips.png");
+        f.newField();
+        f.setIconCurrentField("/resourse/orangeChips.png");
         dispose();
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
-        FieldButtonStav.setButtonIcon("/resourse/blueChips.png");
+        f.newField();
+        f.setIconCurrentField("/resourse/blueChips.png");
         dispose();
     }//GEN-LAST:event_bBlueChipsActionPerformed
 
