@@ -2,7 +2,7 @@ package mainPackage;
 
 public class Roulette extends javax.swing.JFrame {
 
-    FieldManager fieldArr = new FieldManager();
+    FieldManager fieldManager = new FieldManager();                                 //Менеджер полей ставок
 
     public Roulette() {
         initComponents();
@@ -170,11 +170,20 @@ public class Roulette extends javax.swing.JFrame {
         clearField = new javax.swing.JButton();
         setChips = new javax.swing.JButton();
         clearAllField = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        stavLabel = new javax.swing.JLabel();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Casino Roulette");
         setResizable(false);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         maskPanel.setOpaque(false);
@@ -2792,7 +2801,7 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.add(clearField);
         clearField.setBounds(550, 450, 120, 30);
 
-        setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/ChipsChoiser.png"))); // NOI18N
+        setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/ChoiserBlue50x50.png"))); // NOI18N
         setChips.setToolTipText("");
         setChips.setBorder(null);
         setChips.setBorderPainted(false);
@@ -2820,6 +2829,20 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.add(clearAllField);
         clearAllField.setBounds(720, 450, 110, 30);
 
+        jButton1.setText("array list, hashMap");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        maskPanel.add(jButton1);
+        jButton1.setBounds(930, 450, 150, 25);
+
+        stavLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        stavLabel.setText("Ваша ставка");
+        maskPanel.add(stavLabel);
+        stavLabel.setBounds(445, 420, 80, 40);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -2840,628 +2863,637 @@ public class Roulette extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 // <editor-fold defaultstate="collapsed" desc="MORE BUTTON">
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b3);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b3);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b6);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b6);
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b2);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b2);
     }//GEN-LAST:event_b2ActionPerformed
 
     private void bg2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg2to5ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg2to5);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg2to5);
     }//GEN-LAST:event_bg2to5ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b5);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b5);
     }//GEN-LAST:event_b5ActionPerformed
 
     private void bg5to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg5to8ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg5to8);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg5to8);
     }//GEN-LAST:event_bg5to8ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b8);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b8);
     }//GEN-LAST:event_b8ActionPerformed
 
     private void bg8to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg8to11ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg8to11);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg8to11);
     }//GEN-LAST:event_bg8to11ActionPerformed
 
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b11);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b11);
     }//GEN-LAST:event_b11ActionPerformed
 
     private void bg11to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg11to14ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg11to14);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg11to14);
     }//GEN-LAST:event_bg11to14ActionPerformed
 
     private void b14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b14ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b14);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b14);
     }//GEN-LAST:event_b14ActionPerformed
 
     private void bg14to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg14to17ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg14to17);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg14to17);
     }//GEN-LAST:event_bg14to17ActionPerformed
 
     private void b17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b17ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b17);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b17);
     }//GEN-LAST:event_b17ActionPerformed
 
     private void bg17to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg17to20ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg17to20);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg17to20);
     }//GEN-LAST:event_bg17to20ActionPerformed
 
     private void b20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b20ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b20);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b20);
     }//GEN-LAST:event_b20ActionPerformed
 
     private void bg20to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg20to23ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg20to23);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg20to23);
     }//GEN-LAST:event_bg20to23ActionPerformed
 
     private void b23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b23ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b23);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b23);
     }//GEN-LAST:event_b23ActionPerformed
 
     private void bg23to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg23to26ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg23to26);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg23to26);
     }//GEN-LAST:event_bg23to26ActionPerformed
 
     private void b26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b26ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b26);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b26);
     }//GEN-LAST:event_b26ActionPerformed
 
     private void bg26to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg26to29ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg26to29);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg26to29);
     }//GEN-LAST:event_bg26to29ActionPerformed
 
     private void b29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b29ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b29);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b29);
     }//GEN-LAST:event_b29ActionPerformed
 
     private void bg29to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg29to32ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg29to32);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg29to32);
     }//GEN-LAST:event_bg29to32ActionPerformed
 
     private void b32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b32ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b32);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b32);
     }//GEN-LAST:event_b32ActionPerformed
 
     private void bg32to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg32to35ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg32to35);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg32to35);
     }//GEN-LAST:event_bg32to35ActionPerformed
 
     private void b35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b35ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b35);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b35);
     }//GEN-LAST:event_b35ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b1);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b1);
     }//GEN-LAST:event_b1ActionPerformed
 
     private void bg1to4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg1to4ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg1to4);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg1to4);
     }//GEN-LAST:event_bg1to4ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b4);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b4);
     }//GEN-LAST:event_b4ActionPerformed
 
     private void bg4to7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg4to7ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg4to7);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg4to7);
     }//GEN-LAST:event_bg4to7ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b7);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b7);
     }//GEN-LAST:event_b7ActionPerformed
 
     private void bg7to10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg7to10ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg7to10);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg7to10);
     }//GEN-LAST:event_bg7to10ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b10);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b10);
     }//GEN-LAST:event_b10ActionPerformed
 
     private void bg10to13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg10to13ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg10to13);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg10to13);
     }//GEN-LAST:event_bg10to13ActionPerformed
 
     private void b13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b13);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b13);
     }//GEN-LAST:event_b13ActionPerformed
 
     private void bg13to16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg13to16ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg13to16);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg13to16);
     }//GEN-LAST:event_bg13to16ActionPerformed
 
     private void b16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b16);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b16);
     }//GEN-LAST:event_b16ActionPerformed
 
     private void bg16to19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg16to19ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg16to19);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg16to19);
     }//GEN-LAST:event_bg16to19ActionPerformed
 
     private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b19);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b19);
     }//GEN-LAST:event_b19ActionPerformed
 
     private void bg19to22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg19to22ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg19to22);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg19to22);
     }//GEN-LAST:event_bg19to22ActionPerformed
 
     private void b22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b22);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b22);
     }//GEN-LAST:event_b22ActionPerformed
 
     private void bg22to25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg22to25ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg22to25);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg22to25);
     }//GEN-LAST:event_bg22to25ActionPerformed
 
     private void b25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b25);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b25);
     }//GEN-LAST:event_b25ActionPerformed
 
     private void bg25to28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg25to28ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg25to28);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg25to28);
     }//GEN-LAST:event_bg25to28ActionPerformed
 
     private void b28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b28);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b28);
     }//GEN-LAST:event_b28ActionPerformed
 
     private void bg28to31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg28to31ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg28to31);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg28to31);
     }//GEN-LAST:event_bg28to31ActionPerformed
 
     private void b31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b31);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b31);
     }//GEN-LAST:event_b31ActionPerformed
 
     private void bg31to34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg31to34ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg31to34);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg31to34);
     }//GEN-LAST:event_bg31to34ActionPerformed
 
     private void b34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b34);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b34);
     }//GEN-LAST:event_b34ActionPerformed
 
     private void b00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b00ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b00);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b00);
     }//GEN-LAST:event_b00ActionPerformed
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b0);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b0);
     }//GEN-LAST:event_b0ActionPerformed
 
     private void bv1to2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv1to2ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv1to2);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv1to2);
     }//GEN-LAST:event_bv1to2ActionPerformed
 
     private void bc1_2_4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc1_2_4_5ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc1_2_4_5);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc1_2_4_5);
     }//GEN-LAST:event_bc1_2_4_5ActionPerformed
 
     private void bv4to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv4to5ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv4to5);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv4to5);
     }//GEN-LAST:event_bv4to5ActionPerformed
 
     private void bc4_5_7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc4_5_7_8ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc4_5_7_8);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc4_5_7_8);
     }//GEN-LAST:event_bc4_5_7_8ActionPerformed
 
     private void bv7to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv7to8ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv7to8);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv7to8);
     }//GEN-LAST:event_bv7to8ActionPerformed
 
     private void bc7_8_10_11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc7_8_10_11ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc7_8_10_11);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc7_8_10_11);
     }//GEN-LAST:event_bc7_8_10_11ActionPerformed
 
     private void bv10to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv10to11ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv10to11);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv10to11);
     }//GEN-LAST:event_bv10to11ActionPerformed
 
     private void bc10_11_13_14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc10_11_13_14ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc10_11_13_14);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc10_11_13_14);
     }//GEN-LAST:event_bc10_11_13_14ActionPerformed
 
     private void bv13to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv13to14ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv13to14);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv13to14);
     }//GEN-LAST:event_bv13to14ActionPerformed
 
     private void bv16to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv16to17ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv16to17);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv16to17);
     }//GEN-LAST:event_bv16to17ActionPerformed
 
     private void bv19to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv19to20ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv19to20);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv19to20);
     }//GEN-LAST:event_bv19to20ActionPerformed
 
     private void bv22to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv22to23ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv22to23);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv22to23);
     }//GEN-LAST:event_bv22to23ActionPerformed
 
     private void bv25to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv25to26ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv25to26);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv25to26);
     }//GEN-LAST:event_bv25to26ActionPerformed
 
     private void bv28to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv28to29ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv28to29);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv28to29);
     }//GEN-LAST:event_bv28to29ActionPerformed
 
     private void bv31to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv31to32ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv31to32);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv31to32);
     }//GEN-LAST:event_bv31to32ActionPerformed
 
     private void bv34to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv34to35ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv34to35);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv34to35);
     }//GEN-LAST:event_bv34to35ActionPerformed
 
     private void bc13_14_16_17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc13_14_16_17ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc13_14_16_17);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc13_14_16_17);
     }//GEN-LAST:event_bc13_14_16_17ActionPerformed
 
     private void bc16_17_19_20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc16_17_19_20ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc16_17_19_20);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc16_17_19_20);
     }//GEN-LAST:event_bc16_17_19_20ActionPerformed
 
     private void bc19_20_22_23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc19_20_22_23ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc19_20_22_23);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc19_20_22_23);
     }//GEN-LAST:event_bc19_20_22_23ActionPerformed
 
     private void bc22_23_25_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc22_23_25_26ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc22_23_25_26);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc22_23_25_26);
     }//GEN-LAST:event_bc22_23_25_26ActionPerformed
 
     private void bc25_26_28_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc25_26_28_29ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc25_26_28_29);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc25_26_28_29);
     }//GEN-LAST:event_bc25_26_28_29ActionPerformed
 
     private void bc28_29_31_32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc28_29_31_32ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc28_29_31_32);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc28_29_31_32);
     }//GEN-LAST:event_bc28_29_31_32ActionPerformed
 
     private void bc31_32_34_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc31_32_34_35ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc31_32_34_35);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc31_32_34_35);
     }//GEN-LAST:event_bc31_32_34_35ActionPerformed
 
     private void bv2to3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv2to3ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv2to3);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv2to3);
     }//GEN-LAST:event_bv2to3ActionPerformed
 
     private void bv5to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv5to6ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv5to6);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv5to6);
     }//GEN-LAST:event_bv5to6ActionPerformed
 
     private void bv8to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv8to9ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv8to9);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv8to9);
     }//GEN-LAST:event_bv8to9ActionPerformed
 
     private void bv11to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv11to12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv11to12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv11to12);
     }//GEN-LAST:event_bv11to12ActionPerformed
 
     private void bv14to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv14to15ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv14to15);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv14to15);
     }//GEN-LAST:event_bv14to15ActionPerformed
 
     private void bv17to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv17to18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv17to18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv17to18);
     }//GEN-LAST:event_bv17to18ActionPerformed
 
     private void bv20to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv20to21ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv20to21);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv20to21);
     }//GEN-LAST:event_bv20to21ActionPerformed
 
     private void bv23to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv23to24ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv23to24);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv23to24);
     }//GEN-LAST:event_bv23to24ActionPerformed
 
     private void bv26to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv26to27ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv26to27);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv26to27);
     }//GEN-LAST:event_bv26to27ActionPerformed
 
     private void bv29to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv29to30ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv29to30);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv29to30);
     }//GEN-LAST:event_bv29to30ActionPerformed
 
     private void bv32to33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv32to33ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv32to33);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv32to33);
     }//GEN-LAST:event_bv32to33ActionPerformed
 
     private void bv35to36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv35to36ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bv35to36);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bv35to36);
     }//GEN-LAST:event_bv35to36ActionPerformed
 
     private void bc2_3_5_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc2_3_5_6ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc2_3_5_6);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc2_3_5_6);
     }//GEN-LAST:event_bc2_3_5_6ActionPerformed
 
     private void bc5_6_8_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc5_6_8_9ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc5_6_8_9);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc5_6_8_9);
     }//GEN-LAST:event_bc5_6_8_9ActionPerformed
 
     private void bc8_9_11_12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc8_9_11_12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc8_9_11_12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc8_9_11_12);
     }//GEN-LAST:event_bc8_9_11_12ActionPerformed
 
     private void bc11_12_14_15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc11_12_14_15ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc11_12_14_15);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc11_12_14_15);
     }//GEN-LAST:event_bc11_12_14_15ActionPerformed
 
     private void bc14_15_17_18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc14_15_17_18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc14_15_17_18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc14_15_17_18);
     }//GEN-LAST:event_bc14_15_17_18ActionPerformed
 
     private void bc17_18_20_21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc17_18_20_21ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc17_18_20_21);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc17_18_20_21);
     }//GEN-LAST:event_bc17_18_20_21ActionPerformed
 
     private void bc20_21_23_24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc20_21_23_24ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc20_21_23_24);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc20_21_23_24);
     }//GEN-LAST:event_bc20_21_23_24ActionPerformed
 
     private void bc23_24_26_27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc23_24_26_27ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc23_24_26_27);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc23_24_26_27);
     }//GEN-LAST:event_bc23_24_26_27ActionPerformed
 
     private void bc26_27_29_30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc26_27_29_30ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc26_27_29_30);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc26_27_29_30);
     }//GEN-LAST:event_bc26_27_29_30ActionPerformed
 
     private void bc29_30_32_33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc29_30_32_33ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc29_30_32_33);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc29_30_32_33);
     }//GEN-LAST:event_bc29_30_32_33ActionPerformed
 
     private void bc32_33_35_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc32_33_35_36ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bc32_33_35_36);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bc32_33_35_36);
     }//GEN-LAST:event_bc32_33_35_36ActionPerformed
 
     private void b2to1_3_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_3_36ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b2to1_3_36);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b2to1_3_36);
     }//GEN-LAST:event_b2to1_3_36ActionPerformed
 
     private void b2to1_2_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_2_35ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b2to1_2_35);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b2to1_2_35);
     }//GEN-LAST:event_b2to1_2_35ActionPerformed
 
     private void b2to1_1_34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_1_34ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b2to1_1_34);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b2to1_1_34);
     }//GEN-LAST:event_b2to1_1_34ActionPerformed
 
     private void b1st12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1st12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b1st12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b1st12);
     }//GEN-LAST:event_b1st12ActionPerformed
 
     private void b2nd12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2nd12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b2nd12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b2nd12);
     }//GEN-LAST:event_b2nd12ActionPerformed
 
     private void b1of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b1of18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b1of18);
     }//GEN-LAST:event_b1of18ActionPerformed
 
     private void b_evenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_evenActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b_even);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b_even);
     }//GEN-LAST:event_b_evenActionPerformed
 
     private void b_redActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_redActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b_red);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b_red);
     }//GEN-LAST:event_b_redActionPerformed
 
     private void b_blackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_blackActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b_black);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b_black);
     }//GEN-LAST:event_b_blackActionPerformed
 
     private void b_oddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_oddActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b_odd);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b_odd);
     }//GEN-LAST:event_b_oddActionPerformed
 
     private void b19of36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of36ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b19of36);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b19of36);
     }//GEN-LAST:event_b19of36ActionPerformed
 
     private void b31of33vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31of33vActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b31of33v);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b31of33v);
     }//GEN-LAST:event_b31of33vActionPerformed
 
     private void b31of36vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31of36vvActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b31of36vv);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b31of36vv);
     }//GEN-LAST:event_b31of36vvActionPerformed
 
     private void b16of21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16of21ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b16of21);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b16of21);
     }//GEN-LAST:event_b16of21ActionPerformed
 
     private void b7of9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7of9ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b7of9);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b7of9);
     }//GEN-LAST:event_b7of9ActionPerformed
 
     private void b19of24vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of24vvActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b19of24vv);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b19of24vv);
     }//GEN-LAST:event_b19of24vvActionPerformed
 
     private void b10of15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10of15ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b10of15);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b10of15);
     }//GEN-LAST:event_b10of15ActionPerformed
 
     private void b22of27vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22of27vvActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b22of27vv);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b22of27vv);
     }//GEN-LAST:event_b22of27vvActionPerformed
 
     private void b34of36vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34of36vActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b34of36v);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b34of36v);
     }//GEN-LAST:event_b34of36vActionPerformed
 
     private void b28of33vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28of33vvActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b28of33vv);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b28of33vv);
     }//GEN-LAST:event_b28of33vvActionPerformed
 
     private void b10of12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10of12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b10of12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b10of12);
     }//GEN-LAST:event_b10of12ActionPerformed
 
     private void b7of12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7of12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b7of12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b7of12);
     }//GEN-LAST:event_b7of12ActionPerformed
 
     private void b19of21vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of21vActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b19of21v);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b19of21v);
     }//GEN-LAST:event_b19of21vActionPerformed
 
     private void b25of27vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25of27vActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b25of27v);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b25of27v);
     }//GEN-LAST:event_b25of27vActionPerformed
 
     private void b13of15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13of15ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b13of15);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b13of15);
     }//GEN-LAST:event_b13of15ActionPerformed
 
     private void b4of6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4of6ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b4of6);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b4of6);
     }//GEN-LAST:event_b4of6ActionPerformed
 
     private void b28of30vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28of30vActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b28of30v);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b28of30v);
     }//GEN-LAST:event_b28of30vActionPerformed
 
     private void b22of24vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22of24vActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b22of24v);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b22of24v);
     }//GEN-LAST:event_b22of24vActionPerformed
 
     private void b16of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16of18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b16of18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b16of18);
     }//GEN-LAST:event_b16of18ActionPerformed
 
     private void b25of30vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25of30vvActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b25of30vv);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b25of30vv);
     }//GEN-LAST:event_b25of30vvActionPerformed
 
     private void b1of6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of6ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b1of6);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b1of6);
     }//GEN-LAST:event_b1of6ActionPerformed
 
     private void b1of3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of3ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b1of3);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b1of3);
     }//GEN-LAST:event_b1of3ActionPerformed
 
     private void b13of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13of18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b13of18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b13of18);
     }//GEN-LAST:event_b13of18ActionPerformed
 
     private void b4of9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4of9ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b4of9);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b4of9);
     }//GEN-LAST:event_b4of9ActionPerformed
 
     private void b0of3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0of3ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b0of3);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b0of3);
     }//GEN-LAST:event_b0of3ActionPerformed
 
     private void bg3to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg3to6ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg3to6);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg3to6);
     }//GEN-LAST:event_bg3to6ActionPerformed
 
     private void bg6to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg6to9ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg6to9);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg6to9);
     }//GEN-LAST:event_bg6to9ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b9);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b9);
     }//GEN-LAST:event_b9ActionPerformed
 
     private void bg9to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg9to12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg9to12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg9to12);
     }//GEN-LAST:event_bg9to12ActionPerformed
 
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b12);
     }//GEN-LAST:event_b12ActionPerformed
 
     private void bg12to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg12to15ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg12to15);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg12to15);
     }//GEN-LAST:event_bg12to15ActionPerformed
 
     private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b15);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b15);
     }//GEN-LAST:event_b15ActionPerformed
 
     private void bg15to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg15to18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg15to18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg15to18);
     }//GEN-LAST:event_bg15to18ActionPerformed
 
     private void b18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b18ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b18);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b18);
     }//GEN-LAST:event_b18ActionPerformed
 
     private void bg18to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg18to21ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg18to21);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg18to21);
     }//GEN-LAST:event_bg18to21ActionPerformed
 
     private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b21);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b21);
     }//GEN-LAST:event_b21ActionPerformed
 
     private void bg21to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg21to24ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg21to24);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg21to24);
     }//GEN-LAST:event_bg21to24ActionPerformed
 
     private void b24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b24ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b24);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b24);
     }//GEN-LAST:event_b24ActionPerformed
 
     private void bg24to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg24to27ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg24to27);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg24to27);
     }//GEN-LAST:event_bg24to27ActionPerformed
 
     private void b27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b27ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b27);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b27);
     }//GEN-LAST:event_b27ActionPerformed
 
     private void bg27to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg27to30ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg27to30);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg27to30);
     }//GEN-LAST:event_bg27to30ActionPerformed
 
     private void b30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b30ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b30);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b30);
     }//GEN-LAST:event_b30ActionPerformed
 
     private void bg30to33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg30to33ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg30to33);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg30to33);
     }//GEN-LAST:event_bg30to33ActionPerformed
 
     private void b33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b33ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b33);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b33);
     }//GEN-LAST:event_b33ActionPerformed
 
     private void bg33to36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg33to36ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(bg33to36);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(bg33to36);
     }//GEN-LAST:event_bg33to36ActionPerformed
 
     private void b36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b36ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b36);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b36);
     }//GEN-LAST:event_b36ActionPerformed
 
     private void b3rd12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3rd12ActionPerformed
-        fieldArr.setBtNIcon_setBtNCounter(b3rd12);
+        fieldManager.currentField.setBtNIcon_setBtNCounter(b3rd12);
     }//GEN-LAST:event_b3rd12ActionPerformed
 
     private void clearFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFieldActionPerformed
-        fieldArr.clearCurrentField();
+        fieldManager.currentField.clearCurrentField();
     }//GEN-LAST:event_clearFieldActionPerformed
 
     private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
-        new SetChips(fieldArr).setVisible(true);
+        new SetChips(fieldManager).setVisible(true);                            //При создании нового фрейма,передает в конструктор онного объект менеджера полей
     }//GEN-LAST:event_setChipsActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
-        fieldArr.clearAllField();
+        fieldManager.clearAllField();
     }//GEN-LAST:event_clearAllFieldActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.out.println("Лист менеджера полей: "+fieldManager.fieldsArr);
+        System.out.println("Мапа поля: "+fieldManager.currentField.getButtonCounter());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        fieldManager.stavIconMainFrameChoiser(setChips);                        //При фокусе главного окна,после смены ставки меняет иконку выбора ставки
+    }//GEN-LAST:event_formWindowGainedFocus
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3630,9 +3662,11 @@ public class Roulette extends javax.swing.JFrame {
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
     private javax.swing.JButton clearField;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
     private javax.swing.JButton setChips;
+    private javax.swing.JLabel stavLabel;
     // End of variables declaration//GEN-END:variables
 // </editor-fold>
 }

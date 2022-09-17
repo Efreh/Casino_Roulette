@@ -1,16 +1,23 @@
 package mainPackage;
+//Окно выбора номинала ставок
+//В конструктор принимает объект менеджера полей из главного фрейма
 
 public class SetChips extends javax.swing.JFrame {
 
-    FieldManager f;
+    FieldManager f;                                                             //Локальный объект менеджера полей
+
+    //Стандартный конструктор для main метода этого окна
     public SetChips() {
         initComponents();
     }
-    
+
+    //Конструктор для кнопки из главного окна для передачи данных из объекта FieldManager (менеджер полей)
     public SetChips(FieldManager f) {
         initComponents();
-        this.f=f;
+        this.f = f;
     }
+    
+    IconVariables iconPath = new IconVariables();                               //Хранилище путей иконок
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -144,27 +151,27 @@ public class SetChips extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
-        f.newField();
-        f.setIconCurrentField("/resourse/redChips.png");
-        dispose();
+        f.newField();                                                           //Новое поле
+        f.setIconCurrentField(iconPath.redChipsIcon30x30);                      //Выбор иконки для текущего поля
+        dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bRedChipsActionPerformed
 
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
-        f.newField();
-        f.setIconCurrentField("/resourse/greenChips.png");
-        dispose();
+        f.newField();                                                           //Новое поле
+        f.setIconCurrentField(iconPath.greenChipsIcon30x30);                    //Выбор иконки для текущего поля
+        dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bGreenChipsActionPerformed
 
     private void bOrangeChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrangeChipsActionPerformed
-        f.newField();
-        f.setIconCurrentField("/resourse/orangeChips.png");
-        dispose();
+        f.newField();                                                           //Новое поле
+        f.setIconCurrentField(iconPath.orangeChipsIcon30x30);                   //Выбор иконки для текущего поля
+        dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
-        f.newField();
-        f.setIconCurrentField("/resourse/blueChips.png");
-        dispose();
+        f.newField();                                                           //Новое поле
+        f.setIconCurrentField(iconPath.blueChipsIcon30x30);                     //Выбор иконки для текущего поля
+        dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bBlueChipsActionPerformed
 
     public static void main(String args[]) {
