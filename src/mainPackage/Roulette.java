@@ -2,10 +2,12 @@ package mainPackage;
 
 public class Roulette extends javax.swing.JFrame {
 
-    FieldManager fieldManager = new FieldManager();                                 //Менеджер полей ставок
+    FieldManager fieldManager = new FieldManager();                             //Менеджер полей ставок
+    Player player = new Player();
 
     public Roulette() {
         initComponents();
+        player.startSetLabelText(lPlayerName, lPlayerBet);
     }
 
     @SuppressWarnings("unchecked")
@@ -172,6 +174,9 @@ public class Roulette extends javax.swing.JFrame {
         clearAllField = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         stavLabel = new javax.swing.JLabel();
+        bPlayer = new javax.swing.JButton();
+        lPlayerName = new javax.swing.JLabel();
+        lPlayerBet = new javax.swing.JLabel();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2843,6 +2848,23 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.add(stavLabel);
         stavLabel.setBounds(445, 420, 80, 40);
 
+        bPlayer.setText("Игрок");
+        bPlayer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPlayerActionPerformed(evt);
+            }
+        });
+        maskPanel.add(bPlayer);
+        bPlayer.setBounds(1010, 50, 67, 25);
+
+        lPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        maskPanel.add(lPlayerName);
+        lPlayerName.setBounds(570, 40, 70, 30);
+
+        lPlayerBet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        maskPanel.add(lPlayerBet);
+        lPlayerBet.setBounds(570, 80, 70, 30);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -3484,6 +3506,7 @@ public class Roulette extends javax.swing.JFrame {
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
         fieldManager.clearAllField();
+        fieldManager.stavIconMainFrameChoiser(setChips);
     }//GEN-LAST:event_clearAllFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -3493,7 +3516,12 @@ public class Roulette extends javax.swing.JFrame {
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         fieldManager.stavIconMainFrameChoiser(setChips);                        //При фокусе главного окна,после смены ставки меняет иконку выбора ставки
+        player.startSetLabelText(lPlayerName, lPlayerBet);                      //При фокусе высталяются значения полей Игрока
     }//GEN-LAST:event_formWindowGainedFocus
+
+    private void bPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlayerActionPerformed
+        new PlayerJFrame(player).setVisible(true);                              //При создании нового фрейма,передает в конструктор онного объект класса Игрока
+    }//GEN-LAST:event_bPlayerActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3577,6 +3605,7 @@ public class Roulette extends javax.swing.JFrame {
     private javax.swing.JButton b7of9;
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
+    private javax.swing.JButton bPlayer;
     private javax.swing.JButton b_black;
     private javax.swing.JButton b_even;
     private javax.swing.JButton b_odd;
@@ -3663,6 +3692,8 @@ public class Roulette extends javax.swing.JFrame {
     private javax.swing.JButton clearAllField;
     private javax.swing.JButton clearField;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel lPlayerBet;
+    private javax.swing.JLabel lPlayerName;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
     private javax.swing.JButton setChips;

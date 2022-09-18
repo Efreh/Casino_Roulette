@@ -31,6 +31,7 @@ public class SetChips extends javax.swing.JFrame {
         bOrangeChips = new javax.swing.JButton();
 
         setTitle("Set Chip");
+        setAlwaysOnTop(true);
         setUndecorated(true);
         setResizable(false);
         setSize(new java.awt.Dimension(400, 126));

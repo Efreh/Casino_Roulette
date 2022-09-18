@@ -7,19 +7,19 @@ import javax.swing.JButton;
 public class FieldManager {
 
     FieldManager() {
-        fieldsArr.add(new FieldButtonStav());
+        fieldsArr.add(new SingularFieldClass());
         currentField = fieldsArr.get(fieldsArr.size() - 1);
         currentField.setButtonIcon(iconPath.blueChipsIcon30x30);
     }
     IconVariables iconPath = new IconVariables();                               //Хранилище путей иконок
 
-    FieldButtonStav currentField;                                               //Текущее поле
+    SingularFieldClass currentField;                                               //Текущее поле
 
-    ArrayList<FieldButtonStav> fieldsArr = new ArrayList();                     //Список созданных полей ставок
+    ArrayList<SingularFieldClass> fieldsArr = new ArrayList();                     //Список созданных полей ставок
 
     //Новое поле при выборе вида ставки
     void newField() {
-        fieldsArr.add(new FieldButtonStav());
+        fieldsArr.add(new SingularFieldClass());
         currentField = fieldsArr.get(fieldsArr.size() - 1);
     }
 
@@ -42,7 +42,10 @@ public class FieldManager {
         }
         fieldsArr = new ArrayList();
         newField();
+        setIconCurrentField(iconPath.blueChipsIcon30x30);
     }
+    
+    //Метод выбора иконки окна выбора ставок
     void stavIconMainFrameChoiser(JButton b){
         if(currentField.getButtonIcon().equals(iconPath.redChipsIcon30x30)){
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.redChipsIcon50x50)));

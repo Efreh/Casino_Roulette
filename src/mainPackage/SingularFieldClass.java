@@ -4,7 +4,7 @@ package mainPackage;
 import javax.swing.JButton;
 import java.util.*;
 
-public class FieldButtonStav {
+public class SingularFieldClass {
 
     private String buttonIcon;                                                  //Хранит адресс к текущей иконке
     public void setButtonIcon(String icon) {buttonIcon = icon;}
