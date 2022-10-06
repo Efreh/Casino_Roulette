@@ -36,6 +36,11 @@ public class PlayerJFrame extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(383, 244));
 
         tfName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNameActionPerformed(evt);
+            }
+        });
 
         tfBetSize.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
@@ -84,6 +89,10 @@ public class PlayerJFrame extends javax.swing.JFrame {
         p.budget = Integer.parseInt(tfBetSize.getText());
         dispose();
     }//GEN-LAST:event_bSaveActionPerformed
+
+    private void tfNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNameActionPerformed
 
     public static void main(String args[]) {
 

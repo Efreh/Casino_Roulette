@@ -1,11 +1,12 @@
 package mainPackage;
 
-public class Roulette extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     FieldManager fieldManager = new FieldManager();                             //Менеджер полей ставок
     Player player = new Player();
+    Ball ball = new Ball();
 
-    public Roulette() {
+    public MainFrame() {
         initComponents();
         player.startSetLabelText(lPlayerName, lPlayerBet);
     }
@@ -177,6 +178,7 @@ public class Roulette extends javax.swing.JFrame {
         bPlayer = new javax.swing.JButton();
         lPlayerName = new javax.swing.JLabel();
         lPlayerBet = new javax.swing.JLabel();
+        bRollBall = new javax.swing.JButton();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -194,7 +196,7 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.setOpaque(false);
         maskPanel.setLayout(null);
 
-        b00.setToolTipText("");
+        b00.setToolTipText("00");
         b00.setBorder(null);
         b00.setBorderPainted(false);
         b00.setContentAreaFilled(false);
@@ -211,7 +213,7 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.add(b00);
         b00.setBounds(505, 165, 30, 30);
 
-        b0.setToolTipText("");
+        b0.setToolTipText("0");
         b0.setBorder(null);
         b0.setBorderPainted(false);
         b0.setContentAreaFilled(false);
@@ -236,7 +238,7 @@ public class Roulette extends javax.swing.JFrame {
         b1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b1.setMaximumSize(new java.awt.Dimension(30, 30));
         b1.setMinimumSize(new java.awt.Dimension(30, 30));
-        b1.setName(""); // NOI18N
+        b1.setName("1 red nechet"); // NOI18N
         b1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b1ActionPerformed(evt);
@@ -2865,6 +2867,15 @@ public class Roulette extends javax.swing.JFrame {
         maskPanel.add(lPlayerBet);
         lPlayerBet.setBounds(570, 80, 70, 30);
 
+        bRollBall.setText("Крутить");
+        bRollBall.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRollBallActionPerformed(evt);
+            }
+        });
+        maskPanel.add(bRollBall);
+        bRollBall.setBounds(450, 70, 75, 25);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -3512,6 +3523,10 @@ public class Roulette extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.out.println("Лист менеджера полей: "+fieldManager.fieldsArr);
         System.out.println("Мапа поля: "+fieldManager.currentField.getButtonCounter());
+        System.out.println(b1.getName());
+        if (b1.getName().contains("red")){
+            System.out.println("red nayden");
+        } else {System.out.println("red ne nayden");}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
@@ -3522,13 +3537,17 @@ public class Roulette extends javax.swing.JFrame {
     private void bPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlayerActionPerformed
         new PlayerJFrame(player).setVisible(true);                              //При создании нового фрейма,передает в конструктор онного объект класса Игрока
     }//GEN-LAST:event_bPlayerActionPerformed
+
+    private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
+        System.out.println(ball.rollTheBall());
+    }//GEN-LAST:event_bRollBallActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Roulette().setVisible(true);
+                new MainFrame().setVisible(true);
             }
         });
 
@@ -3606,6 +3625,7 @@ public class Roulette extends javax.swing.JFrame {
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
     private javax.swing.JButton bPlayer;
+    private javax.swing.JButton bRollBall;
     private javax.swing.JButton b_black;
     private javax.swing.JButton b_even;
     private javax.swing.JButton b_odd;
