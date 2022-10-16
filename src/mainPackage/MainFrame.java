@@ -204,7 +204,7 @@ public class MainFrame extends javax.swing.JFrame {
         b00.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b00.setMaximumSize(new java.awt.Dimension(30, 30));
         b00.setMinimumSize(new java.awt.Dimension(30, 30));
-        b00.setName(""); // NOI18N
+        b00.setName("00"); // NOI18N
         b00.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b00ActionPerformed(evt);
@@ -221,7 +221,7 @@ public class MainFrame extends javax.swing.JFrame {
         b0.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b0.setMaximumSize(new java.awt.Dimension(30, 30));
         b0.setMinimumSize(new java.awt.Dimension(30, 30));
-        b0.setName(""); // NOI18N
+        b0.setName("0"); // NOI18N
         b0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b0ActionPerformed(evt);
@@ -255,7 +255,7 @@ public class MainFrame extends javax.swing.JFrame {
         b2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b2.setMaximumSize(new java.awt.Dimension(30, 30));
         b2.setMinimumSize(new java.awt.Dimension(30, 30));
-        b2.setName(""); // NOI18N
+        b2.setName("2 black chet"); // NOI18N
         b2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b2ActionPerformed(evt);
@@ -272,7 +272,7 @@ public class MainFrame extends javax.swing.JFrame {
         b3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b3.setMaximumSize(new java.awt.Dimension(30, 30));
         b3.setMinimumSize(new java.awt.Dimension(30, 30));
-        b3.setName(""); // NOI18N
+        b3.setName("3 red nechet"); // NOI18N
         b3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b3ActionPerformed(evt);
@@ -289,7 +289,7 @@ public class MainFrame extends javax.swing.JFrame {
         b4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b4.setMaximumSize(new java.awt.Dimension(30, 30));
         b4.setMinimumSize(new java.awt.Dimension(30, 30));
-        b4.setName(""); // NOI18N
+        b4.setName("4 black chet"); // NOI18N
         b4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b4ActionPerformed(evt);
@@ -306,7 +306,7 @@ public class MainFrame extends javax.swing.JFrame {
         b5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b5.setMaximumSize(new java.awt.Dimension(30, 30));
         b5.setMinimumSize(new java.awt.Dimension(30, 30));
-        b5.setName(""); // NOI18N
+        b5.setName("5 red nechet"); // NOI18N
         b5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b5ActionPerformed(evt);
@@ -323,7 +323,7 @@ public class MainFrame extends javax.swing.JFrame {
         b6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b6.setMaximumSize(new java.awt.Dimension(30, 30));
         b6.setMinimumSize(new java.awt.Dimension(30, 30));
-        b6.setName(""); // NOI18N
+        b6.setName("6 black chet"); // NOI18N
         b6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b6ActionPerformed(evt);
@@ -340,7 +340,7 @@ public class MainFrame extends javax.swing.JFrame {
         b7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b7.setMaximumSize(new java.awt.Dimension(30, 30));
         b7.setMinimumSize(new java.awt.Dimension(30, 30));
-        b7.setName(""); // NOI18N
+        b7.setName("7 red nechet"); // NOI18N
         b7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b7ActionPerformed(evt);
@@ -357,7 +357,7 @@ public class MainFrame extends javax.swing.JFrame {
         b8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b8.setMaximumSize(new java.awt.Dimension(30, 30));
         b8.setMinimumSize(new java.awt.Dimension(30, 30));
-        b8.setName(""); // NOI18N
+        b8.setName("8 black chet"); // NOI18N
         b8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b8ActionPerformed(evt);
@@ -374,7 +374,7 @@ public class MainFrame extends javax.swing.JFrame {
         b9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b9.setMaximumSize(new java.awt.Dimension(30, 30));
         b9.setMinimumSize(new java.awt.Dimension(30, 30));
-        b9.setName(""); // NOI18N
+        b9.setName("9 red nechet"); // NOI18N
         b9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b9ActionPerformed(evt);
@@ -391,7 +391,7 @@ public class MainFrame extends javax.swing.JFrame {
         b10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b10.setMaximumSize(new java.awt.Dimension(30, 30));
         b10.setMinimumSize(new java.awt.Dimension(30, 30));
-        b10.setName(""); // NOI18N
+        b10.setName("10 black chet"); // NOI18N
         b10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b10ActionPerformed(evt);
@@ -408,7 +408,7 @@ public class MainFrame extends javax.swing.JFrame {
         b11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b11.setMaximumSize(new java.awt.Dimension(30, 30));
         b11.setMinimumSize(new java.awt.Dimension(30, 30));
-        b11.setName(""); // NOI18N
+        b11.setName("11 black nechet"); // NOI18N
         b11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b11ActionPerformed(evt);
@@ -425,7 +425,7 @@ public class MainFrame extends javax.swing.JFrame {
         b12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b12.setMaximumSize(new java.awt.Dimension(30, 30));
         b12.setMinimumSize(new java.awt.Dimension(30, 30));
-        b12.setName(""); // NOI18N
+        b12.setName("12 red chet"); // NOI18N
         b12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b12ActionPerformed(evt);
@@ -442,7 +442,7 @@ public class MainFrame extends javax.swing.JFrame {
         b13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b13.setMaximumSize(new java.awt.Dimension(30, 30));
         b13.setMinimumSize(new java.awt.Dimension(30, 30));
-        b13.setName(""); // NOI18N
+        b13.setName("13 black nechet"); // NOI18N
         b13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b13ActionPerformed(evt);
@@ -459,7 +459,7 @@ public class MainFrame extends javax.swing.JFrame {
         b14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b14.setMaximumSize(new java.awt.Dimension(30, 30));
         b14.setMinimumSize(new java.awt.Dimension(30, 30));
-        b14.setName(""); // NOI18N
+        b14.setName("14 red chet"); // NOI18N
         b14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b14ActionPerformed(evt);
@@ -476,7 +476,7 @@ public class MainFrame extends javax.swing.JFrame {
         b15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b15.setMaximumSize(new java.awt.Dimension(30, 30));
         b15.setMinimumSize(new java.awt.Dimension(30, 30));
-        b15.setName(""); // NOI18N
+        b15.setName("15 black nechet"); // NOI18N
         b15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b15ActionPerformed(evt);
@@ -493,7 +493,7 @@ public class MainFrame extends javax.swing.JFrame {
         b16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b16.setMaximumSize(new java.awt.Dimension(30, 30));
         b16.setMinimumSize(new java.awt.Dimension(30, 30));
-        b16.setName(""); // NOI18N
+        b16.setName("16 red chet"); // NOI18N
         b16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b16ActionPerformed(evt);
@@ -510,7 +510,7 @@ public class MainFrame extends javax.swing.JFrame {
         b17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b17.setMaximumSize(new java.awt.Dimension(30, 30));
         b17.setMinimumSize(new java.awt.Dimension(30, 30));
-        b17.setName(""); // NOI18N
+        b17.setName("17 black nechet"); // NOI18N
         b17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b17ActionPerformed(evt);
@@ -527,7 +527,7 @@ public class MainFrame extends javax.swing.JFrame {
         b18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b18.setMaximumSize(new java.awt.Dimension(30, 30));
         b18.setMinimumSize(new java.awt.Dimension(30, 30));
-        b18.setName(""); // NOI18N
+        b18.setName("18 red chet"); // NOI18N
         b18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b18ActionPerformed(evt);
@@ -544,7 +544,7 @@ public class MainFrame extends javax.swing.JFrame {
         b19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b19.setMaximumSize(new java.awt.Dimension(30, 30));
         b19.setMinimumSize(new java.awt.Dimension(30, 30));
-        b19.setName(""); // NOI18N
+        b19.setName("19 red nechet"); // NOI18N
         b19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b19ActionPerformed(evt);
@@ -561,7 +561,7 @@ public class MainFrame extends javax.swing.JFrame {
         b20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b20.setMaximumSize(new java.awt.Dimension(30, 30));
         b20.setMinimumSize(new java.awt.Dimension(30, 30));
-        b20.setName(""); // NOI18N
+        b20.setName("20 black chet"); // NOI18N
         b20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b20ActionPerformed(evt);
@@ -578,7 +578,7 @@ public class MainFrame extends javax.swing.JFrame {
         b21.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b21.setMaximumSize(new java.awt.Dimension(30, 30));
         b21.setMinimumSize(new java.awt.Dimension(30, 30));
-        b21.setName(""); // NOI18N
+        b21.setName("21 red nechet"); // NOI18N
         b21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b21ActionPerformed(evt);
@@ -595,7 +595,7 @@ public class MainFrame extends javax.swing.JFrame {
         b22.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b22.setMaximumSize(new java.awt.Dimension(30, 30));
         b22.setMinimumSize(new java.awt.Dimension(30, 30));
-        b22.setName(""); // NOI18N
+        b22.setName("22 black chet"); // NOI18N
         b22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b22ActionPerformed(evt);
@@ -612,7 +612,7 @@ public class MainFrame extends javax.swing.JFrame {
         b23.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b23.setMaximumSize(new java.awt.Dimension(30, 30));
         b23.setMinimumSize(new java.awt.Dimension(30, 30));
-        b23.setName(""); // NOI18N
+        b23.setName("23 red nechet"); // NOI18N
         b23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b23ActionPerformed(evt);
@@ -629,7 +629,7 @@ public class MainFrame extends javax.swing.JFrame {
         b24.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b24.setMaximumSize(new java.awt.Dimension(30, 30));
         b24.setMinimumSize(new java.awt.Dimension(30, 30));
-        b24.setName(""); // NOI18N
+        b24.setName("24 black chet"); // NOI18N
         b24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b24ActionPerformed(evt);
@@ -646,7 +646,7 @@ public class MainFrame extends javax.swing.JFrame {
         b25.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b25.setMaximumSize(new java.awt.Dimension(30, 30));
         b25.setMinimumSize(new java.awt.Dimension(30, 30));
-        b25.setName(""); // NOI18N
+        b25.setName("25 red nechet"); // NOI18N
         b25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b25ActionPerformed(evt);
@@ -663,7 +663,7 @@ public class MainFrame extends javax.swing.JFrame {
         b26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b26.setMaximumSize(new java.awt.Dimension(30, 30));
         b26.setMinimumSize(new java.awt.Dimension(30, 30));
-        b26.setName(""); // NOI18N
+        b26.setName("26 black chet"); // NOI18N
         b26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b26ActionPerformed(evt);
@@ -680,7 +680,7 @@ public class MainFrame extends javax.swing.JFrame {
         b27.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b27.setMaximumSize(new java.awt.Dimension(30, 30));
         b27.setMinimumSize(new java.awt.Dimension(30, 30));
-        b27.setName(""); // NOI18N
+        b27.setName("27 red nechet"); // NOI18N
         b27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b27ActionPerformed(evt);
@@ -697,7 +697,7 @@ public class MainFrame extends javax.swing.JFrame {
         b28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b28.setMaximumSize(new java.awt.Dimension(30, 30));
         b28.setMinimumSize(new java.awt.Dimension(30, 30));
-        b28.setName(""); // NOI18N
+        b28.setName("28 black chet"); // NOI18N
         b28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b28ActionPerformed(evt);
@@ -714,7 +714,7 @@ public class MainFrame extends javax.swing.JFrame {
         b29.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b29.setMaximumSize(new java.awt.Dimension(30, 30));
         b29.setMinimumSize(new java.awt.Dimension(30, 30));
-        b29.setName(""); // NOI18N
+        b29.setName("29 black nechet"); // NOI18N
         b29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b29ActionPerformed(evt);
@@ -731,7 +731,7 @@ public class MainFrame extends javax.swing.JFrame {
         b30.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b30.setMaximumSize(new java.awt.Dimension(30, 30));
         b30.setMinimumSize(new java.awt.Dimension(30, 30));
-        b30.setName(""); // NOI18N
+        b30.setName("30 red chet"); // NOI18N
         b30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b30ActionPerformed(evt);
@@ -748,7 +748,7 @@ public class MainFrame extends javax.swing.JFrame {
         b31.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b31.setMaximumSize(new java.awt.Dimension(30, 30));
         b31.setMinimumSize(new java.awt.Dimension(30, 30));
-        b31.setName(""); // NOI18N
+        b31.setName("31 black nechet"); // NOI18N
         b31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b31ActionPerformed(evt);
@@ -765,7 +765,7 @@ public class MainFrame extends javax.swing.JFrame {
         b32.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b32.setMaximumSize(new java.awt.Dimension(30, 30));
         b32.setMinimumSize(new java.awt.Dimension(30, 30));
-        b32.setName(""); // NOI18N
+        b32.setName("32 red chet"); // NOI18N
         b32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b32ActionPerformed(evt);
@@ -782,7 +782,7 @@ public class MainFrame extends javax.swing.JFrame {
         b33.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b33.setMaximumSize(new java.awt.Dimension(30, 30));
         b33.setMinimumSize(new java.awt.Dimension(30, 30));
-        b33.setName(""); // NOI18N
+        b33.setName("33 black nechet"); // NOI18N
         b33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b33ActionPerformed(evt);
@@ -799,7 +799,7 @@ public class MainFrame extends javax.swing.JFrame {
         b34.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b34.setMaximumSize(new java.awt.Dimension(30, 30));
         b34.setMinimumSize(new java.awt.Dimension(30, 30));
-        b34.setName(""); // NOI18N
+        b34.setName("34 red chet"); // NOI18N
         b34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b34ActionPerformed(evt);
@@ -816,7 +816,7 @@ public class MainFrame extends javax.swing.JFrame {
         b35.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b35.setMaximumSize(new java.awt.Dimension(30, 30));
         b35.setMinimumSize(new java.awt.Dimension(30, 30));
-        b35.setName(""); // NOI18N
+        b35.setName("35 black nechet"); // NOI18N
         b35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b35ActionPerformed(evt);
@@ -833,7 +833,7 @@ public class MainFrame extends javax.swing.JFrame {
         b36.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         b36.setMaximumSize(new java.awt.Dimension(30, 30));
         b36.setMinimumSize(new java.awt.Dimension(30, 30));
-        b36.setName(""); // NOI18N
+        b36.setName("36 red chet"); // NOI18N
         b36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b36ActionPerformed(evt);
