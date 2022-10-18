@@ -1,10 +1,16 @@
-package mainPackage;
+package framePackage;
+
+import logicPackage.Player;
+import logicPackage.ChipContainer;
+import graphicLogic.FieldManager;
+import logicPackage.Ball;
 
 public class MainFrame extends javax.swing.JFrame {
 
     FieldManager fieldManager = new FieldManager();                             //Менеджер полей ставок
     Player player = new Player();
     Ball ball = new Ball();
+    ChipContainer chipCont = new ChipContainer();
 
     public MainFrame() {
         initComponents();
@@ -2897,10 +2903,14 @@ public class MainFrame extends javax.swing.JFrame {
 // <editor-fold defaultstate="collapsed" desc="MORE BUTTON">
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b3);
+        chipCont.addChipInArrayAndPlusCounter("b3", "red", 3, 35, false);
+        System.out.println(chipCont.chipsArray);
+//        System.out.println(chipCont.chipsArray.get(0).counterChip);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b6);
+        chipCont.addChipInArrayAndPlusCounter("b6", "black", 6, 35, true);
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
@@ -3521,12 +3531,14 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_clearAllFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("Лист менеджера полей: "+fieldManager.fieldsArr);
-        System.out.println("Мапа поля: "+fieldManager.currentField.getButtonCounter());
+        System.out.println("Лист менеджера полей: " + fieldManager.fieldsArr);
+        System.out.println("Мапа поля: " + fieldManager.currentField.getButtonCounter());
         System.out.println(b1.getName());
-        if (b1.getName().contains("red")){
+        if (b1.getName().contains("red")) {
             System.out.println("red nayden");
-        } else {System.out.println("red ne nayden");}
+        } else {
+            System.out.println("red ne nayden");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus

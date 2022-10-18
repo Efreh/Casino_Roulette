@@ -1,5 +1,8 @@
-package mainPackage;
+package framePackage;
 //Окно смены параметров Игрока
+
+import logicPackage.Player;
+
 
 public class PlayerJFrame extends javax.swing.JFrame {
 

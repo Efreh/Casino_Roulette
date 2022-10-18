@@ -1,4 +1,4 @@
-package mainPackage;
+package graphicLogic;
 // Класс еденичного поля ставок 
 
 import javax.swing.JButton;
@@ -15,7 +15,7 @@ public class SingularFieldClass {
     public void setButtonCounter(HashMap h) {buttonCounter = h;}
 
     //Установка иконки на каждую кнопку и счетчик нажатий на кнопку
-    void setBtNIcon_setBtNCounter(JButton b) {
+    public void setBtNIcon_setBtNCounter(JButton b) {
         if (buttonIcon != null) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(buttonIcon)));
             if (!buttonCounter.containsKey(b)) {
@@ -29,9 +29,9 @@ public class SingularFieldClass {
             }
         }
     }
-
+    
     //Очистка текущего поля ставок
-    void clearCurrentField() {
+    public void clearCurrentField() {
         if (buttonCounter != null) {
             ArrayList<JButton> arrBut = new ArrayList<>(buttonCounter.keySet());
             for (int i = 0; i < arrBut.size(); i++) {

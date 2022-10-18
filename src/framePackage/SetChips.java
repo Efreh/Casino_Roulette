@@ -1,6 +1,10 @@
-package mainPackage;
+package framePackage;
 //Окно выбора номинала ставок
 //В конструктор принимает объект менеджера полей из главного фрейма
+
+import graphicLogic.IconVariables;
+import graphicLogic.FieldManager;
+
 
 public class SetChips extends javax.swing.JFrame {
 
