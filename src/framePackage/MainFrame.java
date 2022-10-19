@@ -1,7 +1,7 @@
 package framePackage;
 
 import logicPackage.Player;
-import logicPackage.ChipContainer;
+import logicPackage.ChipManager;
 import graphicLogic.FieldManager;
 import logicPackage.Ball;
 
@@ -10,7 +10,7 @@ public class MainFrame extends javax.swing.JFrame {
     FieldManager fieldManager = new FieldManager();                             //Менеджер полей ставок
     Player player = new Player();
     Ball ball = new Ball();
-    ChipContainer chipCont = new ChipContainer();
+    ChipManager chipCont = new ChipManager();
 
     public MainFrame() {
         initComponents();
@@ -179,12 +179,12 @@ public class MainFrame extends javax.swing.JFrame {
         clearField = new javax.swing.JButton();
         setChips = new javax.swing.JButton();
         clearAllField = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         stavLabel = new javax.swing.JLabel();
         bPlayer = new javax.swing.JButton();
         lPlayerName = new javax.swing.JLabel();
         lPlayerBet = new javax.swing.JLabel();
         bRollBall = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2842,15 +2842,6 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(clearAllField);
         clearAllField.setBounds(720, 450, 110, 30);
 
-        jButton1.setText("array list, hashMap");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        maskPanel.add(jButton1);
-        jButton1.setBounds(930, 450, 150, 25);
-
         stavLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         stavLabel.setText("Ваша ставка");
         maskPanel.add(stavLabel);
@@ -2882,6 +2873,17 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(bRollBall);
         bRollBall.setBounds(450, 70, 75, 25);
 
+        jButton2.setText("Проверка содержимого массивов");
+        jButton2.setToolTipText("");
+        jButton2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        maskPanel.add(jButton2);
+        jButton2.setBounds(660, 70, 220, 30);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -2905,7 +2907,7 @@ public class MainFrame extends javax.swing.JFrame {
         fieldManager.currentField.setBtNIcon_setBtNCounter(b3);
         chipCont.addChipInArrayAndPlusCounter("b3", "red", 3, 35, false);
         System.out.println(chipCont.chipsArray);
-//        System.out.println(chipCont.chipsArray.get(0).counterChip);
+        System.out.println(chipCont.chipsArray.get(0).counterChip);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
@@ -3530,17 +3532,6 @@ public class MainFrame extends javax.swing.JFrame {
         fieldManager.stavIconMainFrameChoiser(setChips);
     }//GEN-LAST:event_clearAllFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.println("Лист менеджера полей: " + fieldManager.fieldsArr);
-        System.out.println("Мапа поля: " + fieldManager.currentField.getButtonCounter());
-        System.out.println(b1.getName());
-        if (b1.getName().contains("red")) {
-            System.out.println("red nayden");
-        } else {
-            System.out.println("red ne nayden");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         fieldManager.stavIconMainFrameChoiser(setChips);                        //При фокусе главного окна,после смены ставки меняет иконку выбора ставки
         player.startSetLabelText(lPlayerName, lPlayerBet);                      //При фокусе высталяются значения полей Игрока
@@ -3551,8 +3542,13 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bPlayerActionPerformed
 
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
-        System.out.println(ball.rollTheBall());
+        ball.rollTheBall();
+        System.out.println(ball.toString());
     }//GEN-LAST:event_bRollBallActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.out.println(chipCont.toString());
+    }//GEN-LAST:event_jButton2ActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3723,7 +3719,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
     private javax.swing.JButton clearField;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel lPlayerBet;
     private javax.swing.JLabel lPlayerName;
     private javax.swing.JLabel mainFountLabel;

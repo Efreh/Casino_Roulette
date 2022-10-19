@@ -1,22 +1,22 @@
 package logicPackage;
 
-public class Chip {
+public class Chip extends Ball {
 
-    String nameChip;
-    String colorChip;
-    int coefficientChip;
-    int numberChip;
-    int counterChip =1;
-    boolean chetnostChip;
-
-    Chip(String nameChip, String colorChip,int numberChip,int coefficientChip,boolean chetnostChip) {
+    String nameChip;                                                            //Имя фишки
+    public int counterChip = 1;                                                 //Счётчик колличества фишек в стопке ставки
+    int coefficientChip;                                                        //Коофицент выигрыша
+    
+    Chip(String nameChip,int numberChip, int coefficientChip) {
+        
         this.nameChip = nameChip;
-        this.numberChip = numberChip;
-        this.colorChip = colorChip;
+        this.colorBall = definitionCzveta(numberChip);
+        this.numberBall = numberChip;
         this.coefficientChip = coefficientChip;
-        this.chetnostChip = chetnostChip;
+        this.chetnostBall = definitionChetnosti(numberChip);
+        
     }
 
+    //Перезапись equals для избежания повторного добавления фишки к уже имеющейся
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Chip) {
