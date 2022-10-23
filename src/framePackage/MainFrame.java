@@ -2907,8 +2907,6 @@ public class MainFrame extends javax.swing.JFrame {
         fieldManager.currentField.setBtNIcon_setBtNCounter(b3);
         //
         chipMngr.addChipInArrayAndPlusCounter("b3", 3, 35);
-        System.out.println(chipMngr.chipsArray);
-        System.out.println(chipMngr.chipsArray.get(0).counterChip);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
@@ -2919,6 +2917,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b2", 2, 35);
     }//GEN-LAST:event_b2ActionPerformed
 
     private void bg2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg2to5ActionPerformed
@@ -3526,7 +3526,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_clearFieldActionPerformed
 
     private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
-        new SetChips(fieldManager).setVisible(true);                            //При создании нового фрейма,передает в конструктор онного объект менеджера полей
+        new SetChips(fieldManager,chipMngr).setVisible(true);                   //При создании нового фрейма,передает в конструктор онного объект менеджера полей
     }//GEN-LAST:event_setChipsActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
@@ -3549,7 +3549,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        System.out.println(chipMngr.toString());
+        chipMngr.massiveViev();
     }//GEN-LAST:event_jButton2ActionPerformed
 // </editor-fold>
 

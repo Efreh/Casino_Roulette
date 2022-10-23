@@ -52,7 +52,7 @@ public class Ball {
         }
     }
 
-    public String toString() {
-        return "Номер шара: " + numberBall + " Цвет шара: " + colorBall + " Чётность: " + chetnostBall;
-    }
+//    public String toString() {
+//        return "Номер шара: " + numberBall + " Цвет шара: " + colorBall + " Чётность: " + chetnostBall;
+//    }
 }
