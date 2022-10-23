@@ -2906,335 +2906,493 @@ public class MainFrame extends javax.swing.JFrame {
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b3);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b3", 3, 35);
+        chipMngr.addChipInArrayAndPlusCounter("b3", 35, 3);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b6);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b6", 6, 35);
+        chipMngr.addChipInArrayAndPlusCounter("b6", 35, 6);
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b2", 2, 35);
+        chipMngr.addChipInArrayAndPlusCounter("b2", 35, 2);
     }//GEN-LAST:event_b2ActionPerformed
 
     private void bg2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg2to5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg2to5);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg2to5", 17, 2,5);
     }//GEN-LAST:event_bg2to5ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b5);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b5", 35, 5);
     }//GEN-LAST:event_b5ActionPerformed
 
     private void bg5to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg5to8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg5to8);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg5to8", 17, 5,8);
     }//GEN-LAST:event_bg5to8ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b8);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b8", 35, 8);
     }//GEN-LAST:event_b8ActionPerformed
 
     private void bg8to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg8to11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg8to11);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg8to11", 17, 8,11);
     }//GEN-LAST:event_bg8to11ActionPerformed
 
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b11);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b11", 35, 11);
     }//GEN-LAST:event_b11ActionPerformed
 
     private void bg11to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg11to14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg11to14);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg11to14", 17, 11,14);
     }//GEN-LAST:event_bg11to14ActionPerformed
 
     private void b14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b14);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b14", 35, 14);
     }//GEN-LAST:event_b14ActionPerformed
 
     private void bg14to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg14to17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg14to17);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg14to17", 17, 14,17);
     }//GEN-LAST:event_bg14to17ActionPerformed
 
     private void b17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b17);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b17", 35, 17);
     }//GEN-LAST:event_b17ActionPerformed
 
     private void bg17to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg17to20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg17to20);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg17to20", 17, 17,20);
     }//GEN-LAST:event_bg17to20ActionPerformed
 
     private void b20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b20);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b20", 35, 20);
     }//GEN-LAST:event_b20ActionPerformed
 
     private void bg20to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg20to23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg20to23);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg20to23", 17, 20,23);
     }//GEN-LAST:event_bg20to23ActionPerformed
 
     private void b23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b23);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b23", 35, 23);
     }//GEN-LAST:event_b23ActionPerformed
 
     private void bg23to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg23to26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg23to26);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg23to26", 17, 23,26);
     }//GEN-LAST:event_bg23to26ActionPerformed
 
     private void b26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b26);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b26", 35, 26);
     }//GEN-LAST:event_b26ActionPerformed
 
     private void bg26to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg26to29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg26to29);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg26to29", 17, 26,29);
     }//GEN-LAST:event_bg26to29ActionPerformed
 
     private void b29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b29);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b29", 35, 29);
     }//GEN-LAST:event_b29ActionPerformed
 
     private void bg29to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg29to32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg29to32);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg29to32", 17, 29,32);
     }//GEN-LAST:event_bg29to32ActionPerformed
 
     private void b32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b32);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b32", 35, 32);
     }//GEN-LAST:event_b32ActionPerformed
 
     private void bg32to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg32to35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg32to35);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg32to35", 17, 32,35);
     }//GEN-LAST:event_bg32to35ActionPerformed
 
     private void b35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b35);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b35", 35, 35);
     }//GEN-LAST:event_b35ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b1);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b1", 35, 1);
     }//GEN-LAST:event_b1ActionPerformed
 
     private void bg1to4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg1to4ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg1to4);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg1to4", 17, 1,4);
     }//GEN-LAST:event_bg1to4ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b4);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b4", 35, 4);
     }//GEN-LAST:event_b4ActionPerformed
 
     private void bg4to7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg4to7ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg4to7);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg4to7", 17, 4,7);
     }//GEN-LAST:event_bg4to7ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b7);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b7", 35, 7);
     }//GEN-LAST:event_b7ActionPerformed
 
     private void bg7to10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg7to10ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg7to10);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg7to10", 17, 7,10);
     }//GEN-LAST:event_bg7to10ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b10);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b10", 35, 10);
     }//GEN-LAST:event_b10ActionPerformed
 
     private void bg10to13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg10to13ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg10to13);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg10to13", 17, 10,13);
     }//GEN-LAST:event_bg10to13ActionPerformed
 
     private void b13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b13);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b13", 35, 13);
     }//GEN-LAST:event_b13ActionPerformed
 
     private void bg13to16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg13to16ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg13to16);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg13to16", 17, 13,16);
     }//GEN-LAST:event_bg13to16ActionPerformed
 
     private void b16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b16);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b16", 35, 16);
     }//GEN-LAST:event_b16ActionPerformed
 
     private void bg16to19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg16to19ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg16to19);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg16to19", 17, 16,19);
     }//GEN-LAST:event_bg16to19ActionPerformed
 
     private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b19);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b19", 35, 19);
     }//GEN-LAST:event_b19ActionPerformed
 
     private void bg19to22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg19to22ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg19to22);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg19to22", 17, 19,22);
     }//GEN-LAST:event_bg19to22ActionPerformed
 
     private void b22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b22);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b22", 35, 22);
     }//GEN-LAST:event_b22ActionPerformed
 
     private void bg22to25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg22to25ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg22to25);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg22to25", 17, 22,25);
     }//GEN-LAST:event_bg22to25ActionPerformed
 
     private void b25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b25);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b25", 35, 25);
     }//GEN-LAST:event_b25ActionPerformed
 
     private void bg25to28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg25to28ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg25to28);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg25to28", 17, 25,28);
     }//GEN-LAST:event_bg25to28ActionPerformed
 
     private void b28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b28);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b28", 35, 28);
     }//GEN-LAST:event_b28ActionPerformed
 
     private void bg28to31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg28to31ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg28to31);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg28to31", 17, 28,31);
     }//GEN-LAST:event_bg28to31ActionPerformed
 
     private void b31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b31);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b31", 35, 31);
     }//GEN-LAST:event_b31ActionPerformed
 
     private void bg31to34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg31to34ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg31to34);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg31to34", 17, 31,34);
     }//GEN-LAST:event_bg31to34ActionPerformed
 
     private void b34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b34);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b34", 35, 34);
     }//GEN-LAST:event_b34ActionPerformed
 
     private void b00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b00ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b00);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b00", 35, 37);
     }//GEN-LAST:event_b00ActionPerformed
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b0);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b0", 35, 0);
     }//GEN-LAST:event_b0ActionPerformed
 
     private void bv1to2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv1to2ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv1to2);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv1to2", 17, 1,2);
     }//GEN-LAST:event_bv1to2ActionPerformed
 
     private void bc1_2_4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc1_2_4_5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc1_2_4_5);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc1_2_4_5", 8, 1,2,4,5);
     }//GEN-LAST:event_bc1_2_4_5ActionPerformed
 
     private void bv4to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv4to5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv4to5);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv4to5", 17, 4,5);
     }//GEN-LAST:event_bv4to5ActionPerformed
 
     private void bc4_5_7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc4_5_7_8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc4_5_7_8);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc4_5_7_8", 8, 4,5,7,8);
     }//GEN-LAST:event_bc4_5_7_8ActionPerformed
 
     private void bv7to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv7to8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv7to8);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv7to8", 17, 7,8);
     }//GEN-LAST:event_bv7to8ActionPerformed
 
     private void bc7_8_10_11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc7_8_10_11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc7_8_10_11);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc7_8_10_11", 8, 7,8,10,11);
     }//GEN-LAST:event_bc7_8_10_11ActionPerformed
 
     private void bv10to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv10to11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv10to11);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv10to11", 17, 10,11);
     }//GEN-LAST:event_bv10to11ActionPerformed
 
     private void bc10_11_13_14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc10_11_13_14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc10_11_13_14);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc10_11_13_14", 8, 10,11,13,14);
     }//GEN-LAST:event_bc10_11_13_14ActionPerformed
 
     private void bv13to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv13to14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv13to14);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv13to14", 17, 13,14);
     }//GEN-LAST:event_bv13to14ActionPerformed
 
     private void bv16to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv16to17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv16to17);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv16to17", 17, 16,17);
     }//GEN-LAST:event_bv16to17ActionPerformed
 
     private void bv19to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv19to20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv19to20);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv19to20", 17, 19,20);
     }//GEN-LAST:event_bv19to20ActionPerformed
 
     private void bv22to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv22to23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv22to23);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv22to23", 17, 22,23);
     }//GEN-LAST:event_bv22to23ActionPerformed
 
     private void bv25to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv25to26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv25to26);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv25to26", 17, 25,26);
     }//GEN-LAST:event_bv25to26ActionPerformed
 
     private void bv28to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv28to29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv28to29);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv28to29", 17, 28,29);
     }//GEN-LAST:event_bv28to29ActionPerformed
 
     private void bv31to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv31to32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv31to32);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv31to32", 17, 31,32);
     }//GEN-LAST:event_bv31to32ActionPerformed
 
     private void bv34to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv34to35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv34to35);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv34to35", 17, 34,35);
     }//GEN-LAST:event_bv34to35ActionPerformed
 
     private void bc13_14_16_17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc13_14_16_17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc13_14_16_17);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc13_14_16_17", 8, 13,14,16,17);
     }//GEN-LAST:event_bc13_14_16_17ActionPerformed
 
     private void bc16_17_19_20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc16_17_19_20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc16_17_19_20);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc16_17_19_20", 8, 16,17,19,20);
     }//GEN-LAST:event_bc16_17_19_20ActionPerformed
 
     private void bc19_20_22_23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc19_20_22_23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc19_20_22_23);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc19_20_22_23", 8, 19,20,22,23);
     }//GEN-LAST:event_bc19_20_22_23ActionPerformed
 
     private void bc22_23_25_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc22_23_25_26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc22_23_25_26);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc22_23_25_26", 8, 22,23,25,26);
     }//GEN-LAST:event_bc22_23_25_26ActionPerformed
 
     private void bc25_26_28_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc25_26_28_29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc25_26_28_29);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc25_26_28_29", 8, 25,26,28,29);
     }//GEN-LAST:event_bc25_26_28_29ActionPerformed
 
     private void bc28_29_31_32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc28_29_31_32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc28_29_31_32);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc28_29_31_32", 8, 28,29,31,32);
     }//GEN-LAST:event_bc28_29_31_32ActionPerformed
 
     private void bc31_32_34_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc31_32_34_35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc31_32_34_35);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc31_32_34_35", 8, 31,32,34,35);
     }//GEN-LAST:event_bc31_32_34_35ActionPerformed
 
     private void bv2to3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv2to3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv2to3);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv2to3", 17, 2,3);
     }//GEN-LAST:event_bv2to3ActionPerformed
 
     private void bv5to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv5to6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv5to6);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv5to6", 17, 5,6);
     }//GEN-LAST:event_bv5to6ActionPerformed
 
     private void bv8to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv8to9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv8to9);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv8to9", 17, 8,9);
     }//GEN-LAST:event_bv8to9ActionPerformed
 
     private void bv11to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv11to12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv11to12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv11to12", 17, 11,12);
     }//GEN-LAST:event_bv11to12ActionPerformed
 
     private void bv14to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv14to15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv14to15);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv14to15", 17, 14,15);
     }//GEN-LAST:event_bv14to15ActionPerformed
 
     private void bv17to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv17to18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv17to18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv17to18", 17, 17,18);
     }//GEN-LAST:event_bv17to18ActionPerformed
 
     private void bv20to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv20to21ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv20to21);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv20to21", 17, 20,21);
     }//GEN-LAST:event_bv20to21ActionPerformed
 
     private void bv23to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv23to24ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv23to24);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv23to24", 17, 23,24);
     }//GEN-LAST:event_bv23to24ActionPerformed
 
     private void bv26to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv26to27ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv26to27);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv26to27", 17, 26,27);
     }//GEN-LAST:event_bv26to27ActionPerformed
 
     private void bv29to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv29to30ActionPerformed
@@ -3545,7 +3703,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         ball.rollTheBall();
-        System.out.println(ball.toString());
+        ball.showBall();
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -12,15 +12,30 @@ public class ChipManager {
     public ArrayList<Chip> currentChipArray;                                    //Текуший массив фишек-ставок
 
     //Добавление новой ставки в текущий массив и ++ к стопке ставки(counterChip),если такая ставка уже есть
-    public void addChipInArrayAndPlusCounter(String nameChip, int numberChip, int coefficientChip) {
-        if (currentChipArray.contains(new Chip(nameChip, numberChip, coefficientChip))) {
+    public void addChipInArrayAndPlusCounter(String nameChip, int coefficientChip, int numberChip) {
+        if (currentChipArray.contains(new Chip(nameChip, coefficientChip, numberChip))) {
             for (int i = 0; i < currentChipArray.size(); i++) {
-                if (currentChipArray.get(i).equals(new Chip(nameChip, numberChip, coefficientChip))) {
+                if (currentChipArray.get(i).equals(new Chip(nameChip, coefficientChip, numberChip))) {
                     currentChipArray.get(i).counterChip++;
                 }
             }
         } else {
-            currentChipArray.add(new Chip(nameChip, numberChip, coefficientChip));
+            currentChipArray.add(new Chip(nameChip, coefficientChip, numberChip));
+        }
+
+    }
+
+    //Добавление новой ставки в текущий массив и ++ к стопке ставки(counterChip),если такая ставка уже есть
+    //overload method для ставок со множеством
+    public void addChipInArrayAndPlusCounter(String nameChip, int coefficientChip, int... numberChip) {
+        if (currentChipArray.contains(new Chip(nameChip, coefficientChip, numberChip))) {
+            for (int i = 0; i < currentChipArray.size(); i++) {
+                if (currentChipArray.get(i).equals(new Chip(nameChip, coefficientChip, numberChip))) {
+                    currentChipArray.get(i).counterChip++;
+                }
+            }
+        } else {
+            currentChipArray.add(new Chip(nameChip, coefficientChip, numberChip));
         }
 
     }
@@ -35,5 +50,6 @@ public class ChipManager {
         for (ArrayList<ArrayList> a : chipsArraysArray) {
             System.out.println(a.toString());
         }
+        System.out.println(" ");
     }
 }
