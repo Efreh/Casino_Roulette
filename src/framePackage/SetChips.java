@@ -1,10 +1,16 @@
-package mainPackage;
+package framePackage;
 //Окно выбора номинала ставок
 //В конструктор принимает объект менеджера полей из главного фрейма
+
+import graphicLogic.IconVariables;
+import graphicLogic.FieldManager;
+import logicPackage.ChipManager;
+
 
 public class SetChips extends javax.swing.JFrame {
 
     FieldManager f;                                                             //Локальный объект менеджера полей
+    ChipManager chipMan;
 
     //Стандартный конструктор для main метода этого окна
     public SetChips() {
@@ -12,9 +18,10 @@ public class SetChips extends javax.swing.JFrame {
     }
 
     //Конструктор для кнопки из главного окна для передачи данных из объекта FieldManager (менеджер полей)
-    public SetChips(FieldManager f) {
+    public SetChips(FieldManager f,ChipManager chipMan) {
         initComponents();
         this.f = f;
+        this.chipMan = chipMan;
     }
     
     IconVariables iconPath = new IconVariables();                               //Хранилище путей иконок
@@ -154,24 +161,28 @@ public class SetChips extends javax.swing.JFrame {
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
         f.newField();                                                           //Новое поле
         f.setIconCurrentField(iconPath.redChipsIcon30x30);                      //Выбор иконки для текущего поля
+        chipMan.newChipArray();
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bRedChipsActionPerformed
 
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
         f.newField();                                                           //Новое поле
         f.setIconCurrentField(iconPath.greenChipsIcon30x30);                    //Выбор иконки для текущего поля
+        chipMan.newChipArray();
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bGreenChipsActionPerformed
 
     private void bOrangeChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrangeChipsActionPerformed
         f.newField();                                                           //Новое поле
         f.setIconCurrentField(iconPath.orangeChipsIcon30x30);                   //Выбор иконки для текущего поля
+        chipMan.newChipArray();
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
         f.newField();                                                           //Новое поле
         f.setIconCurrentField(iconPath.blueChipsIcon30x30);                     //Выбор иконки для текущего поля
+        chipMan.newChipArray();
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bBlueChipsActionPerformed
 

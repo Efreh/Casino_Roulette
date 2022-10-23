@@ -1,4 +1,4 @@
-package mainPackage;
+package logicPackage;
 
 
 public class WinLogic {
