@@ -1,9 +1,7 @@
 package framePackage;
 
-import logicPackage.Player;
-import logicPackage.ChipManager;
+import logicPackage.*;
 import graphicLogic.FieldManager;
-import logicPackage.Ball;
 
 public class MainFrame extends javax.swing.JFrame {
 
@@ -11,6 +9,7 @@ public class MainFrame extends javax.swing.JFrame {
     Player player = new Player();
     Ball ball = new Ball();
     ChipManager chipMngr = new ChipManager();
+    WinLogic winner = new WinLogic();
 
     public MainFrame() {
         initComponents();
@@ -2906,777 +2905,920 @@ public class MainFrame extends javax.swing.JFrame {
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b3);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b3", 35, 3);
+        chipMngr.addChipInArrayAndPlusCounter("b3", 35, player.getCurrentRate(), 3);
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b6);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b6", 35, 6);
+        chipMngr.addChipInArrayAndPlusCounter("b6", 35, player.getCurrentRate(), 6);
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b2", 35, 2);
+        chipMngr.addChipInArrayAndPlusCounter("b2", 35, player.getCurrentRate(), 2);
     }//GEN-LAST:event_b2ActionPerformed
 
     private void bg2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg2to5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg2to5);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg2to5", 17, 2,5);
+        chipMngr.addChipInArrayAndPlusCounter("bg2to5", 17, player.getCurrentRate(), 2, 5);
     }//GEN-LAST:event_bg2to5ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b5);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b5", 35, 5);
+        chipMngr.addChipInArrayAndPlusCounter("b5", 35, player.getCurrentRate(), 5);
     }//GEN-LAST:event_b5ActionPerformed
 
     private void bg5to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg5to8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg5to8);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg5to8", 17, 5,8);
+        chipMngr.addChipInArrayAndPlusCounter("bg5to8", 17, player.getCurrentRate(), 5, 8);
     }//GEN-LAST:event_bg5to8ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b8);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b8", 35, 8);
+        chipMngr.addChipInArrayAndPlusCounter("b8", 35, player.getCurrentRate(), 8);
     }//GEN-LAST:event_b8ActionPerformed
 
     private void bg8to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg8to11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg8to11);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg8to11", 17, 8,11);
+        chipMngr.addChipInArrayAndPlusCounter("bg8to11", 17, player.getCurrentRate(), 8, 11);
     }//GEN-LAST:event_bg8to11ActionPerformed
 
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b11);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b11", 35, 11);
+        chipMngr.addChipInArrayAndPlusCounter("b11", 35, player.getCurrentRate(), 11);
     }//GEN-LAST:event_b11ActionPerformed
 
     private void bg11to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg11to14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg11to14);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg11to14", 17, 11,14);
+        chipMngr.addChipInArrayAndPlusCounter("bg11to14", 17, player.getCurrentRate(), 11, 14);
     }//GEN-LAST:event_bg11to14ActionPerformed
 
     private void b14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b14);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b14", 35, 14);
+        chipMngr.addChipInArrayAndPlusCounter("b14", 35, player.getCurrentRate(), 14);
     }//GEN-LAST:event_b14ActionPerformed
 
     private void bg14to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg14to17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg14to17);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg14to17", 17, 14,17);
+        chipMngr.addChipInArrayAndPlusCounter("bg14to17", 17, player.getCurrentRate(), 14, 17);
     }//GEN-LAST:event_bg14to17ActionPerformed
 
     private void b17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b17);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b17", 35, 17);
+        chipMngr.addChipInArrayAndPlusCounter("b17", 35, player.getCurrentRate(), 17);
     }//GEN-LAST:event_b17ActionPerformed
 
     private void bg17to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg17to20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg17to20);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg17to20", 17, 17,20);
+        chipMngr.addChipInArrayAndPlusCounter("bg17to20", 17, player.getCurrentRate(), 17, 20);
     }//GEN-LAST:event_bg17to20ActionPerformed
 
     private void b20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b20);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b20", 35, 20);
+        chipMngr.addChipInArrayAndPlusCounter("b20", 35, player.getCurrentRate(), 20);
     }//GEN-LAST:event_b20ActionPerformed
 
     private void bg20to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg20to23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg20to23);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg20to23", 17, 20,23);
+        chipMngr.addChipInArrayAndPlusCounter("bg20to23", 17, player.getCurrentRate(), 20, 23);
     }//GEN-LAST:event_bg20to23ActionPerformed
 
     private void b23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b23);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b23", 35, 23);
+        chipMngr.addChipInArrayAndPlusCounter("b23", 35, player.getCurrentRate(), 23);
     }//GEN-LAST:event_b23ActionPerformed
 
     private void bg23to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg23to26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg23to26);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg23to26", 17, 23,26);
+        chipMngr.addChipInArrayAndPlusCounter("bg23to26", 17, player.getCurrentRate(), 23, 26);
     }//GEN-LAST:event_bg23to26ActionPerformed
 
     private void b26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b26);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b26", 35, 26);
+        chipMngr.addChipInArrayAndPlusCounter("b26", 35, player.getCurrentRate(), 26);
     }//GEN-LAST:event_b26ActionPerformed
 
     private void bg26to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg26to29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg26to29);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg26to29", 17, 26,29);
+        chipMngr.addChipInArrayAndPlusCounter("bg26to29", 17, player.getCurrentRate(), 26, 29);
     }//GEN-LAST:event_bg26to29ActionPerformed
 
     private void b29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b29);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b29", 35, 29);
+        chipMngr.addChipInArrayAndPlusCounter("b29", 35, player.getCurrentRate(), 29);
     }//GEN-LAST:event_b29ActionPerformed
 
     private void bg29to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg29to32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg29to32);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg29to32", 17, 29,32);
+        chipMngr.addChipInArrayAndPlusCounter("bg29to32", 17, player.getCurrentRate(), 29, 32);
     }//GEN-LAST:event_bg29to32ActionPerformed
 
     private void b32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b32);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b32", 35, 32);
+        chipMngr.addChipInArrayAndPlusCounter("b32", 35, player.getCurrentRate(), 32);
     }//GEN-LAST:event_b32ActionPerformed
 
     private void bg32to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg32to35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg32to35);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg32to35", 17, 32,35);
+        chipMngr.addChipInArrayAndPlusCounter("bg32to35", 17, player.getCurrentRate(), 32, 35);
     }//GEN-LAST:event_bg32to35ActionPerformed
 
     private void b35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b35);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b35", 35, 35);
+        chipMngr.addChipInArrayAndPlusCounter("b35", 35, player.getCurrentRate(), 35);
     }//GEN-LAST:event_b35ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b1);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b1", 35, 1);
+        chipMngr.addChipInArrayAndPlusCounter("b1", 35, player.getCurrentRate(), 1);
     }//GEN-LAST:event_b1ActionPerformed
 
     private void bg1to4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg1to4ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg1to4);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg1to4", 17, 1,4);
+        chipMngr.addChipInArrayAndPlusCounter("bg1to4", 17, player.getCurrentRate(), 1, 4);
     }//GEN-LAST:event_bg1to4ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b4);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b4", 35, 4);
+        chipMngr.addChipInArrayAndPlusCounter("b4", 35, player.getCurrentRate(), 4);
     }//GEN-LAST:event_b4ActionPerformed
 
     private void bg4to7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg4to7ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg4to7);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg4to7", 17, 4,7);
+        chipMngr.addChipInArrayAndPlusCounter("bg4to7", 17, player.getCurrentRate(), 4, 7);
     }//GEN-LAST:event_bg4to7ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b7);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b7", 35, 7);
+        chipMngr.addChipInArrayAndPlusCounter("b7", 35, player.getCurrentRate(), 7);
     }//GEN-LAST:event_b7ActionPerformed
 
     private void bg7to10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg7to10ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg7to10);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg7to10", 17, 7,10);
+        chipMngr.addChipInArrayAndPlusCounter("bg7to10", 17, player.getCurrentRate(), 7, 10);
     }//GEN-LAST:event_bg7to10ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b10);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b10", 35, 10);
+        chipMngr.addChipInArrayAndPlusCounter("b10", 35, player.getCurrentRate(), 10);
     }//GEN-LAST:event_b10ActionPerformed
 
     private void bg10to13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg10to13ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg10to13);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg10to13", 17, 10,13);
+        chipMngr.addChipInArrayAndPlusCounter("bg10to13", 17, player.getCurrentRate(), 10, 13);
     }//GEN-LAST:event_bg10to13ActionPerformed
 
     private void b13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b13);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b13", 35, 13);
+        chipMngr.addChipInArrayAndPlusCounter("b13", 35, player.getCurrentRate(), 13);
     }//GEN-LAST:event_b13ActionPerformed
 
     private void bg13to16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg13to16ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg13to16);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg13to16", 17, 13,16);
+        chipMngr.addChipInArrayAndPlusCounter("bg13to16", 17, player.getCurrentRate(), 13, 16);
     }//GEN-LAST:event_bg13to16ActionPerformed
 
     private void b16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b16);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b16", 35, 16);
+        chipMngr.addChipInArrayAndPlusCounter("b16", 35, player.getCurrentRate(), 16);
     }//GEN-LAST:event_b16ActionPerformed
 
     private void bg16to19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg16to19ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg16to19);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg16to19", 17, 16,19);
+        chipMngr.addChipInArrayAndPlusCounter("bg16to19", 17, player.getCurrentRate(), 16, 19);
     }//GEN-LAST:event_bg16to19ActionPerformed
 
     private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b19);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b19", 35, 19);
+        chipMngr.addChipInArrayAndPlusCounter("b19", 35, player.getCurrentRate(), 19);
     }//GEN-LAST:event_b19ActionPerformed
 
     private void bg19to22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg19to22ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg19to22);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg19to22", 17, 19,22);
+        chipMngr.addChipInArrayAndPlusCounter("bg19to22", 17, player.getCurrentRate(), 19, 22);
     }//GEN-LAST:event_bg19to22ActionPerformed
 
     private void b22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b22);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b22", 35, 22);
+        chipMngr.addChipInArrayAndPlusCounter("b22", 35, player.getCurrentRate(), 22);
     }//GEN-LAST:event_b22ActionPerformed
 
     private void bg22to25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg22to25ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg22to25);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg22to25", 17, 22,25);
+        chipMngr.addChipInArrayAndPlusCounter("bg22to25", 17, player.getCurrentRate(), 22, 25);
     }//GEN-LAST:event_bg22to25ActionPerformed
 
     private void b25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b25);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b25", 35, 25);
+        chipMngr.addChipInArrayAndPlusCounter("b25", 35, player.getCurrentRate(), 25);
     }//GEN-LAST:event_b25ActionPerformed
 
     private void bg25to28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg25to28ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg25to28);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg25to28", 17, 25,28);
+        chipMngr.addChipInArrayAndPlusCounter("bg25to28", 17, player.getCurrentRate(), 25, 28);
     }//GEN-LAST:event_bg25to28ActionPerformed
 
     private void b28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b28);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b28", 35, 28);
+        chipMngr.addChipInArrayAndPlusCounter("b28", 35, player.getCurrentRate(), 28);
     }//GEN-LAST:event_b28ActionPerformed
 
     private void bg28to31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg28to31ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg28to31);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg28to31", 17, 28,31);
+        chipMngr.addChipInArrayAndPlusCounter("bg28to31", 17, player.getCurrentRate(), 28, 31);
     }//GEN-LAST:event_bg28to31ActionPerformed
 
     private void b31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b31);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b31", 35, 31);
+        chipMngr.addChipInArrayAndPlusCounter("b31", 35, player.getCurrentRate(), 31);
     }//GEN-LAST:event_b31ActionPerformed
 
     private void bg31to34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg31to34ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg31to34);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bg31to34", 17, 31,34);
+        chipMngr.addChipInArrayAndPlusCounter("bg31to34", 17, player.getCurrentRate(), 31, 34);
     }//GEN-LAST:event_bg31to34ActionPerformed
 
     private void b34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b34);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b34", 35, 34);
+        chipMngr.addChipInArrayAndPlusCounter("b34", 35, player.getCurrentRate(), 34);
     }//GEN-LAST:event_b34ActionPerformed
 
     private void b00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b00ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b00);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b00", 35, 37);
+        chipMngr.addChipInArrayAndPlusCounter("b00", 35, player.getCurrentRate(), 37);
     }//GEN-LAST:event_b00ActionPerformed
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b0);
         //
-        chipMngr.addChipInArrayAndPlusCounter("b0", 35, 0);
+        chipMngr.addChipInArrayAndPlusCounter("b0", 35, player.getCurrentRate(), 0);
     }//GEN-LAST:event_b0ActionPerformed
 
     private void bv1to2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv1to2ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv1to2);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv1to2", 17, 1,2);
+        chipMngr.addChipInArrayAndPlusCounter("bv1to2", 17, player.getCurrentRate(), 1, 2);
     }//GEN-LAST:event_bv1to2ActionPerformed
 
     private void bc1_2_4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc1_2_4_5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc1_2_4_5);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc1_2_4_5", 8, 1,2,4,5);
+        chipMngr.addChipInArrayAndPlusCounter("bc1_2_4_5", 8, player.getCurrentRate(), 1, 2, 4, 5);
     }//GEN-LAST:event_bc1_2_4_5ActionPerformed
 
     private void bv4to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv4to5ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv4to5);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv4to5", 17, 4,5);
+        chipMngr.addChipInArrayAndPlusCounter("bv4to5", 17, player.getCurrentRate(), 4, 5);
     }//GEN-LAST:event_bv4to5ActionPerformed
 
     private void bc4_5_7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc4_5_7_8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc4_5_7_8);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc4_5_7_8", 8, 4,5,7,8);
+        chipMngr.addChipInArrayAndPlusCounter("bc4_5_7_8", 8, player.getCurrentRate(), 4, 5, 7, 8);
     }//GEN-LAST:event_bc4_5_7_8ActionPerformed
 
     private void bv7to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv7to8ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv7to8);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv7to8", 17, 7,8);
+        chipMngr.addChipInArrayAndPlusCounter("bv7to8", 17, player.getCurrentRate(), 7, 8);
     }//GEN-LAST:event_bv7to8ActionPerformed
 
     private void bc7_8_10_11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc7_8_10_11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc7_8_10_11);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc7_8_10_11", 8, 7,8,10,11);
+        chipMngr.addChipInArrayAndPlusCounter("bc7_8_10_11", 8, player.getCurrentRate(), 7, 8, 10, 11);
     }//GEN-LAST:event_bc7_8_10_11ActionPerformed
 
     private void bv10to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv10to11ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv10to11);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv10to11", 17, 10,11);
+        chipMngr.addChipInArrayAndPlusCounter("bv10to11", 17, player.getCurrentRate(), 10, 11);
     }//GEN-LAST:event_bv10to11ActionPerformed
 
     private void bc10_11_13_14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc10_11_13_14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc10_11_13_14);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc10_11_13_14", 8, 10,11,13,14);
+        chipMngr.addChipInArrayAndPlusCounter("bc10_11_13_14", 8, player.getCurrentRate(), 10, 11, 13, 14);
     }//GEN-LAST:event_bc10_11_13_14ActionPerformed
 
     private void bv13to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv13to14ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv13to14);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv13to14", 17, 13,14);
+        chipMngr.addChipInArrayAndPlusCounter("bv13to14", 17, player.getCurrentRate(), 13, 14);
     }//GEN-LAST:event_bv13to14ActionPerformed
 
     private void bv16to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv16to17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv16to17);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv16to17", 17, 16,17);
+        chipMngr.addChipInArrayAndPlusCounter("bv16to17", 17, player.getCurrentRate(), 16, 17);
     }//GEN-LAST:event_bv16to17ActionPerformed
 
     private void bv19to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv19to20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv19to20);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv19to20", 17, 19,20);
+        chipMngr.addChipInArrayAndPlusCounter("bv19to20", 17, player.getCurrentRate(), 19, 20);
     }//GEN-LAST:event_bv19to20ActionPerformed
 
     private void bv22to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv22to23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv22to23);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv22to23", 17, 22,23);
+        chipMngr.addChipInArrayAndPlusCounter("bv22to23", 17, player.getCurrentRate(), 22, 23);
     }//GEN-LAST:event_bv22to23ActionPerformed
 
     private void bv25to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv25to26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv25to26);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv25to26", 17, 25,26);
+        chipMngr.addChipInArrayAndPlusCounter("bv25to26", 17, player.getCurrentRate(), 25, 26);
     }//GEN-LAST:event_bv25to26ActionPerformed
 
     private void bv28to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv28to29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv28to29);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv28to29", 17, 28,29);
+        chipMngr.addChipInArrayAndPlusCounter("bv28to29", 17, player.getCurrentRate(), 28, 29);
     }//GEN-LAST:event_bv28to29ActionPerformed
 
     private void bv31to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv31to32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv31to32);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv31to32", 17, 31,32);
+        chipMngr.addChipInArrayAndPlusCounter("bv31to32", 17, player.getCurrentRate(), 31, 32);
     }//GEN-LAST:event_bv31to32ActionPerformed
 
     private void bv34to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv34to35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv34to35);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv34to35", 17, 34,35);
+        chipMngr.addChipInArrayAndPlusCounter("bv34to35", 17, player.getCurrentRate(), 34, 35);
     }//GEN-LAST:event_bv34to35ActionPerformed
 
     private void bc13_14_16_17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc13_14_16_17ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc13_14_16_17);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc13_14_16_17", 8, 13,14,16,17);
+        chipMngr.addChipInArrayAndPlusCounter("bc13_14_16_17", 8, player.getCurrentRate(), 13, 14, 16, 17);
     }//GEN-LAST:event_bc13_14_16_17ActionPerformed
 
     private void bc16_17_19_20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc16_17_19_20ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc16_17_19_20);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc16_17_19_20", 8, 16,17,19,20);
+        chipMngr.addChipInArrayAndPlusCounter("bc16_17_19_20", 8, player.getCurrentRate(), 16, 17, 19, 20);
     }//GEN-LAST:event_bc16_17_19_20ActionPerformed
 
     private void bc19_20_22_23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc19_20_22_23ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc19_20_22_23);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc19_20_22_23", 8, 19,20,22,23);
+        chipMngr.addChipInArrayAndPlusCounter("bc19_20_22_23", 8, player.getCurrentRate(), 19, 20, 22, 23);
     }//GEN-LAST:event_bc19_20_22_23ActionPerformed
 
     private void bc22_23_25_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc22_23_25_26ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc22_23_25_26);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc22_23_25_26", 8, 22,23,25,26);
+        chipMngr.addChipInArrayAndPlusCounter("bc22_23_25_26", 8, player.getCurrentRate(), 22, 23, 25, 26);
     }//GEN-LAST:event_bc22_23_25_26ActionPerformed
 
     private void bc25_26_28_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc25_26_28_29ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc25_26_28_29);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc25_26_28_29", 8, 25,26,28,29);
+        chipMngr.addChipInArrayAndPlusCounter("bc25_26_28_29", 8, player.getCurrentRate(), 25, 26, 28, 29);
     }//GEN-LAST:event_bc25_26_28_29ActionPerformed
 
     private void bc28_29_31_32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc28_29_31_32ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc28_29_31_32);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc28_29_31_32", 8, 28,29,31,32);
+        chipMngr.addChipInArrayAndPlusCounter("bc28_29_31_32", 8, player.getCurrentRate(), 28, 29, 31, 32);
     }//GEN-LAST:event_bc28_29_31_32ActionPerformed
 
     private void bc31_32_34_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc31_32_34_35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc31_32_34_35);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bc31_32_34_35", 8, 31,32,34,35);
+        chipMngr.addChipInArrayAndPlusCounter("bc31_32_34_35", 8, player.getCurrentRate(), 31, 32, 34, 35);
     }//GEN-LAST:event_bc31_32_34_35ActionPerformed
 
     private void bv2to3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv2to3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv2to3);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv2to3", 17, 2,3);
+        chipMngr.addChipInArrayAndPlusCounter("bv2to3", 17, player.getCurrentRate(), 2, 3);
     }//GEN-LAST:event_bv2to3ActionPerformed
 
     private void bv5to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv5to6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv5to6);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv5to6", 17, 5,6);
+        chipMngr.addChipInArrayAndPlusCounter("bv5to6", 17, player.getCurrentRate(), 5, 6);
     }//GEN-LAST:event_bv5to6ActionPerformed
 
     private void bv8to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv8to9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv8to9);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv8to9", 17, 8,9);
+        chipMngr.addChipInArrayAndPlusCounter("bv8to9", 17, player.getCurrentRate(), 8, 9);
     }//GEN-LAST:event_bv8to9ActionPerformed
 
     private void bv11to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv11to12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv11to12);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv11to12", 17, 11,12);
+        chipMngr.addChipInArrayAndPlusCounter("bv11to12", 17, player.getCurrentRate(), 11, 12);
     }//GEN-LAST:event_bv11to12ActionPerformed
 
     private void bv14to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv14to15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv14to15);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv14to15", 17, 14,15);
+        chipMngr.addChipInArrayAndPlusCounter("bv14to15", 17, player.getCurrentRate(), 14, 15);
     }//GEN-LAST:event_bv14to15ActionPerformed
 
     private void bv17to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv17to18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv17to18);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv17to18", 17, 17,18);
+        chipMngr.addChipInArrayAndPlusCounter("bv17to18", 17, player.getCurrentRate(), 17, 18);
     }//GEN-LAST:event_bv17to18ActionPerformed
 
     private void bv20to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv20to21ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv20to21);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv20to21", 17, 20,21);
+        chipMngr.addChipInArrayAndPlusCounter("bv20to21", 17, player.getCurrentRate(), 20, 21);
     }//GEN-LAST:event_bv20to21ActionPerformed
 
     private void bv23to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv23to24ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv23to24);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv23to24", 17, 23,24);
+        chipMngr.addChipInArrayAndPlusCounter("bv23to24", 17, player.getCurrentRate(), 23, 24);
     }//GEN-LAST:event_bv23to24ActionPerformed
 
     private void bv26to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv26to27ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv26to27);
         //
-        chipMngr.addChipInArrayAndPlusCounter("bv26to27", 17, 26,27);
+        chipMngr.addChipInArrayAndPlusCounter("bv26to27", 17, player.getCurrentRate(), 26, 27);
     }//GEN-LAST:event_bv26to27ActionPerformed
 
     private void bv29to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv29to30ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv29to30);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv29to30", 17, player.getCurrentRate(), 29, 30);
     }//GEN-LAST:event_bv29to30ActionPerformed
 
     private void bv32to33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv32to33ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv32to33);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv32to33", 17, player.getCurrentRate(), 32, 33);
     }//GEN-LAST:event_bv32to33ActionPerformed
 
     private void bv35to36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv35to36ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bv35to36);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bv35to36", 17, player.getCurrentRate(), 35, 36);
     }//GEN-LAST:event_bv35to36ActionPerformed
 
     private void bc2_3_5_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc2_3_5_6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc2_3_5_6);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc2_3_5_6", 8, player.getCurrentRate(), 2, 3, 5, 6);
     }//GEN-LAST:event_bc2_3_5_6ActionPerformed
 
     private void bc5_6_8_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc5_6_8_9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc5_6_8_9);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc5_6_8_9", 8, player.getCurrentRate(), 5, 6, 8, 9);
     }//GEN-LAST:event_bc5_6_8_9ActionPerformed
 
     private void bc8_9_11_12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc8_9_11_12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc8_9_11_12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc8_9_11_12", 8, player.getCurrentRate(), 8, 9, 11, 12);
     }//GEN-LAST:event_bc8_9_11_12ActionPerformed
 
     private void bc11_12_14_15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc11_12_14_15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc11_12_14_15);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc11_12_14_15", 8, player.getCurrentRate(), 11, 12, 14, 15);
     }//GEN-LAST:event_bc11_12_14_15ActionPerformed
 
     private void bc14_15_17_18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc14_15_17_18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc14_15_17_18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc14_15_17_18", 8, player.getCurrentRate(), 14, 15, 17, 18);
     }//GEN-LAST:event_bc14_15_17_18ActionPerformed
 
     private void bc17_18_20_21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc17_18_20_21ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc17_18_20_21);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc17_18_20_21", 8, player.getCurrentRate(), 17, 18, 20, 21);
     }//GEN-LAST:event_bc17_18_20_21ActionPerformed
 
     private void bc20_21_23_24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc20_21_23_24ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc20_21_23_24);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc20_21_23_24", 8, player.getCurrentRate(), 20, 21, 23, 24);
     }//GEN-LAST:event_bc20_21_23_24ActionPerformed
 
     private void bc23_24_26_27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc23_24_26_27ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc23_24_26_27);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc23_24_26_27", 8, player.getCurrentRate(), 23, 24, 26, 27);
     }//GEN-LAST:event_bc23_24_26_27ActionPerformed
 
     private void bc26_27_29_30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc26_27_29_30ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc26_27_29_30);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc26_27_29_30", 8, player.getCurrentRate(), 26, 27, 29, 30);
     }//GEN-LAST:event_bc26_27_29_30ActionPerformed
 
     private void bc29_30_32_33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc29_30_32_33ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc29_30_32_33);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc29_30_32_33", 8, player.getCurrentRate(), 29, 30, 32, 33);
     }//GEN-LAST:event_bc29_30_32_33ActionPerformed
 
     private void bc32_33_35_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc32_33_35_36ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bc32_33_35_36);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bc32_33_35_36", 8, player.getCurrentRate(), 32, 33, 35, 36);
     }//GEN-LAST:event_bc32_33_35_36ActionPerformed
 
     private void b2to1_3_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_3_36ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2to1_3_36);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b2to1_3_36", 2, player.getCurrentRate(), 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36);
     }//GEN-LAST:event_b2to1_3_36ActionPerformed
 
     private void b2to1_2_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_2_35ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2to1_2_35);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b2to1_2_35", 2, player.getCurrentRate(), 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35);
     }//GEN-LAST:event_b2to1_2_35ActionPerformed
 
     private void b2to1_1_34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_1_34ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2to1_1_34);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b2to1_1_35", 2, player.getCurrentRate(), 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34);
     }//GEN-LAST:event_b2to1_1_34ActionPerformed
 
     private void b1st12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1st12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b1st12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b1st12", 2, player.getCurrentRate(), 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
     }//GEN-LAST:event_b1st12ActionPerformed
 
     private void b2nd12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2nd12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b2nd12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b2nd12", 2, player.getCurrentRate(), 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
     }//GEN-LAST:event_b2nd12ActionPerformed
 
     private void b1of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b1of18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b1of18", 1, player.getCurrentRate(), 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18);
     }//GEN-LAST:event_b1of18ActionPerformed
 
     private void b_evenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_evenActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b_even);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b_even", 1, player.getCurrentRate(), 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36);
     }//GEN-LAST:event_b_evenActionPerformed
 
     private void b_redActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_redActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b_red);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b_red", 1, player.getCurrentRate(), 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36);
     }//GEN-LAST:event_b_redActionPerformed
 
     private void b_blackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_blackActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b_black);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b_black", 1, player.getCurrentRate(), 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35);
     }//GEN-LAST:event_b_blackActionPerformed
 
     private void b_oddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_oddActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b_odd);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b_odd", 1, player.getCurrentRate(), 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35);
     }//GEN-LAST:event_b_oddActionPerformed
 
     private void b19of36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of36ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b19of36);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b19of36", 1, player.getCurrentRate(), 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36);
     }//GEN-LAST:event_b19of36ActionPerformed
 
     private void b31of33vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31of33vActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b31of33v);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b31of33v", 11, player.getCurrentRate(), 31, 32, 33);
     }//GEN-LAST:event_b31of33vActionPerformed
 
     private void b31of36vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31of36vvActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b31of36vv);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b31of36vv", 5, player.getCurrentRate(), 31, 32, 33, 34, 35, 36);
     }//GEN-LAST:event_b31of36vvActionPerformed
 
     private void b16of21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16of21ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b16of21);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b16of31", 5, player.getCurrentRate(), 16, 17, 18, 19, 20, 21);
     }//GEN-LAST:event_b16of21ActionPerformed
 
     private void b7of9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7of9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b7of9);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b7of9", 11, player.getCurrentRate(), 7, 8, 9);
     }//GEN-LAST:event_b7of9ActionPerformed
 
     private void b19of24vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of24vvActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b19of24vv);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b19of24vv", 5, player.getCurrentRate(), 19, 20, 21, 22, 23, 24);
     }//GEN-LAST:event_b19of24vvActionPerformed
 
     private void b10of15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10of15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b10of15);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b10of15", 5, player.getCurrentRate(), 10, 11, 12, 13, 14, 15);
     }//GEN-LAST:event_b10of15ActionPerformed
 
     private void b22of27vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22of27vvActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b22of27vv);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b16", 5, player.getCurrentRate(), 22, 23, 24, 25, 26, 27);
     }//GEN-LAST:event_b22of27vvActionPerformed
 
     private void b34of36vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34of36vActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b34of36v);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b34of36v", 11, player.getCurrentRate(), 34, 35, 36);
     }//GEN-LAST:event_b34of36vActionPerformed
 
     private void b28of33vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28of33vvActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b28of33vv);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b28of33vv", 5, player.getCurrentRate(), 28, 29, 30, 31, 32, 33);
     }//GEN-LAST:event_b28of33vvActionPerformed
 
     private void b10of12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10of12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b10of12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b10of12", 11, player.getCurrentRate(), 10, 11, 12);
     }//GEN-LAST:event_b10of12ActionPerformed
 
     private void b7of12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7of12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b7of12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b7of12", 5, player.getCurrentRate(), 7, 8, 9, 10, 11, 12);
     }//GEN-LAST:event_b7of12ActionPerformed
 
     private void b19of21vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of21vActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b19of21v);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b19of21v", 11, player.getCurrentRate(), 19, 20, 21);
     }//GEN-LAST:event_b19of21vActionPerformed
 
     private void b25of27vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25of27vActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b25of27v);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b25of27v", 11, player.getCurrentRate(), 25, 26, 27);
     }//GEN-LAST:event_b25of27vActionPerformed
 
     private void b13of15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13of15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b13of15);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b13of15", 11, player.getCurrentRate(), 13, 14, 15);
     }//GEN-LAST:event_b13of15ActionPerformed
 
     private void b4of6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4of6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b4of6);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b4of6", 11, player.getCurrentRate(), 4, 5, 6);
     }//GEN-LAST:event_b4of6ActionPerformed
 
     private void b28of30vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28of30vActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b28of30v);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b28of30v", 11, player.getCurrentRate(), 28, 29, 30);
     }//GEN-LAST:event_b28of30vActionPerformed
 
     private void b22of24vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22of24vActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b22of24v);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b22of24v", 11, player.getCurrentRate(), 22, 23, 24);
     }//GEN-LAST:event_b22of24vActionPerformed
 
     private void b16of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16of18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b16of18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b16of18", 11, player.getCurrentRate(), 16, 17, 18);
     }//GEN-LAST:event_b16of18ActionPerformed
 
     private void b25of30vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25of30vvActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b25of30vv);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b25of30vv", 5, player.getCurrentRate(), 25, 26, 27, 28, 29, 30);
     }//GEN-LAST:event_b25of30vvActionPerformed
 
     private void b1of6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b1of6);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b1of6", 5, player.getCurrentRate(), 1, 2, 3, 4, 5, 6);
     }//GEN-LAST:event_b1of6ActionPerformed
 
     private void b1of3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b1of3);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b1of3", 11, player.getCurrentRate(), 1, 2, 3);
     }//GEN-LAST:event_b1of3ActionPerformed
 
     private void b13of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13of18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b13of18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b13of18", 5, player.getCurrentRate(), 13, 14, 15, 16, 17, 18);
     }//GEN-LAST:event_b13of18ActionPerformed
 
     private void b4of9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4of9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b4of9);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b4of9", 5, player.getCurrentRate(), 4, 5, 6, 7, 8, 9);
     }//GEN-LAST:event_b4of9ActionPerformed
 
     private void b0of3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0of3ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b0of3);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b0of3", 8, player.getCurrentRate(), 0, 1, 2, 3);
     }//GEN-LAST:event_b0of3ActionPerformed
 
     private void bg3to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg3to6ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg3to6);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b3to6", 17, player.getCurrentRate(), 3, 6);
     }//GEN-LAST:event_bg3to6ActionPerformed
 
     private void bg6to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg6to9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg6to9);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg6to9", 17, player.getCurrentRate(), 6, 9);
     }//GEN-LAST:event_bg6to9ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b9);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b9", 35, player.getCurrentRate(), 9);
     }//GEN-LAST:event_b9ActionPerformed
 
     private void bg9to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg9to12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg9to12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg9to12", 17, player.getCurrentRate(), 9, 12);
     }//GEN-LAST:event_bg9to12ActionPerformed
 
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b12", 35, player.getCurrentRate(), 12);
     }//GEN-LAST:event_b12ActionPerformed
 
     private void bg12to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg12to15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg12to15);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg12to15", 17, player.getCurrentRate(), 12, 15);
     }//GEN-LAST:event_bg12to15ActionPerformed
 
     private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b15);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b15", 35, player.getCurrentRate(), 15);
     }//GEN-LAST:event_b15ActionPerformed
 
     private void bg15to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg15to18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg15to18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg15to18", 17, player.getCurrentRate(), 15, 18);
     }//GEN-LAST:event_bg15to18ActionPerformed
 
     private void b18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b18ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b18);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b18", 35, player.getCurrentRate(), 18);
     }//GEN-LAST:event_b18ActionPerformed
 
     private void bg18to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg18to21ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg18to21);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg18to21", 17, player.getCurrentRate(), 18, 21);
     }//GEN-LAST:event_bg18to21ActionPerformed
 
     private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b21);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b21", 35, player.getCurrentRate(), 21);
     }//GEN-LAST:event_b21ActionPerformed
 
     private void bg21to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg21to24ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg21to24);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg21to24", 17, player.getCurrentRate(), 21, 24);
     }//GEN-LAST:event_bg21to24ActionPerformed
 
     private void b24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b24ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b24);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b24", 35, player.getCurrentRate(), 24);
     }//GEN-LAST:event_b24ActionPerformed
 
     private void bg24to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg24to27ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg24to27);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg24to27", 17, player.getCurrentRate(), 24, 27);
     }//GEN-LAST:event_bg24to27ActionPerformed
 
     private void b27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b27ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b27);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b27", 35, player.getCurrentRate(), 27);
     }//GEN-LAST:event_b27ActionPerformed
 
     private void bg27to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg27to30ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg27to30);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg27to30", 17, player.getCurrentRate(), 27, 30);
     }//GEN-LAST:event_bg27to30ActionPerformed
 
     private void b30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b30ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b30);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b30", 35, player.getCurrentRate(), 30);
     }//GEN-LAST:event_b30ActionPerformed
 
     private void bg30to33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg30to33ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg30to33);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b30to33", 17, player.getCurrentRate(), 30, 33);
     }//GEN-LAST:event_bg30to33ActionPerformed
 
     private void b33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b33ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b33);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b33", 35, player.getCurrentRate(), 33);
     }//GEN-LAST:event_b33ActionPerformed
 
     private void bg33to36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg33to36ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(bg33to36);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("bg33to36", 17, player.getCurrentRate(), 33, 36);
     }//GEN-LAST:event_bg33to36ActionPerformed
 
     private void b36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b36ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b36);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b36", 35, player.getCurrentRate(), 36);
     }//GEN-LAST:event_b36ActionPerformed
 
     private void b3rd12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3rd12ActionPerformed
         fieldManager.currentField.setBtNIcon_setBtNCounter(b3rd12);
+        //
+        chipMngr.addChipInArrayAndPlusCounter("b3rd12", 2, player.getCurrentRate(), 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36);
     }//GEN-LAST:event_b3rd12ActionPerformed
 
     private void clearFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearFieldActionPerformed
@@ -3684,7 +3826,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_clearFieldActionPerformed
 
     private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
-        new SetChips(fieldManager,chipMngr).setVisible(true);                   //При создании нового фрейма,передает в конструктор онного объект менеджера полей
+        new SetChips(fieldManager, chipMngr,player).setVisible(true);                   //При создании нового фрейма,передает в конструктор онного объект менеджера полей
     }//GEN-LAST:event_setChipsActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
@@ -3704,6 +3846,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         ball.rollTheBall();
         ball.showBall();
+        winner.logikaSravneniaStavok(ball, chipMngr, player);
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
