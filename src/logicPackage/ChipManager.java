@@ -42,6 +42,7 @@ public class ChipManager {
 
     //Создание единичного массива полей ставок и добавление его к массиву массивов
     public void newChipArray() {
+        chipsArraysArray = new ArrayList<>();
         chipsArraysArray.add(new ArrayList<Chip>());                            //Новый массив фишек в МассивеМассивов
         currentChipArray = chipsArraysArray.get(chipsArraysArray.size() - 1);   //Назначеное текущего Массива последним добавленным к МассивуМассивов
     }

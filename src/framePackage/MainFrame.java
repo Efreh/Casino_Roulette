@@ -3832,6 +3832,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
         fieldManager.clearAllField();
         fieldManager.stavIconMainFrameChoiser(setChips);
+        chipMngr.newChipArray();
+        player.setCurrentRate(10);
     }//GEN-LAST:event_clearAllFieldActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
@@ -3847,6 +3849,11 @@ public class MainFrame extends javax.swing.JFrame {
         ball.rollTheBall();
         ball.showBall();
         winner.logikaSravneniaStavok(ball, chipMngr, player);
+        player.setBudgetLabel(lPlayerBet);
+        chipMngr.newChipArray();
+        fieldManager.clearAllField();
+        fieldManager.stavIconMainFrameChoiser(setChips);
+        player.setCurrentRate(10);
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

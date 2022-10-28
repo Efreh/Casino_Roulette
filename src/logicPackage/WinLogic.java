@@ -1,6 +1,6 @@
 package logicPackage;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class WinLogic {
 
@@ -9,12 +9,22 @@ public class WinLogic {
         for (ArrayList a : bigList) {
             for (Object c : a) {
                 Chip chip = (Chip) c;
-                if (ball.numberBall == chip.numberBall) {
-                    player.budget+= chip.coefficientChip*chip.currentRate*chip.counterChip;
+                if (chip.numberChip == null) {
+                    if (ball.numberBall == chip.numberBall) {
+                        player.budget += chip.coefficientChip * chip.currentRate * chip.counterChip;
+                    } else {
+                        player.budget -= chip.currentRate * chip.counterChip;
+                    }
                 }
-                for(int i = 0;i<chip.numberChip.length;i++){
-                    if(ball.numberBall==chip.numberChip[i]){
-                        player.budget+= chip.coefficientChip*chip.currentRate*chip.counterChip;
+                if (chip.numberBall == 300 && chip.numberChip != null) {
+                    ArrayList<Integer> list = new ArrayList<>();
+                    for (int i : chip.numberChip) {
+                        list.add(Integer.valueOf(i));
+                    }
+                    if (list.contains(ball.numberBall)) {
+                        player.budget += chip.coefficientChip * chip.currentRate * chip.counterChip;
+                    } else {
+                        player.budget -= chip.currentRate * chip.counterChip;
                     }
                 }
             }

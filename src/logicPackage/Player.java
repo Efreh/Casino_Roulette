@@ -20,4 +20,7 @@ public class Player {
         lname.setText(name);
         lBetSize.setText(Integer.toString(budget));
     }
+    public void setBudgetLabel(JLabel lBetSize) {
+        lBetSize.setText(Integer.toString(budget));
+    }
 }

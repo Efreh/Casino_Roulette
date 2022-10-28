@@ -1,29 +1,28 @@
 package logicPackage;
 
-public class Chip extends Ball {
+public class Chip {
 
     String nameChip;                                                            //Имя фишки
     public int counterChip = 1;                                                 //Счётчик колличества фишек в стопке ставки
     int coefficientChip;                                                        //Коофицент выигрыша
+    int numberBall = 300;
     int[] numberChip;                                                           //Массив ставки на множество чисел
     public int currentRate;                                                     //Текущий размер ставки
 
-    Chip(String nameChip, int coefficientChip,int currentRate, int numberChip) {
+    Chip(String nameChip, int coefficientChip, int currentRate, int numberChip) {
 
         this.nameChip = nameChip;
-        this.colorBall = definitionCzveta(numberChip);
         this.numberBall = numberChip;
         this.coefficientChip = coefficientChip;
-        this.chetnostBall = definitionChetnosti(numberChip);
-        this.currentRate= currentRate;
+        this.currentRate = currentRate;
 
     }
 
-    Chip(String nameChip, int coefficientChip,int currentRate, int... numberChip) {
+    Chip(String nameChip, int coefficientChip, int currentRate, int... numberChip) {
         this.nameChip = nameChip;
         this.coefficientChip = coefficientChip;
         this.numberChip = numberChip;
-        this.currentRate= currentRate;
+        this.currentRate = currentRate;
     }
 
     //Перезапись equals для избежания повторного добавления фишки к уже имеющейся
