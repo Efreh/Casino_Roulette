@@ -7,7 +7,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     FieldManager fieldManager = new FieldManager();                             //Менеджер полей ставок
     Player player = new Player();
-    Ball ball = new Ball();
     ChipManager chipMngr = new ChipManager();
     WinLogic winner = new WinLogic();
 
@@ -183,7 +182,6 @@ public class MainFrame extends javax.swing.JFrame {
         lPlayerName = new javax.swing.JLabel();
         lPlayerBet = new javax.swing.JLabel();
         bRollBall = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2813,7 +2811,7 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(clearField);
         clearField.setBounds(550, 450, 120, 30);
 
-        setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/ChoiserBlue50x50.png"))); // NOI18N
+        setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ChoiserBlue50x50.png"))); // NOI18N
         setChips.setToolTipText("");
         setChips.setBorder(null);
         setChips.setBorderPainted(false);
@@ -2872,17 +2870,6 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(bRollBall);
         bRollBall.setBounds(450, 70, 75, 25);
 
-        jButton2.setText("Проверка содержимого массивов");
-        jButton2.setToolTipText("");
-        jButton2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        maskPanel.add(jButton2);
-        jButton2.setBounds(660, 70, 220, 30);
-
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -2890,7 +2877,7 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().add(maskPanel, gridBagConstraints);
 
         mainFountLabel.setBackground(new java.awt.Color(51, 102, 0));
-        mainFountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/field.png"))); // NOI18N
+        mainFountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/field.png"))); // NOI18N
         mainFountLabel.setOpaque(true);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -3846,19 +3833,15 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bPlayerActionPerformed
 
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
-        ball.rollTheBall();
-        ball.showBall();
-        winner.logikaSravneniaStavok(ball, chipMngr, player);
+        winner.rollTheBall();
+        winner.showBall();
+        winner.logikaSravneniaStavok(chipMngr, player);
         player.setBudgetLabel(lPlayerBet);
         chipMngr.newChipArray();
         fieldManager.clearAllField();
         fieldManager.stavIconMainFrameChoiser(setChips);
         player.setCurrentRate(10);
     }//GEN-LAST:event_bRollBallActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        chipMngr.massiveViev();
-    }//GEN-LAST:event_jButton2ActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -4029,7 +4012,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
     private javax.swing.JButton clearField;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel lPlayerBet;
     private javax.swing.JLabel lPlayerName;
     private javax.swing.JLabel mainFountLabel;

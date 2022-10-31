@@ -2,10 +2,8 @@ package framePackage;
 //Окно выбора номинала ставок
 //В конструктор принимает объект менеджера полей из главного фрейма
 
-import graphicLogic.IconVariables;
-import graphicLogic.FieldManager;
-import logicPackage.ChipManager;
-import logicPackage.Player;
+import graphicLogic.*;
+import logicPackage.*;
 
 public class SetChips extends javax.swing.JFrame {
 
@@ -52,7 +50,7 @@ public class SetChips extends javax.swing.JFrame {
         FountPanel.setPreferredSize(new java.awt.Dimension(480, 126));
 
         bRedChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        bRedChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/redChipsChoiseWindow.png"))); // NOI18N
+        bRedChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/redChipsChoiseWindow.png"))); // NOI18N
         bRedChips.setText("5$");
         bRedChips.setToolTipText("");
         bRedChips.setBorder(null);
@@ -70,7 +68,7 @@ public class SetChips extends javax.swing.JFrame {
         });
 
         bBlueChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        bBlueChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/blueChipsChoiseWindow.png"))); // NOI18N
+        bBlueChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blueChipsChoiseWindow.png"))); // NOI18N
         bBlueChips.setText("10$");
         bBlueChips.setToolTipText("");
         bBlueChips.setBorder(null);
@@ -88,7 +86,7 @@ public class SetChips extends javax.swing.JFrame {
         });
 
         bGreenChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        bGreenChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/greenChipsChoiseWindow.png"))); // NOI18N
+        bGreenChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/greenChipsChoiseWindow.png"))); // NOI18N
         bGreenChips.setText("25$");
         bGreenChips.setToolTipText("");
         bGreenChips.setBorder(null);
@@ -106,7 +104,7 @@ public class SetChips extends javax.swing.JFrame {
         });
 
         bOrangeChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        bOrangeChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resourse/orangeChipsChoiseWindow.png"))); // NOI18N
+        bOrangeChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/orangeChipsChoiseWindow.png"))); // NOI18N
         bOrangeChips.setText("100$");
         bOrangeChips.setToolTipText("");
         bOrangeChips.setBorder(null);

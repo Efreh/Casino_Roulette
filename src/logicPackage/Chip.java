@@ -1,28 +1,22 @@
 package logicPackage;
 
+import java.util.ArrayList;
+
 public class Chip {
 
     String nameChip;                                                            //Имя фишки
     public int counterChip = 1;                                                 //Счётчик колличества фишек в стопке ставки
     int coefficientChip;                                                        //Коофицент выигрыша
-    int numberBall = 300;
-    int[] numberChip;                                                           //Массив ставки на множество чисел
     public int currentRate;                                                     //Текущий размер ставки
-
-    Chip(String nameChip, int coefficientChip, int currentRate, int numberChip) {
-
-        this.nameChip = nameChip;
-        this.numberBall = numberChip;
-        this.coefficientChip = coefficientChip;
-        this.currentRate = currentRate;
-
-    }
+    ArrayList<Integer> arraysChipNumbers = new ArrayList<>();
 
     Chip(String nameChip, int coefficientChip, int currentRate, int... numberChip) {
         this.nameChip = nameChip;
         this.coefficientChip = coefficientChip;
-        this.numberChip = numberChip;
         this.currentRate = currentRate;
+        for (int i : numberChip) {
+            this.arraysChipNumbers.add(Integer.valueOf(i));
+        }
     }
 
     //Перезапись equals для избежания повторного добавления фишки к уже имеющейся

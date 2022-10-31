@@ -4,28 +4,29 @@ import java.util.*;
 
 public class WinLogic {
 
-    public void logikaSravneniaStavok(Ball ball, ChipManager chipManager, Player player) {
+// <editor-fold desc="БЛОК ЗАПУСКА ШАРА">
+    int numberBall;                                                             //Номер шара
+    Random random = new Random();                                               //Рандом шара
+
+    public void rollTheBall() {                                                 //Рандом номера шара //37й номер = 00
+        numberBall = random.nextInt(38);
+    }
+
+    public void showBall() {                                                    //Индикация выпавшего шара
+        System.out.println("Номер шара " + numberBall);
+        System.out.println(" ");
+    }
+// </editor-fold>   
+
+    public void logikaSravneniaStavok(ChipManager chipManager, Player player) {
         ArrayList<ArrayList> bigList = chipManager.chipsArraysArray;
         for (ArrayList a : bigList) {
             for (Object c : a) {
                 Chip chip = (Chip) c;
-                if (chip.numberChip == null) {
-                    if (ball.numberBall == chip.numberBall) {
-                        player.budget += chip.coefficientChip * chip.currentRate * chip.counterChip;
-                    } else {
-                        player.budget -= chip.currentRate * chip.counterChip;
-                    }
-                }
-                if (chip.numberBall == 300 && chip.numberChip != null) {
-                    ArrayList<Integer> list = new ArrayList<>();
-                    for (int i : chip.numberChip) {
-                        list.add(Integer.valueOf(i));
-                    }
-                    if (list.contains(ball.numberBall)) {
-                        player.budget += chip.coefficientChip * chip.currentRate * chip.counterChip;
-                    } else {
-                        player.budget -= chip.currentRate * chip.counterChip;
-                    }
+                if (chip.arraysChipNumbers.contains(numberBall)) {
+                    player.budget += chip.coefficientChip * chip.currentRate * chip.counterChip;
+                } else {
+                    player.budget -= chip.currentRate * chip.counterChip;
                 }
             }
         }
