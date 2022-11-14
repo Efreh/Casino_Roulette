@@ -1,16 +1,15 @@
 package graphicLogic;
-// Класс еденичного поля ставок 
 
 import javax.swing.JButton;
 import java.util.*;
 
-public class SingularFieldClass {
+public class SingularChipCgraficClass {
 
     private String buttonIcon;                                                  //Хранит адресс к текущей иконке
     public void setButtonIcon(String icon) {buttonIcon = icon;}
     public String getButtonIcon() {return buttonIcon;}
 
-    private HashMap<JButton, Integer> buttonCounter = new HashMap<>();          //Мапа со счетчиком колличества фишек
+    private HashMap<JButton, Integer> buttonCounter = new HashMap<>();          //Мапа со счетчиком колличества нажатий на фишку
     public HashMap getButtonCounter() {return buttonCounter;}
     public void setButtonCounter(HashMap h) {buttonCounter = h;}
 

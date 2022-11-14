@@ -18,4 +18,5 @@ public class IconVariables {
     public String orangeChipsChoiseWindow100x100 = "/resources/orangeChipsChoiseWindow.png";
 
     public String fieldImage = "/resources/field";
+    public String playerIcon = "/resources/player50x54_icon.png";
 }

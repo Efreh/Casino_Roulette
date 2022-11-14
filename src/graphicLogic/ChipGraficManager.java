@@ -4,22 +4,22 @@ package graphicLogic;
 import java.util.*;
 import javax.swing.JButton;
 
-public class FieldManager {
+public class ChipGraficManager {
 
-    public FieldManager() {
-        fieldsArr.add(new SingularFieldClass());
+    public ChipGraficManager() {
+        fieldsArr.add(new SingularChipCgraficClass());
         currentField = fieldsArr.get(fieldsArr.size() - 1);
         currentField.setButtonIcon(iconPath.blueChipsIcon30x30);
     }
     IconVariables iconPath = new IconVariables();                               //Хранилище путей иконок
 
-    public SingularFieldClass currentField;                                               //Текущее поле
+    public SingularChipCgraficClass currentField;                               //Текущее поле
 
-    public ArrayList<SingularFieldClass> fieldsArr = new ArrayList();                     //Список созданных полей ставок
+    public ArrayList<SingularChipCgraficClass> fieldsArr = new ArrayList();     //Список созданных полей ставок
 
     //Новое поле при выборе вида ставки
     public void newField() {
-        fieldsArr.add(new SingularFieldClass());
+        fieldsArr.add(new SingularChipCgraficClass());
         currentField = fieldsArr.get(fieldsArr.size() - 1);
     }
 

@@ -7,7 +7,7 @@ import logicPackage.*;
 
 public class SetChips extends javax.swing.JFrame {
 
-    FieldManager f;                                                             //Локальный объект менеджера полей
+    ChipGraficManager f;                                                             //Локальный объект менеджера полей
     ChipManager chipMan;
     Player player;
 
@@ -16,10 +16,10 @@ public class SetChips extends javax.swing.JFrame {
         initComponents();
     }
 
-    //Конструктор для кнопки из главного окна для передачи данных из объекта FieldManager (графика полей)
+    //Конструктор для кнопки из главного окна для передачи данных из объекта ChipGraficManager (графика полей)
     //ChipManager (менеждер массивов ставок)
     //Player (Объект игрока)
-    public SetChips(FieldManager f, ChipManager chipMan, Player player) {
+    public SetChips(ChipGraficManager f, ChipManager chipMan, Player player) {
         initComponents();
         this.f = f;
         this.chipMan = chipMan;
