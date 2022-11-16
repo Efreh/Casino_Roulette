@@ -1,4 +1,4 @@
-package graphicLogic;
+package logicPackage;
 
 public class IconVariables {
 

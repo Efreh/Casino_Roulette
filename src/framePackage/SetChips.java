@@ -2,12 +2,11 @@ package framePackage;
 //Окно выбора номинала ставок
 //В конструктор принимает объект менеджера полей из главного фрейма
 
-import graphicLogic.*;
+import logicPackage.IconVariables;
 import logicPackage.*;
 
 public class SetChips extends javax.swing.JFrame {
 
-    ChipGraficManager f;                                                             //Локальный объект менеджера полей
     ChipManager chipMan;
     Player player;
 
@@ -19,9 +18,8 @@ public class SetChips extends javax.swing.JFrame {
     //Конструктор для кнопки из главного окна для передачи данных из объекта ChipGraficManager (графика полей)
     //ChipManager (менеждер массивов ставок)
     //Player (Объект игрока)
-    public SetChips(ChipGraficManager f, ChipManager chipMan, Player player) {
+    public SetChips(ChipManager chipMan, Player player) {
         initComponents();
-        this.f = f;
         this.chipMan = chipMan;
         this.player = player;
     }
@@ -161,33 +159,29 @@ public class SetChips extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
-        f.newField();                                                           //Новое поле графики
-        f.setIconCurrentField(iconPath.redChipsIcon30x30);                      //Выбор иконки для текущего поля
         chipMan.newChipArray();                                                 //Новое поле ставок
+        chipMan.setIconCurrentChipArray(iconPath.redChipsIcon30x30);            //Выбор иконки для текущего поля
         player.setCurrentRate(5);                                               //Смена размера ставки
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bRedChipsActionPerformed
 
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
-        f.newField();                                                           //Новое поле графики
-        f.setIconCurrentField(iconPath.greenChipsIcon30x30);                    //Выбор иконки для текущего поля
         chipMan.newChipArray();                                                 //Новое поле ставок
+        chipMan.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);          //Выбор иконки для текущего поля
         player.setCurrentRate(25);                                              //Смена размера ставки
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bGreenChipsActionPerformed
 
     private void bOrangeChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bOrangeChipsActionPerformed
-        f.newField();                                                           //Новое поле графики
-        f.setIconCurrentField(iconPath.orangeChipsIcon30x30);                   //Выбор иконки для текущего поля
         chipMan.newChipArray();                                                 //Новое поле ставок
+        chipMan.setIconCurrentChipArray(iconPath.orangeChipsIcon30x30);         //Выбор иконки для текущего поля
         player.setCurrentRate(100);                                             //Смена размера ставки
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
-        f.newField();                                                           //Новое поле графики
-        f.setIconCurrentField(iconPath.blueChipsIcon30x30);                     //Выбор иконки для текущего поля
         chipMan.newChipArray();                                                 //Новое поле ставок
+        chipMan.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);           //Выбор иконки для текущего поля
         player.setCurrentRate(10);                                              //Смена размера ставки
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bBlueChipsActionPerformed

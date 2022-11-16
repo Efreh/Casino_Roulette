@@ -1,6 +1,7 @@
 package logicPackage;
 
 import java.util.ArrayList;
+import javax.swing.JButton;
 
 public class Chip {
 
@@ -8,9 +9,11 @@ public class Chip {
     public int counterChip = 1;                                                 //Счётчик колличества фишек в стопке ставки
     int coefficientChip;                                                        //Коофицент выигрыша
     public int currentRate;                                                     //Текущий размер ставки
-    ArrayList<Integer> arraysChipNumbers = new ArrayList<>();
+    ArrayList<Integer> arraysChipNumbers = new ArrayList<>();                   //Хранение значений ставки на кнопке
+    JButton button;                                                             //Jbutton для последующего изменения его иконки и текста
 
-    Chip(String nameChip, int coefficientChip, int currentRate, int... numberChip) {
+    Chip(JButton button,String nameChip, int coefficientChip, int currentRate, int... numberChip) {
+        this.button=button;
         this.nameChip = nameChip;
         this.coefficientChip = coefficientChip;
         this.currentRate = currentRate;
@@ -20,6 +23,7 @@ public class Chip {
     }
 
     //Перезапись equals для избежания повторного добавления фишки к уже имеющейся
+    //Сравнение происходит по имени Фишки
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Chip) {
