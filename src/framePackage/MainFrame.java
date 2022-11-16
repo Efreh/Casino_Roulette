@@ -3502,7 +3502,12 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_b3rd12ActionPerformed
 
     private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
-        new SetChips(chipMngr, player).setVisible(true);                        // При создании нового фрейма, передает в конструктор онного объект менеджера полей
+        // При создании нового фрейма выбора фишки, передает в конструктор окна выбора фишки объект класса chipMngr и player
+        //Так же передаёт текущий фрейм в конструктор выбора фишки
+        new SetChips(framePackage.MainFrame.this, chipMngr, player).setVisible(true);
+
+        //Блокировка окна на время выбора фишки
+        framePackage.MainFrame.this.setEnabled(false);
     }//GEN-LAST:event_setChipsActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
@@ -3516,7 +3521,12 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowGainedFocus
 
     private void bPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlayerActionPerformed
-        new PlayerJFrame(player).setVisible(true);                              //При создании нового фрейма, передает в конструктор онного объект класса Игрока
+        // При создании нового фрейма выбора фишки, передает в конструктор окна выбора фишки объект класса player
+        //Так же передаёт текущий фрейм в конструктор выбора фишки
+        new PlayerJFrame(framePackage.MainFrame.this, player).setVisible(true);
+        
+        //Блокировка окна на время выбора фишки
+        framePackage.MainFrame.this.setEnabled(false);
     }//GEN-LAST:event_bPlayerActionPerformed
 
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed

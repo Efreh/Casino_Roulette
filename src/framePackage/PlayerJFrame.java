@@ -4,8 +4,9 @@ package framePackage;
 import logicPackage.Player;
 
 public class PlayerJFrame extends javax.swing.JFrame {
-    
+
     Player p;
+    MainFrame mf;
 
     //Стандартный конструктор для main метода этого окна
     public PlayerJFrame() {
@@ -13,8 +14,9 @@ public class PlayerJFrame extends javax.swing.JFrame {
     }
 
     //Конструктор для передачи данных из объекта класса Player
-    public PlayerJFrame(Player p) {
+    public PlayerJFrame(MainFrame mf, Player p) {
         initComponents();
+        this.mf = mf;
         this.p = p;
         tfName.setText(p.name);
         tfBetSize.setText(Integer.toString(p.budget));
@@ -30,8 +32,8 @@ public class PlayerJFrame extends javax.swing.JFrame {
         bSave = new javax.swing.JButton();
         errorLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
@@ -92,6 +94,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
         p.name = tfName.getText();
         try {
             p.budget = Integer.parseInt(tfBetSize.getText());
+            mf.setEnabled(true);
             dispose();
         } catch (NumberFormatException e) {
             errorLabel.setText("Введи число!");

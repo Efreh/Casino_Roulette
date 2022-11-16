@@ -2,13 +2,13 @@ package framePackage;
 //Окно выбора номинала ставок
 //В конструктор принимает объект менеджера полей из главного фрейма
 
-import logicPackage.IconVariables;
 import logicPackage.*;
 
 public class SetChips extends javax.swing.JFrame {
 
     ChipManager chipMan;
     Player player;
+    MainFrame mf;
 
     //Стандартный конструктор для main метода этого окна
     public SetChips() {
@@ -18,8 +18,9 @@ public class SetChips extends javax.swing.JFrame {
     //Конструктор для кнопки из главного окна для передачи данных из объекта ChipGraficManager (графика полей)
     //ChipManager (менеждер массивов ставок)
     //Player (Объект игрока)
-    public SetChips(ChipManager chipMan, Player player) {
+    public SetChips(MainFrame mf,ChipManager chipMan, Player player) {
         initComponents();
+        this.mf = mf;
         this.chipMan = chipMan;
         this.player = player;
     }
@@ -162,6 +163,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.redChipsIcon30x30);            //Выбор иконки для текущего поля
         player.setCurrentRate(5);                                               //Смена размера ставки
+        mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bRedChipsActionPerformed
 
@@ -169,6 +171,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);          //Выбор иконки для текущего поля
         player.setCurrentRate(25);                                              //Смена размера ставки
+        mf.setEnabled(true);
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bGreenChipsActionPerformed
 
@@ -176,6 +179,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.orangeChipsIcon30x30);         //Выбор иконки для текущего поля
         player.setCurrentRate(100);                                             //Смена размера ставки
+        mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bOrangeChipsActionPerformed
 
@@ -183,6 +187,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);           //Выбор иконки для текущего поля
         player.setCurrentRate(10);                                              //Смена размера ставки
+        mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bBlueChipsActionPerformed
 
