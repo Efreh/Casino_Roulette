@@ -174,12 +174,10 @@ public class MainFrame extends javax.swing.JFrame {
         b34of36v = new javax.swing.JButton();
         setChips = new javax.swing.JButton();
         clearAllField = new javax.swing.JButton();
-        stavLabel = new javax.swing.JLabel();
         bPlayer = new javax.swing.JButton();
         lPlayerName = new javax.swing.JLabel();
         lPlayerButget = new javax.swing.JLabel();
         bRollBall = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2798,13 +2796,13 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(b34of36v);
         b34of36v.setBounds(1010, 115, 30, 30);
 
+        setChips.setBackground(new java.awt.Color(51, 153, 0));
         setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ChoiserBlue50x50.png"))); // NOI18N
-        setChips.setToolTipText("");
-        setChips.setBorder(null);
-        setChips.setBorderPainted(false);
+        setChips.setText("Выбрать ставку");
+        setChips.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         setChips.setContentAreaFilled(false);
         setChips.setFocusable(false);
-        setChips.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        setChips.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         setChips.setMaximumSize(new java.awt.Dimension(30, 30));
         setChips.setMinimumSize(new java.awt.Dimension(30, 30));
         setChips.setName(""); // NOI18N
@@ -2814,60 +2812,68 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(setChips);
-        setChips.setBounds(460, 450, 50, 50);
+        setChips.setBounds(540, 440, 160, 60);
 
-        clearAllField.setText("Clear all field");
-        clearAllField.setBorder(null);
+        clearAllField.setBackground(new java.awt.Color(51, 153, 0));
+        clearAllField.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clearAllIcon.png"))); // NOI18N
+        clearAllField.setText("Очистить поле");
+        clearAllField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        clearAllField.setContentAreaFilled(false);
+        clearAllField.setFocusable(false);
+        clearAllField.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        clearAllField.setOpaque(false);
         clearAllField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearAllFieldActionPerformed(evt);
             }
         });
         maskPanel.add(clearAllField);
-        clearAllField.setBounds(720, 450, 110, 30);
+        clearAllField.setBounds(880, 440, 160, 60);
 
-        stavLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        stavLabel.setText("Ваша ставка");
-        maskPanel.add(stavLabel);
-        stavLabel.setBounds(445, 420, 80, 40);
-
+        bPlayer.setBackground(new java.awt.Color(51, 153, 0));
         bPlayer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/player50x54_icon.png"))); // NOI18N
-        bPlayer.setBorder(null);
-        bPlayer.setBorderPainted(false);
+        bPlayer.setText("<html>Профиль<p>Игрока</html>");
+        bPlayer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bPlayer.setContentAreaFilled(false);
         bPlayer.setFocusable(false);
+        bPlayer.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        bPlayer.setIconTextGap(20);
         bPlayer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bPlayerActionPerformed(evt);
             }
         });
         maskPanel.add(bPlayer);
-        bPlayer.setBounds(1080, 340, 54, 54);
+        bPlayer.setBounds(880, 50, 160, 60);
 
+        lPlayerName.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lPlayerName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lPlayerName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maskPanel.add(lPlayerName);
-        lPlayerName.setBounds(1070, 400, 80, 20);
+        lPlayerName.setBounds(710, 50, 160, 30);
 
+        lPlayerButget.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerButget.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lPlayerButget.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerButget);
-        lPlayerButget.setBounds(1070, 460, 80, 20);
+        lPlayerButget.setBounds(710, 80, 160, 30);
 
-        bRollBall.setText("Крутить");
+        bRollBall.setBackground(new java.awt.Color(51, 153, 0));
+        bRollBall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/rollIcon.png"))); // NOI18N
+        bRollBall.setText("<html>Вращать<p>рулетку</html>");
+        bRollBall.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bRollBall.setContentAreaFilled(false);
+        bRollBall.setFocusable(false);
+        bRollBall.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        bRollBall.setIconTextGap(20);
         bRollBall.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bRollBallActionPerformed(evt);
             }
         });
         maskPanel.add(bRollBall);
-        bRollBall.setBounds(450, 75, 75, 20);
-
-        jLabel1.setText("Бюджет игры");
-        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        maskPanel.add(jLabel1);
-        jLabel1.setBounds(1070, 440, 80, 20);
+        bRollBall.setBounds(540, 50, 160, 60);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -3510,11 +3516,6 @@ public class MainFrame extends javax.swing.JFrame {
         framePackage.MainFrame.this.setEnabled(false);
     }//GEN-LAST:event_setChipsActionPerformed
 
-    private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
-        chipMngr.clearAllFields();
-        chipMngr.stavIconMainFrameChoiser(setChips);
-    }//GEN-LAST:event_clearAllFieldActionPerformed
-
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         chipMngr.stavIconMainFrameChoiser(setChips);                            // При фокусlPlayerBubget окна,после смены ставки меняет иконку выбора ставки player
         player.startSetLabelText(lPlayerName, lPlayerButget);                   //  При фокусе высталяются значения полей Игрока
@@ -3537,6 +3538,11 @@ public class MainFrame extends javax.swing.JFrame {
         chipMngr.clearAllFields();
         chipMngr.stavIconMainFrameChoiser(setChips);
     }//GEN-LAST:event_bRollBallActionPerformed
+
+    private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
+        chipMngr.clearAllFields();
+        chipMngr.stavIconMainFrameChoiser(setChips);
+    }//GEN-LAST:event_clearAllFieldActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3706,13 +3712,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bv7to8;
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lPlayerButget;
     private javax.swing.JLabel lPlayerName;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
     private javax.swing.JButton setChips;
-    private javax.swing.JLabel stavLabel;
     // End of variables declaration//GEN-END:variables
 // </editor-fold>
 }

@@ -18,9 +18,9 @@ public class Player {
 
     public void startSetLabelText(JLabel lname, JLabel lBetSize) {
         lname.setText(name);
-        lBetSize.setText(Integer.toString(budget));
+        lBetSize.setText("Бюджет: "+Integer.toString(budget));
     }
     public void setBudgetLabel(JLabel lBetSize) {
-        lBetSize.setText(Integer.toString(budget));
+        lBetSize.setText("Бюджет: "+Integer.toString(budget));
     }
 }
