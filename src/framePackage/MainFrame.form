@@ -4181,13 +4181,12 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/resources/ChoiserBlue50x50.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x431;&#x440;&#x430;&#x442;&#x44c; &#x441;&#x442;&#x430;&#x432;&#x43a;&#x443;"/>
+            <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x431;&#x43e;&#x440; &#x441;&#x442;&#x430;&#x432;&#x43a;&#x438;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder/>
               </Border>
             </Property>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="10"/>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -4203,7 +4202,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="540" y="440" width="160" height="60"/>
+              <AbsoluteConstraints x="710" y="440" width="160" height="60"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -4221,10 +4220,8 @@
                 <BevelBorder/>
               </Border>
             </Property>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="10"/>
-            <Property name="opaque" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearAllFieldActionPerformed"/>
@@ -4249,7 +4246,6 @@
                 <BevelBorder/>
               </Border>
             </Property>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="10"/>
             <Property name="iconTextGap" type="int" value="20"/>
@@ -4269,6 +4265,7 @@
               <Color blue="0" green="99" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x418;&#x43c;&#x44f; &#x438;&#x433;&#x440;&#x43e;&#x43a;&#x430;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder/>
@@ -4288,6 +4285,7 @@
               <Color blue="0" green="99" red="33" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x411;&#x44e;&#x434;&#x436;&#x435;&#x442;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -4314,7 +4312,6 @@
                 <BevelBorder/>
               </Border>
             </Property>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="10"/>
             <Property name="iconTextGap" type="int" value="20"/>
@@ -4324,7 +4321,22 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="540" y="50" width="160" height="60"/>
+              <AbsoluteConstraints x="540" y="440" width="160" height="60"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="bollLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="&#x41d;&#x43e;&#x43c;&#x435;&#x440; &#x448;&#x430;&#x440;&#x430;"/>
+            <Property name="horizontalTextPosition" type="int" value="0"/>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="210" y="220" width="120" height="100"/>
             </Constraint>
           </Constraints>
         </Component>

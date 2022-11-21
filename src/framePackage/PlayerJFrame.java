@@ -25,66 +25,98 @@ public class PlayerJFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        tfName = new javax.swing.JTextField();
-        tfBetSize = new javax.swing.JTextField();
         bSave = new javax.swing.JButton();
         errorLabel = new javax.swing.JLabel();
+        tfBetSize = new javax.swing.JTextField();
+        tfName = new javax.swing.JTextField();
+        fountLabel = new javax.swing.JLabel();
 
         setAlwaysOnTop(true);
+        setMaximumSize(new java.awt.Dimension(450, 330));
+        setMinimumSize(new java.awt.Dimension(450, 330));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(450, 330));
         setResizable(false);
+        setSize(new java.awt.Dimension(450, 330));
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 102, 0));
-        jPanel1.setPreferredSize(new java.awt.Dimension(383, 244));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setMaximumSize(new java.awt.Dimension(450, 330));
+        jPanel1.setMinimumSize(new java.awt.Dimension(450, 330));
+        jPanel1.setOpaque(false);
+        jPanel1.setPreferredSize(new java.awt.Dimension(450, 330));
 
-        tfName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
-        tfBetSize.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
+        bSave.setBackground(new java.awt.Color(51, 153, 0));
+        bSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/saveIcon.png"))); // NOI18N
         bSave.setText("Сохранить");
+        bSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bSave.setFocusable(false);
+        bSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        bSave.setIconTextGap(20);
         bSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bSaveActionPerformed(evt);
             }
         });
 
+        errorLabel.setBackground(new java.awt.Color(51, 153, 0));
         errorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        tfBetSize.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        tfName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(146, 146, 146)
-                .addComponent(bSave)
+                .addGap(142, 142, 142)
+                .addComponent(bSave, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(errorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tfBetSize, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
-                .addGap(41, 41, 41))
+                .addContainerGap()
+                .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(tfBetSize, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfBetSize, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
-                .addComponent(bSave)
-                .addGap(34, 34, 34))
+                    .addComponent(tfBetSize, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(bSave, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
 
-        getContentPane().add(jPanel1, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        getContentPane().add(jPanel1, gridBagConstraints);
+
+        fountLabel.setBackground(new java.awt.Color(51, 153, 0));
+        fountLabel.setForeground(new java.awt.Color(51, 153, 0));
+        fountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/playerFount.jpg"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        getContentPane().add(fountLabel, gridBagConstraints);
 
         pack();
         setLocationRelativeTo(null);
@@ -93,11 +125,19 @@ public class PlayerJFrame extends javax.swing.JFrame {
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
         p.name = tfName.getText();
         try {
-            p.budget = Integer.parseInt(tfBetSize.getText());
+            int butget = Integer.parseInt(tfBetSize.getText());
+            if (butget >= 5 && butget <= 5000) {
+                p.budget = butget;
+            } else {
+                throw new NumberFormatException();
+            }
+
             mf.setEnabled(true);
             dispose();
         } catch (NumberFormatException e) {
-            errorLabel.setText("Введи число!");
+            errorLabel.setText("<html>Введи число!<p>От 5 до 5000</html>");
+            errorLabel.setOpaque(true);
+            errorLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         }
     }//GEN-LAST:event_bSaveActionPerformed
 
@@ -113,6 +153,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bSave;
     private javax.swing.JLabel errorLabel;
+    private javax.swing.JLabel fountLabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tfBetSize;
     private javax.swing.JTextField tfName;

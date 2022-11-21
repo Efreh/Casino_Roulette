@@ -16,11 +16,8 @@ public class Player {
         currentRate = i;
     }
 
-    public void startSetLabelText(JLabel lname, JLabel lBetSize) {
+    public void playerSetLabelText(JLabel lname, JLabel lBetSize) {
         lname.setText(name);
-        lBetSize.setText("Бюджет: "+Integer.toString(budget));
-    }
-    public void setBudgetLabel(JLabel lBetSize) {
         lBetSize.setText("Бюджет: "+Integer.toString(budget));
     }
 }

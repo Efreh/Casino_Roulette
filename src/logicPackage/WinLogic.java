@@ -1,6 +1,7 @@
 package logicPackage;
 
 import java.util.*;
+import javax.swing.JLabel;
 
 public class WinLogic {
 
@@ -12,9 +13,8 @@ public class WinLogic {
         numberBall = random.nextInt(38);
     }
 
-    public void showBall() {                                                    //Индикация выпавшего шара
-        System.out.println("Номер шара " + numberBall);
-        System.out.println(" ");
+    public void showBall(JLabel label) {                                                    //Индикация выпавшего шара
+        label.setText(Integer.toString(numberBall));
     }
 // </editor-fold>   
 

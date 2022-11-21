@@ -10,7 +10,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
         initComponents();
-        player.startSetLabelText(lPlayerName, lPlayerButget);
+        player.playerSetLabelText(lPlayerName, lPlayerButget);
     }
 
     @SuppressWarnings("unchecked")
@@ -178,6 +178,7 @@ public class MainFrame extends javax.swing.JFrame {
         lPlayerName = new javax.swing.JLabel();
         lPlayerButget = new javax.swing.JLabel();
         bRollBall = new javax.swing.JButton();
+        bollLabel = new javax.swing.JLabel();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2798,9 +2799,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         setChips.setBackground(new java.awt.Color(51, 153, 0));
         setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ChoiserBlue50x50.png"))); // NOI18N
-        setChips.setText("Выбрать ставку");
+        setChips.setText("Выбор ставки");
         setChips.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        setChips.setContentAreaFilled(false);
         setChips.setFocusable(false);
         setChips.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         setChips.setMaximumSize(new java.awt.Dimension(30, 30));
@@ -2812,16 +2812,14 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(setChips);
-        setChips.setBounds(540, 440, 160, 60);
+        setChips.setBounds(710, 440, 160, 60);
 
         clearAllField.setBackground(new java.awt.Color(51, 153, 0));
         clearAllField.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clearAllIcon.png"))); // NOI18N
         clearAllField.setText("Очистить поле");
         clearAllField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        clearAllField.setContentAreaFilled(false);
         clearAllField.setFocusable(false);
         clearAllField.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        clearAllField.setOpaque(false);
         clearAllField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearAllFieldActionPerformed(evt);
@@ -2834,7 +2832,6 @@ public class MainFrame extends javax.swing.JFrame {
         bPlayer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/player50x54_icon.png"))); // NOI18N
         bPlayer.setText("<html>Профиль<p>Игрока</html>");
         bPlayer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bPlayer.setContentAreaFilled(false);
         bPlayer.setFocusable(false);
         bPlayer.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         bPlayer.setIconTextGap(20);
@@ -2848,6 +2845,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         lPlayerName.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lPlayerName.setText("Имя игрока");
         lPlayerName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lPlayerName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maskPanel.add(lPlayerName);
@@ -2855,6 +2853,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         lPlayerButget.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerButget.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lPlayerButget.setText("Бюджет");
         lPlayerButget.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerButget);
         lPlayerButget.setBounds(710, 80, 160, 30);
@@ -2863,7 +2862,6 @@ public class MainFrame extends javax.swing.JFrame {
         bRollBall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/rollIcon.png"))); // NOI18N
         bRollBall.setText("<html>Вращать<p>рулетку</html>");
         bRollBall.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        bRollBall.setContentAreaFilled(false);
         bRollBall.setFocusable(false);
         bRollBall.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         bRollBall.setIconTextGap(20);
@@ -2873,7 +2871,14 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(bRollBall);
-        bRollBall.setBounds(540, 50, 160, 60);
+        bRollBall.setBounds(540, 440, 160, 60);
+
+        bollLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        bollLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bollLabel.setText("Номер шара");
+        bollLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        maskPanel.add(bollLabel);
+        bollLabel.setBounds(210, 220, 120, 100);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -3518,7 +3523,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         chipMngr.stavIconMainFrameChoiser(setChips);                            // При фокусlPlayerBubget окна,после смены ставки меняет иконку выбора ставки player
-        player.startSetLabelText(lPlayerName, lPlayerButget);                   //  При фокусе высталяются значения полей Игрока
+        player.playerSetLabelText(lPlayerName, lPlayerButget);                   //  При фокусе высталяются значения полей Игрока
     }//GEN-LAST:event_formWindowGainedFocus
 
     private void bPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlayerActionPerformed
@@ -3532,16 +3537,14 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         winner.rollTheBall();
-        winner.showBall();
+        winner.showBall(bollLabel);
         winner.logikaSravneniaStavok(chipMngr, player);
-        player.setBudgetLabel(lPlayerButget);
+        player.playerSetLabelText(lPlayerName, lPlayerButget);
         chipMngr.clearAllFields();
-        chipMngr.stavIconMainFrameChoiser(setChips);
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
         chipMngr.clearAllFields();
-        chipMngr.stavIconMainFrameChoiser(setChips);
     }//GEN-LAST:event_clearAllFieldActionPerformed
 // </editor-fold>
 
@@ -3687,6 +3690,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bg7to10;
     private javax.swing.JButton bg8to11;
     private javax.swing.JButton bg9to12;
+    private javax.swing.JLabel bollLabel;
     private javax.swing.JButton bv10to11;
     private javax.swing.JButton bv11to12;
     private javax.swing.JButton bv13to14;

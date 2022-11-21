@@ -6,7 +6,8 @@ import javax.swing.JButton;
 public class ChipManager {
 
     public ChipManager() {                                                      //Стартовый конструктор с начальными массивами
-        newChipArray();
+        chipsArraysArray = new ArrayList<>();
+        newChipArrayInArray();
         currentChipIcon = iconPath.blueChipsIcon30x30;                          //Вид иконки фишки при запуске игры
     }
 
@@ -17,7 +18,6 @@ public class ChipManager {
 
     IconVariables iconPath = new IconVariables();                               //Хранилище путей иконок
 
-    
     //Добавление новой ставки в текущий массив и ++ к стопке ставки(counterChip),если такая ставка уже есть
     //Изменение иконки фишки и текстовое отображение счетчика нажатий на кнопку фишки
     public void addChipInArrayAndPlusCounter(JButton button, String nameChip, int coefficientChip, int currentRate, int... numberChip) {
@@ -41,26 +41,29 @@ public class ChipManager {
     public void setIconCurrentChipArray(String s) {
         currentChipIcon = s;
     }
-    
+
     //Установка иконки отображения текущего размера ставки на главном фрейме
     public void stavIconMainFrameChoiser(JButton b) {
         if (currentChipIcon.equals(iconPath.redChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.redChipsIcon50x50)));
+            b.setText("<html>Выбор ставки<p>Ставка: 5$</html>");
         }
         if (currentChipIcon.equals(iconPath.blueChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.blueChipsIcon50x50)));
+            b.setText("<html>Выбор ставки<p>Ставка: 10$</html>");
         }
         if (currentChipIcon.equals(iconPath.greenChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.greenChipsIcon50x50)));
+            b.setText("<html>Выбор ставки<p>Ставка: 25$</html>");
         }
         if (currentChipIcon.equals(iconPath.orangeChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.orangeChipsIcon50x50)));
+            b.setText("<html>Выбор ставки<p>Ставка: 100$</html>");
         }
     }
 
     //Создание единичного массива полей ставок и добавление его к массиву массивов
-    public void newChipArray() {
-        chipsArraysArray = new ArrayList<>();
+    public void newChipArrayInArray() {
         chipsArraysArray.add(new ArrayList<Chip>());                            //Новый массив фишек в МассивеМассивов
         currentChipArray = chipsArraysArray.get(chipsArraysArray.size() - 1);   //Назначеное текущего Массива последним добавленным к МассивуМассивов
     }
@@ -76,7 +79,8 @@ public class ChipManager {
                     ch.button.setIcon(null);
                 }
             }
-            newChipArray();
+            chipsArraysArray = new ArrayList<>();
+            newChipArrayInArray();
         }
     }
 }
