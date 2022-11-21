@@ -1,7 +1,7 @@
 package logicPackage;
 
 import java.util.ArrayList;
-import javax.swing.JButton;
+import javax.swing.*;
 
 public class ChipManager {
 

@@ -38,7 +38,6 @@ public class PlayerJFrame extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(450, 330));
         setMinimumSize(new java.awt.Dimension(450, 330));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(450, 330));
         setResizable(false);
         setSize(new java.awt.Dimension(450, 330));
         getContentPane().setLayout(new java.awt.GridBagLayout());
@@ -65,6 +64,10 @@ public class PlayerJFrame extends javax.swing.JFrame {
 
         errorLabel.setBackground(new java.awt.Color(51, 153, 0));
         errorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        errorLabel.setText("<html>Размер бюджета игры: <p>от 5 до 5000</html>");
+        errorLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        errorLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        errorLabel.setOpaque(true);
 
         tfBetSize.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
@@ -131,13 +134,10 @@ public class PlayerJFrame extends javax.swing.JFrame {
             } else {
                 throw new NumberFormatException();
             }
-
             mf.setEnabled(true);
             dispose();
         } catch (NumberFormatException e) {
             errorLabel.setText("<html>Введи число!<p>От 5 до 5000</html>");
-            errorLabel.setOpaque(true);
-            errorLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         }
     }//GEN-LAST:event_bSaveActionPerformed
 
