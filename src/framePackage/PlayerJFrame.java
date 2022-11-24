@@ -18,8 +18,8 @@ public class PlayerJFrame extends javax.swing.JFrame {
         initComponents();
         this.mf = mf;
         this.p = p;
-        tfName.setText(p.name);
-        tfBetSize.setText(Integer.toString(p.budget));
+        tfName.setText(p.getName());
+        tfBetSize.setText(Integer.toString(p.getBudget()));
     }
 
     @SuppressWarnings("unchecked")
@@ -32,6 +32,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
         errorLabel = new javax.swing.JLabel();
         tfBetSize = new javax.swing.JTextField();
         tfName = new javax.swing.JTextField();
+        nameLabel = new javax.swing.JLabel();
         fountLabel = new javax.swing.JLabel();
 
         setAlwaysOnTop(true);
@@ -48,6 +49,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(450, 330));
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 330));
+        jPanel1.setLayout(null);
 
         bSave.setBackground(new java.awt.Color(51, 153, 0));
         bSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/saveIcon.png"))); // NOI18N
@@ -61,6 +63,8 @@ public class PlayerJFrame extends javax.swing.JFrame {
                 bSaveActionPerformed(evt);
             }
         });
+        jPanel1.add(bSave);
+        bSave.setBounds(144, 233, 160, 60);
 
         errorLabel.setBackground(new java.awt.Color(51, 153, 0));
         errorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -68,57 +72,42 @@ public class PlayerJFrame extends javax.swing.JFrame {
         errorLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         errorLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         errorLabel.setOpaque(true);
+        jPanel1.add(errorLabel);
+        errorLabel.setBounds(270, 20, 160, 60);
 
         tfBetSize.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfBetSize.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(tfBetSize);
+        tfBetSize.setBounds(270, 80, 160, 60);
 
+        tfName.setBackground(new java.awt.Color(250, 250, 250));
         tfName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(tfName);
+        tfName.setBounds(20, 80, 160, 60);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(142, 142, 142)
-                .addComponent(bSave, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
-                .addComponent(tfBetSize, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfBetSize, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfName, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addComponent(bSave, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-        );
+        nameLabel.setBackground(new java.awt.Color(51, 153, 0));
+        nameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nameLabel.setText("Ведите имя игрока");
+        nameLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        nameLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        nameLabel.setOpaque(true);
+        jPanel1.add(nameLabel);
+        nameLabel.setBounds(20, 20, 160, 60);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         getContentPane().add(jPanel1, gridBagConstraints);
 
         fountLabel.setBackground(new java.awt.Color(51, 153, 0));
         fountLabel.setForeground(new java.awt.Color(51, 153, 0));
         fountLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/playerFount.jpg"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         getContentPane().add(fountLabel, gridBagConstraints);
 
         pack();
@@ -126,18 +115,18 @@ public class PlayerJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
-        p.name = tfName.getText();
+        p.setName(tfName.getText());
         try {
             int butget = Integer.parseInt(tfBetSize.getText());
-            if (butget >= 5 && butget <= 5000) {
-                p.budget = butget;
+            if (butget >= 10 && butget <= 5000) {
+                p.setBudget(butget);
             } else {
                 throw new NumberFormatException();
             }
             mf.setEnabled(true);
             dispose();
         } catch (NumberFormatException e) {
-            errorLabel.setText("<html>Введи число!<p>От 5 до 5000</html>");
+            errorLabel.setText("<html>Введи число!<p>От 10 до 5000</html>");
         }
     }//GEN-LAST:event_bSaveActionPerformed
 
@@ -155,6 +144,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel errorLabel;
     private javax.swing.JLabel fountLabel;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField tfBetSize;
     private javax.swing.JTextField tfName;
     // End of variables declaration//GEN-END:variables

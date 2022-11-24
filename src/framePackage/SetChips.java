@@ -57,7 +57,7 @@ public class SetChips extends javax.swing.JFrame {
 
         bRedChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bRedChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/redChipsChoiseWindow.png"))); // NOI18N
-        bRedChips.setText("5$");
+        bRedChips.setText("10$");
         bRedChips.setToolTipText("");
         bRedChips.setBorder(null);
         bRedChips.setBorderPainted(false);
@@ -75,7 +75,7 @@ public class SetChips extends javax.swing.JFrame {
 
         bBlueChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bBlueChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/blueChipsChoiseWindow.png"))); // NOI18N
-        bBlueChips.setText("10$");
+        bBlueChips.setText("25$");
         bBlueChips.setToolTipText("");
         bBlueChips.setBorder(null);
         bBlueChips.setBorderPainted(false);
@@ -93,7 +93,7 @@ public class SetChips extends javax.swing.JFrame {
 
         bGreenChips.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bGreenChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/greenChipsChoiseWindow.png"))); // NOI18N
-        bGreenChips.setText("25$");
+        bGreenChips.setText("50$");
         bGreenChips.setToolTipText("");
         bGreenChips.setBorder(null);
         bGreenChips.setBorderPainted(false);
@@ -174,9 +174,9 @@ public class SetChips extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bRedChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRedChipsActionPerformed
-        chipMan.newChipArrayInArray();                                                 //Новое поле ставок
+        chipMan.newChipArrayInArray();                                          //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.redChipsIcon30x30);            //Выбор иконки для текущего поля
-        player.setCurrentRate(5);                                               //Смена размера ставки
+        player.setCurrentRate(10);                                               //Смена размера ставки
         mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bRedChipsActionPerformed
@@ -184,7 +184,7 @@ public class SetChips extends javax.swing.JFrame {
     private void bGreenChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGreenChipsActionPerformed
         chipMan.newChipArrayInArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);          //Выбор иконки для текущего поля
-        player.setCurrentRate(25);                                              //Смена размера ставки
+        player.setCurrentRate(50);                                              //Смена размера ставки
         mf.setEnabled(true);
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bGreenChipsActionPerformed
@@ -200,7 +200,7 @@ public class SetChips extends javax.swing.JFrame {
     private void bBlueChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bBlueChipsActionPerformed
         chipMan.newChipArrayInArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);           //Выбор иконки для текущего поля
-        player.setCurrentRate(10);                                              //Смена размера ставки
+        player.setCurrentRate(25);                                              //Смена размера ставки
         mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bBlueChipsActionPerformed
@@ -215,10 +215,10 @@ public class SetChips extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FountPanel;
-    private javax.swing.JButton bBlueChips;
-    private javax.swing.JButton bGreenChips;
-    private javax.swing.JButton bOrangeChips;
-    private javax.swing.JButton bRedChips;
+    public javax.swing.JButton bBlueChips;
+    public javax.swing.JButton bGreenChips;
+    public javax.swing.JButton bOrangeChips;
+    public javax.swing.JButton bRedChips;
     private javax.swing.JLabel fountLabel;
     // End of variables declaration//GEN-END:variables
 }

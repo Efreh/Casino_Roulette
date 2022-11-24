@@ -46,15 +46,15 @@ public class ChipManager {
     public void stavIconMainFrameChoiser(JButton b) {
         if (currentChipIcon.equals(iconPath.redChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.redChipsIcon50x50)));
-            b.setText("<html>Выбор ставки<p>Ставка: 5$</html>");
+            b.setText("<html>Выбор ставки<p>Ставка: 10$</html>");
         }
         if (currentChipIcon.equals(iconPath.blueChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.blueChipsIcon50x50)));
-            b.setText("<html>Выбор ставки<p>Ставка: 10$</html>");
+            b.setText("<html>Выбор ставки<p>Ставка: 25$</html>");
         }
         if (currentChipIcon.equals(iconPath.greenChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.greenChipsIcon50x50)));
-            b.setText("<html>Выбор ставки<p>Ставка: 25$</html>");
+            b.setText("<html>Выбор ставки<p>Ставка: 50$</html>");
         }
         if (currentChipIcon.equals(iconPath.orangeChipsIcon30x30)) {
             b.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconPath.orangeChipsIcon50x50)));
