@@ -5,7 +5,6 @@ import logicPackage.Player;
 
 public class PlayerJFrame extends javax.swing.JFrame {
 
-    Player p;
     MainFrame mf;
 
     //Стандартный конструктор для main метода этого окна
@@ -14,12 +13,11 @@ public class PlayerJFrame extends javax.swing.JFrame {
     }
 
     //Конструктор для передачи данных из объекта класса Player
-    public PlayerJFrame(MainFrame mf, Player p) {
+    public PlayerJFrame(MainFrame mf) {
         initComponents();
         this.mf = mf;
-        this.p = p;
-        tfName.setText(p.getName());
-        tfBetSize.setText(Integer.toString(p.getBudget()));
+        tfName.setText(mf.player.getName());
+        tfBetSize.setText(Integer.toString(mf.player.getBudget()));
     }
 
     @SuppressWarnings("unchecked")
@@ -115,11 +113,13 @@ public class PlayerJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
-        p.setName(tfName.getText());
+        mf.player.setName(tfName.getText());
         try {
             int butget = Integer.parseInt(tfBetSize.getText());
             if (butget >= 10 && butget <= 5000) {
-                p.setBudget(butget);
+                mf.player.setBudget(butget);
+                mf.winner.gameStatus();
+                mf.notif.playerSetLabelText(mf.lPlayerName, mf.lPlayerButget);
             } else {
                 throw new NumberFormatException();
             }

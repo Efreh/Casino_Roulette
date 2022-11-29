@@ -10,6 +10,10 @@ import framePackage.*;
 
 public class WinLogic {
 
+    public WinLogic(MainFrame mf) {
+        this.mf = mf;
+    }
+    MainFrame mf;
     IconVariables iconPath = new IconVariables();
 
 // <editor-fold desc="БЛОК ЗАПУСКА ШАРА">
@@ -44,52 +48,55 @@ public class WinLogic {
     }
 
     //Блокировка кнопок выбора размера ставок,при недостаточном бюджете для онной
-    public void gameStatus(Player p, ChipManager chipMan, JButton b, SetChips setChFrame,MainFrame mf) {
-        if (p.getBudget() < 100) {
-            chipMan.newChipArrayInArray();
-            if (p.getCurrentRate() == 100) {
-                chipMan.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);
-                p.setCurrentRate(50);
-                chipMan.stavIconMainFrameChoiser(b);
+    public void gameStatus() {
+        if (mf.player.getBudget() < 100) {
+            mf.chipMngr.newChipArrayInArray();
+            if (mf.player.getCurrentRate() == 100) {
+                mf.chipMngr.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);
+                mf.player.setCurrentRate(50);
+                mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
             }
-            setChFrame.bOrangeChips.setEnabled(false);
+            mf.setChipsFrame.bOrangeChips.setEnabled(false);
         }
-        if (p.getBudget() < 50) {
-            chipMan.newChipArrayInArray();
-            if (p.getCurrentRate() == 50) {
-                chipMan.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);
-                p.setCurrentRate(25);
-                chipMan.stavIconMainFrameChoiser(b);
+        if (mf.player.getBudget() < 50) {
+            mf.chipMngr.newChipArrayInArray();
+            if (mf.player.getCurrentRate() == 50) {
+                mf.chipMngr.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);
+                mf.player.setCurrentRate(25);
+                mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
             }
-            setChFrame.bGreenChips.setEnabled(false);
+            mf.setChipsFrame.bGreenChips.setEnabled(false);
         }
-        if (p.getBudget() < 25) {
-            chipMan.newChipArrayInArray();
-            if (p.getCurrentRate() == 25) {
-                chipMan.setIconCurrentChipArray(iconPath.redChipsIcon30x30);
-                p.setCurrentRate(10);
-                chipMan.stavIconMainFrameChoiser(b);
+        if (mf.player.getBudget() < 25) {
+            mf.chipMngr.newChipArrayInArray();
+            if (mf.player.getCurrentRate() == 25) {
+                mf.chipMngr.setIconCurrentChipArray(iconPath.redChipsIcon30x30);
+                mf.player.setCurrentRate(10);
+                mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
             }
-            setChFrame.bBlueChips.setEnabled(false);
-        }
-        //Проверка на поражение
-        if (p.getBudget() < 10) {
-            mf.setEnabled(false);
-            new EndGameFrame().setVisible(true);
+            mf.setChipsFrame.bBlueChips.setEnabled(false);
         }
 
         //Разблокировка кнопок выбора ставок при увеличении бюджета
-        if (p.getBudget() >= 100) {
-            setChFrame.bBlueChips.setEnabled(true);
-            setChFrame.bGreenChips.setEnabled(true);
-            setChFrame.bOrangeChips.setEnabled(true);
+        if (mf.player.getBudget() >= 100) {
+            mf.setChipsFrame.bBlueChips.setEnabled(true);
+            mf.setChipsFrame.bGreenChips.setEnabled(true);
+            mf.setChipsFrame.bOrangeChips.setEnabled(true);
         }
-        if (p.getBudget() >= 50) {
-            setChFrame.bBlueChips.setEnabled(true);
-            setChFrame.bGreenChips.setEnabled(true);
+        if (mf.player.getBudget() >= 50) {
+            mf.setChipsFrame.bBlueChips.setEnabled(true);
+            mf.setChipsFrame.bGreenChips.setEnabled(true);
         }
-        if (p.getBudget() >= 25) {
-            setChFrame.bBlueChips.setEnabled(true);
+        if (mf.player.getBudget() >= 25) {
+            mf.setChipsFrame.bBlueChips.setEnabled(true);
+        }
+    }
+
+    public void luseStatus() {
+        //Проверка на поражение
+        if (mf.player.getBudget() < 10) {
+            new EndGameFrame(mf).setVisible(true);
+            mf.setEnabled(false);
         }
     }
 }

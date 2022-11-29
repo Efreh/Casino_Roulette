@@ -16,7 +16,7 @@ public class Player {
     public int getWinAndLuseSize(){return winAndLuseSize;}
     public void setWinAndLuseSize(int i){winAndLuseSize= i;}
     
-    private int currentRate = 10;
+    private int currentRate = 25;
     public int getCurrentRate() {return currentRate;}
     public void setCurrentRate(int i) {currentRate = i;}
     

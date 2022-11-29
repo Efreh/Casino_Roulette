@@ -177,6 +177,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArrayInArray();                                          //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.redChipsIcon30x30);            //Выбор иконки для текущего поля
         player.setCurrentRate(10);                                               //Смена размера ставки
+        mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
         mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bRedChipsActionPerformed
@@ -185,6 +186,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArrayInArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);          //Выбор иконки для текущего поля
         player.setCurrentRate(50);                                              //Смена размера ставки
+        mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
         mf.setEnabled(true);
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bGreenChipsActionPerformed
@@ -193,6 +195,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArrayInArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.orangeChipsIcon30x30);         //Выбор иконки для текущего поля
         player.setCurrentRate(100);                                             //Смена размера ставки
+        mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
         mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bOrangeChipsActionPerformed
@@ -201,6 +204,7 @@ public class SetChips extends javax.swing.JFrame {
         chipMan.newChipArrayInArray();                                                 //Новое поле ставок
         chipMan.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);           //Выбор иконки для текущего поля
         player.setCurrentRate(25);                                              //Смена размера ставки
+        mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
         mf.setEnabled(true);                                                    //Разблокировка главного фрейма
         dispose();                                                              //Закрытие окна с высвобождение м ресурсов
     }//GEN-LAST:event_bBlueChipsActionPerformed

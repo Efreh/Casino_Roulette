@@ -6,11 +6,11 @@ import logicPackage.*;
 
 public class MainFrame extends javax.swing.JFrame {
 
-    Player player = new Player();
-    ChipManager chipMngr = new ChipManager();
-    WinLogic winner = new WinLogic();
-    Notification notif = new Notification(player);
-    SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);
+    public Player player = new Player();
+    public ChipManager chipMngr = new ChipManager();
+    public WinLogic winner = new WinLogic(framePackage.MainFrame.this);
+    public Notification notif = new Notification(player);
+    public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);
 
     public MainFrame() {
         initComponents();
@@ -190,13 +190,6 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Casino Roulette");
         setResizable(false);
-        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
-            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
-                formWindowGainedFocus(evt);
-            }
-            public void windowLostFocus(java.awt.event.WindowEvent evt) {
-            }
-        });
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         maskPanel.setOpaque(false);
@@ -2805,7 +2798,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         setChips.setBackground(new java.awt.Color(51, 153, 0));
         setChips.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/ChoiserBlue50x50.png"))); // NOI18N
-        setChips.setText("Выбор ставки");
+        setChips.setText("<html>Выбор ставки<p>Ставка: 25$</html>");
         setChips.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         setChips.setFocusable(false);
         setChips.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
@@ -3693,16 +3686,11 @@ public class MainFrame extends javax.swing.JFrame {
         framePackage.MainFrame.this.setEnabled(false);
     }//GEN-LAST:event_setChipsActionPerformed
 
-    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
-        chipMngr.stavIconMainFrameChoiser(setChips);                            // При фокусlPlayerBubget окна,после смены ставки меняет иконку выбора ставки player
-        notif.playerSetLabelText(lPlayerName, lPlayerButget);                   //  При фокусе высталяются значения полей Игрока
-    }//GEN-LAST:event_formWindowGainedFocus
-
     private void bPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlayerActionPerformed
         // При создании нового фрейма выбора фишки, передает в конструктор окна выбора фишки объект класса player
         //Так же передаёт текущий фрейм в конструктор выбора фишки
         if (chipMngr.chipsArraysArray.size() == 1 && chipMngr.currentChipArray.size() == 0) {
-            new PlayerJFrame(framePackage.MainFrame.this, player).setVisible(true);
+            new PlayerJFrame(framePackage.MainFrame.this).setVisible(true);
             //Блокировка окна на время выбора фишки
             framePackage.MainFrame.this.setEnabled(false);
         } else {
@@ -3713,8 +3701,9 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         winner.rollTheBall();
         winner.showBall(bollLabel);
-        winner.logikaSravneniaStavok(chipMngr, player,notifLabel);
-        winner.gameStatus(player, chipMngr, setChips,setChipsFrame,framePackage.MainFrame.this);
+        winner.logikaSravneniaStavok(chipMngr, player, notifLabel);
+        notif.setAllStavLabel(lPlayerCurrentStav);
+        winner.luseStatus();
         notif.playerSetLabelText(lPlayerName, lPlayerButget);
         notif.clearAllStavLabel(lPlayerCurrentStav);
         chipMngr.clearAllFields();
@@ -3894,13 +3883,13 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bv7to8;
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
-    private javax.swing.JLabel lPlayerButget;
+    public javax.swing.JLabel lPlayerButget;
     private javax.swing.JLabel lPlayerCurrentStav;
-    private javax.swing.JLabel lPlayerName;
+    public javax.swing.JLabel lPlayerName;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
     private javax.swing.JLabel notifLabel;
-    private javax.swing.JButton setChips;
+    public javax.swing.JButton setChips;
     // End of variables declaration//GEN-END:variables
 // </editor-fold>
 }

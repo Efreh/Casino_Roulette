@@ -13,6 +13,7 @@ public class Notification {
     //Метод изменения значения величины текущей общей ставки
     public void setAllStavLabel(JLabel StavLabel) {
         player.setAllStav(player.getAllStav() + player.getCurrentRate());
+        
         StavLabel.setText("Ставка: " + Integer.toString(player.getAllStav()));
     }
 

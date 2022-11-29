@@ -1,9 +1,18 @@
 package framePackage;
 
+import logicPackage.*;
+
 public class EndGameFrame extends javax.swing.JFrame {
+
+    MainFrame mf;
 
     public EndGameFrame() {
         initComponents();
+    }
+
+    public EndGameFrame(MainFrame mf) {
+        initComponents();
+        this.mf = mf;
     }
 
     @SuppressWarnings("unchecked")
@@ -112,7 +121,8 @@ public class EndGameFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bExitActionPerformed
 
     private void bNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNewGameActionPerformed
-        // TODO add your handling code here:
+        new PlayerJFrame(mf).setVisible(true);
+        dispose();
     }//GEN-LAST:event_bNewGameActionPerformed
 
     public static void main(String args[]) {
