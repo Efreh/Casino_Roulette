@@ -1,11 +1,7 @@
 package logicPackage;
 
 import java.util.*;
-import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import framePackage.SetChips;
-import javax.swing.JOptionPane;
 import framePackage.*;
 
 public class WinLogic {
@@ -41,7 +37,7 @@ public class WinLogic {
                 } else {
                     player.setWinAndLuseSize(chip.currentRate * chip.counterChip);
                     player.setBudget(player.getBudget() - player.getWinAndLuseSize());
-                    notifLabel.setText("Вы проиграли: " + Integer.toString(player.getWinAndLuseSize()));
+                    notifLabel.setText("Вы проиграли: " + Integer.toString(player.getAllStav()));
                 }
             }
         }
@@ -50,8 +46,8 @@ public class WinLogic {
     //Блокировка кнопок выбора размера ставок,при недостаточном бюджете для онной
     public void gameStatus() {
         if (mf.player.getBudget() < 100) {
-            mf.chipMngr.newChipArrayInArray();
-            if (mf.player.getCurrentRate() == 100) {
+            if (mf.player.getCurrentRate() < 100 && mf.player.getCurrentRate() > 50) {
+                mf.chipMngr.newChipArrayInArray();
                 mf.chipMngr.setIconCurrentChipArray(iconPath.greenChipsIcon30x30);
                 mf.player.setCurrentRate(50);
                 mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
@@ -59,8 +55,8 @@ public class WinLogic {
             mf.setChipsFrame.bOrangeChips.setEnabled(false);
         }
         if (mf.player.getBudget() < 50) {
-            mf.chipMngr.newChipArrayInArray();
-            if (mf.player.getCurrentRate() == 50) {
+            if (mf.player.getCurrentRate() < 50 && mf.player.getCurrentRate() > 25) {
+                mf.chipMngr.newChipArrayInArray();
                 mf.chipMngr.setIconCurrentChipArray(iconPath.blueChipsIcon30x30);
                 mf.player.setCurrentRate(25);
                 mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
@@ -68,13 +64,21 @@ public class WinLogic {
             mf.setChipsFrame.bGreenChips.setEnabled(false);
         }
         if (mf.player.getBudget() < 25) {
-            mf.chipMngr.newChipArrayInArray();
-            if (mf.player.getCurrentRate() == 25) {
+            if (mf.player.getCurrentRate() < 25 && mf.player.getCurrentRate()>10) {
+                mf.chipMngr.newChipArrayInArray();
                 mf.chipMngr.setIconCurrentChipArray(iconPath.redChipsIcon30x30);
                 mf.player.setCurrentRate(10);
                 mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
             }
             mf.setChipsFrame.bBlueChips.setEnabled(false);
+        }
+        if (mf.player.getBudget() < 10) {
+            if (mf.player.getCurrentRate() < 10) {
+                mf.chipMngr.newChipArrayInArray();
+                mf.player.setCurrentRate(10);
+                mf.chipMngr.stavIconMainFrameChoiser(mf.setChips);
+            }
+            mf.setChips.setEnabled(false);
         }
 
         //Разблокировка кнопок выбора ставок при увеличении бюджета
@@ -82,13 +86,20 @@ public class WinLogic {
             mf.setChipsFrame.bBlueChips.setEnabled(true);
             mf.setChipsFrame.bGreenChips.setEnabled(true);
             mf.setChipsFrame.bOrangeChips.setEnabled(true);
+            mf.setChipsFrame.bRedChips.setEnabled(true);
+
         }
         if (mf.player.getBudget() >= 50) {
             mf.setChipsFrame.bBlueChips.setEnabled(true);
             mf.setChipsFrame.bGreenChips.setEnabled(true);
+            mf.setChipsFrame.bRedChips.setEnabled(true);
         }
         if (mf.player.getBudget() >= 25) {
             mf.setChipsFrame.bBlueChips.setEnabled(true);
+            mf.setChipsFrame.bRedChips.setEnabled(true);
+        }
+        if (mf.player.getBudget() >= 10) {
+            mf.setChips.setEnabled(true);
         }
     }
 
@@ -98,5 +109,24 @@ public class WinLogic {
             new EndGameFrame(mf).setVisible(true);
             mf.setEnabled(false);
         }
+    }
+
+    //Метод изменения значения величины текущей общей ставки
+    public void currentStavSetter() {
+        if(mf.player.getBudget()>0){
+        mf.player.setAllStav(mf.player.getAllStav() + mf.player.getCurrentRate());
+        mf.player.setBudget(mf.player.getBudget() - mf.player.getCurrentRate());
+        gameStatus();
+        mf.lPlayerCurrentStav.setText("Ставка: " + Integer.toString(mf.player.getAllStav()));
+        mf.lPlayerButget.setText("Бюджет: " + Integer.toString(mf.player.getBudget()));}
+    }
+
+    //Очистка поля общей величины ставки
+    public void clearStavSetter() {
+        mf.player.setBudget(mf.player.getBudget() + mf.player.getAllStav());
+        mf.player.setAllStav(0);
+        gameStatus();
+        mf.lPlayerCurrentStav.setText("Ставка: " + Integer.toString(mf.player.getAllStav()));
+        mf.lPlayerButget.setText("Бюджет: " + Integer.toString(mf.player.getBudget()));
     }
 }

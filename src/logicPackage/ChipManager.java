@@ -5,12 +5,14 @@ import javax.swing.*;
 
 public class ChipManager {
 
-    public ChipManager() {                                                      //Стартовый конструктор с начальными массивами
+    public ChipManager(Player player) {                                         //Стартовый конструктор с начальными массивами
         chipsArraysArray = new ArrayList<>();
         newChipArrayInArray();
         currentChipIcon = iconPath.blueChipsIcon30x30;                          //Вид иконки фишки при запуске игры
+        this.player = player;
     }
 
+    Player player;
     public ArrayList<ArrayList> chipsArraysArray = new ArrayList<>();           //Массив массивов полей ставок
     public ArrayList<Chip> currentChipArray;                                    //Текуший массив фишек-ставок
 
@@ -22,19 +24,20 @@ public class ChipManager {
     //Изменение иконки фишки и текстовое отображение счетчика нажатий на кнопку фишки
     public void addChipInArrayAndPlusCounter(JButton button, String nameChip, int coefficientChip, int currentRate, int... numberChip) {
         Chip sampleChip = new Chip(button, nameChip, coefficientChip, currentRate, numberChip);
-        if (currentChipArray.contains(sampleChip)) {
-            for (int i = 0; i < currentChipArray.size(); i++) {
-                if (currentChipArray.get(i).equals(sampleChip)) {
-                    currentChipArray.get(i).counterChip++;
-                    button.setText(Integer.toString(currentChipArray.get(i).counterChip));
+        if (player.getBudget() > 0) {
+            if (currentChipArray.contains(sampleChip)) {
+                for (int i = 0; i < currentChipArray.size(); i++) {
+                    if (currentChipArray.get(i).equals(sampleChip)) {
+                        currentChipArray.get(i).counterChip++;
+                        button.setText(Integer.toString(currentChipArray.get(i).counterChip));
+                    }
                 }
+            } else {
+                currentChipArray.add(new Chip(button, nameChip, coefficientChip, currentRate, numberChip));
+                button.setIcon(new javax.swing.ImageIcon(getClass().getResource(currentChipIcon)));
+                button.setText("1");
             }
-        } else {
-            currentChipArray.add(new Chip(button, nameChip, coefficientChip, currentRate, numberChip));
-            button.setIcon(new javax.swing.ImageIcon(getClass().getResource(currentChipIcon)));
-            button.setText("1");
         }
-
     }
 
     //Метод установки иконки к номиналу текущей ставки

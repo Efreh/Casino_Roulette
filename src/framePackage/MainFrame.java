@@ -7,7 +7,7 @@ import logicPackage.*;
 public class MainFrame extends javax.swing.JFrame {
 
     public Player player = new Player();
-    public ChipManager chipMngr = new ChipManager();
+    public ChipManager chipMngr = new ChipManager(player);
     public WinLogic winner = new WinLogic(framePackage.MainFrame.this);
     public Notification notif = new Notification(player);
     public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);
@@ -2912,769 +2912,769 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 // <editor-fold defaultstate="collapsed" desc="MORE BUTTON">
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b3, "b3", 35, player.getCurrentRate(), 3);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b6, "b6", 35, player.getCurrentRate(), 6);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b2, "b2", 35, player.getCurrentRate(), 2);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b2ActionPerformed
 
     private void bg2to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg2to5ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg2to5, "bg2to5", 17, player.getCurrentRate(), 2, 5);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg2to5ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b5, "b5", 35, player.getCurrentRate(), 5);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b5ActionPerformed
 
     private void bg5to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg5to8ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg5to8, "bg5to8", 17, player.getCurrentRate(), 5, 8);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg5to8ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b8, "b8", 35, player.getCurrentRate(), 8);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b8ActionPerformed
 
     private void bg8to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg8to11ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg8to11, "bg8to11", 17, player.getCurrentRate(), 8, 11);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg8to11ActionPerformed
 
     private void b11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b11ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b11, "b11", 35, player.getCurrentRate(), 11);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b11ActionPerformed
 
     private void bg11to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg11to14ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg11to14, "bg11to14", 17, player.getCurrentRate(), 11, 14);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg11to14ActionPerformed
 
     private void b14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b14ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b14, "b14", 35, player.getCurrentRate(), 14);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b14ActionPerformed
 
     private void bg14to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg14to17ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg14to17, "bg14to17", 17, player.getCurrentRate(), 14, 17);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg14to17ActionPerformed
 
     private void b17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b17ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b17, "b17", 35, player.getCurrentRate(), 17);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b17ActionPerformed
 
     private void bg17to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg17to20ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg17to20, "bg17to20", 17, player.getCurrentRate(), 17, 20);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg17to20ActionPerformed
 
     private void b20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b20ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b20, "b20", 35, player.getCurrentRate(), 20);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b20ActionPerformed
 
     private void bg20to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg20to23ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg20to23, "bg20to23", 17, player.getCurrentRate(), 20, 23);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg20to23ActionPerformed
 
     private void b23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b23ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b23, "b23", 35, player.getCurrentRate(), 23);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b23ActionPerformed
 
     private void bg23to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg23to26ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg23to26, "bg23to26", 17, player.getCurrentRate(), 23, 26);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg23to26ActionPerformed
 
     private void b26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b26ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b26, "b26", 35, player.getCurrentRate(), 26);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b26ActionPerformed
 
     private void bg26to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg26to29ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg26to29, "bg26to29", 17, player.getCurrentRate(), 26, 29);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg26to29ActionPerformed
 
     private void b29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b29ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b29, "b29", 35, player.getCurrentRate(), 29);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b29ActionPerformed
 
     private void bg29to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg29to32ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg29to32, "bg29to32", 17, player.getCurrentRate(), 29, 32);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg29to32ActionPerformed
 
     private void b32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b32ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b32, "b32", 35, player.getCurrentRate(), 32);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b32ActionPerformed
 
     private void bg32to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg32to35ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg32to35, "bg32to35", 17, player.getCurrentRate(), 32, 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg32to35ActionPerformed
 
     private void b35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b35ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b35, "b35", 35, player.getCurrentRate(), 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b35ActionPerformed
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b1, "b1", 35, player.getCurrentRate(), 1);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b1ActionPerformed
 
     private void bg1to4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg1to4ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg1to4, "bg1to4", 17, player.getCurrentRate(), 1, 4);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg1to4ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b4, "b4", 35, player.getCurrentRate(), 4);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b4ActionPerformed
 
     private void bg4to7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg4to7ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg4to7, "bg4to7", 17, player.getCurrentRate(), 4, 7);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg4to7ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b7, "b7", 35, player.getCurrentRate(), 7);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b7ActionPerformed
 
     private void bg7to10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg7to10ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg7to10, "bg7to10", 17, player.getCurrentRate(), 7, 10);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg7to10ActionPerformed
 
     private void b10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b10, "b10", 35, player.getCurrentRate(), 10);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b10ActionPerformed
 
     private void bg10to13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg10to13ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg10to13, "bg10to13", 17, player.getCurrentRate(), 10, 13);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg10to13ActionPerformed
 
     private void b13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b13, "b13", 35, player.getCurrentRate(), 13);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b13ActionPerformed
 
     private void bg13to16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg13to16ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg13to16, "bg13to16", 17, player.getCurrentRate(), 13, 16);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg13to16ActionPerformed
 
     private void b16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b16, "b16", 35, player.getCurrentRate(), 16);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b16ActionPerformed
 
     private void bg16to19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg16to19ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg16to19, "bg16to19", 17, player.getCurrentRate(), 16, 19);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg16to19ActionPerformed
 
     private void b19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b19, "b19", 35, player.getCurrentRate(), 19);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b19ActionPerformed
 
     private void bg19to22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg19to22ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg19to22, "bg19to22", 17, player.getCurrentRate(), 19, 22);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg19to22ActionPerformed
 
     private void b22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b22, "b22", 35, player.getCurrentRate(), 22);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b22ActionPerformed
 
     private void bg22to25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg22to25ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg22to25, "bg22to25", 17, player.getCurrentRate(), 22, 25);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg22to25ActionPerformed
 
     private void b25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b25, "b25", 35, player.getCurrentRate(), 25);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b25ActionPerformed
 
     private void bg25to28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg25to28ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg25to28, "bg25to28", 17, player.getCurrentRate(), 25, 28);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg25to28ActionPerformed
 
     private void b28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b28, "b28", 35, player.getCurrentRate(), 28);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b28ActionPerformed
 
     private void bg28to31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg28to31ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg28to31, "bg28to31", 17, player.getCurrentRate(), 28, 31);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg28to31ActionPerformed
 
     private void b31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b31, "b31", 35, player.getCurrentRate(), 31);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b31ActionPerformed
 
     private void bg31to34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg31to34ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg31to34, "bg31to34", 17, player.getCurrentRate(), 31, 34);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg31to34ActionPerformed
 
     private void b34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b34, "b34", 35, player.getCurrentRate(), 34);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b34ActionPerformed
 
     private void b00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b00ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b00, "b00", 35, player.getCurrentRate(), 37);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b00ActionPerformed
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b0, "b0", 35, player.getCurrentRate(), 0);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b0ActionPerformed
 
     private void bv1to2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv1to2ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv1to2, "bv1to2", 17, player.getCurrentRate(), 1, 2);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv1to2ActionPerformed
 
     private void bc1_2_4_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc1_2_4_5ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc1_2_4_5, "bc1_2_4_5", 8, player.getCurrentRate(), 1, 2, 4, 5);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc1_2_4_5ActionPerformed
 
     private void bv4to5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv4to5ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv4to5, "bv4to5", 17, player.getCurrentRate(), 4, 5);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv4to5ActionPerformed
 
     private void bc4_5_7_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc4_5_7_8ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc4_5_7_8, "bc4_5_7_8", 8, player.getCurrentRate(), 4, 5, 7, 8);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc4_5_7_8ActionPerformed
 
     private void bv7to8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv7to8ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv7to8, "bv7to8", 17, player.getCurrentRate(), 7, 8);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv7to8ActionPerformed
 
     private void bc7_8_10_11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc7_8_10_11ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc7_8_10_11, "bc7_8_10_11", 8, player.getCurrentRate(), 7, 8, 10, 11);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc7_8_10_11ActionPerformed
 
     private void bv10to11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv10to11ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv10to11, "bv10to11", 17, player.getCurrentRate(), 10, 11);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv10to11ActionPerformed
 
     private void bc10_11_13_14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc10_11_13_14ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc10_11_13_14, "bc10_11_13_14", 8, player.getCurrentRate(), 10, 11, 13, 14);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc10_11_13_14ActionPerformed
 
     private void bv13to14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv13to14ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv13to14, "bv13to14", 17, player.getCurrentRate(), 13, 14);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv13to14ActionPerformed
 
     private void bv16to17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv16to17ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv16to17, "bv16to17", 17, player.getCurrentRate(), 16, 17);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv16to17ActionPerformed
 
     private void bv19to20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv19to20ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv19to20, "bv19to20", 17, player.getCurrentRate(), 19, 20);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv19to20ActionPerformed
 
     private void bv22to23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv22to23ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv22to23, "bv22to23", 17, player.getCurrentRate(), 22, 23);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv22to23ActionPerformed
 
     private void bv25to26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv25to26ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv25to26, "bv25to26", 17, player.getCurrentRate(), 25, 26);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv25to26ActionPerformed
 
     private void bv28to29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv28to29ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv28to29, "bv28to29", 17, player.getCurrentRate(), 28, 29);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv28to29ActionPerformed
 
     private void bv31to32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv31to32ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv31to32, "bv31to32", 17, player.getCurrentRate(), 31, 32);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv31to32ActionPerformed
 
     private void bv34to35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv34to35ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv34to35, "bv34to35", 17, player.getCurrentRate(), 34, 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv34to35ActionPerformed
 
     private void bc13_14_16_17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc13_14_16_17ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc13_14_16_17, "bc13_14_16_17", 8, player.getCurrentRate(), 13, 14, 16, 17);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc13_14_16_17ActionPerformed
 
     private void bc16_17_19_20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc16_17_19_20ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc16_17_19_20, "bc16_17_19_20", 8, player.getCurrentRate(), 16, 17, 19, 20);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc16_17_19_20ActionPerformed
 
     private void bc19_20_22_23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc19_20_22_23ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc19_20_22_23, "bc19_20_22_23", 8, player.getCurrentRate(), 19, 20, 22, 23);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc19_20_22_23ActionPerformed
 
     private void bc22_23_25_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc22_23_25_26ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc22_23_25_26, "bc22_23_25_26", 8, player.getCurrentRate(), 22, 23, 25, 26);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc22_23_25_26ActionPerformed
 
     private void bc25_26_28_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc25_26_28_29ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc25_26_28_29, "bc25_26_28_29", 8, player.getCurrentRate(), 25, 26, 28, 29);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc25_26_28_29ActionPerformed
 
     private void bc28_29_31_32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc28_29_31_32ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc28_29_31_32, "bc28_29_31_32", 8, player.getCurrentRate(), 28, 29, 31, 32);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc28_29_31_32ActionPerformed
 
     private void bc31_32_34_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc31_32_34_35ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc31_32_34_35, "bc31_32_34_35", 8, player.getCurrentRate(), 31, 32, 34, 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc31_32_34_35ActionPerformed
 
     private void bv2to3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv2to3ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv2to3, "bv2to3", 17, player.getCurrentRate(), 2, 3);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv2to3ActionPerformed
 
     private void bv5to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv5to6ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv5to6, "bv5to6", 17, player.getCurrentRate(), 5, 6);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv5to6ActionPerformed
 
     private void bv8to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv8to9ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv8to9, "bv8to9", 17, player.getCurrentRate(), 8, 9);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv8to9ActionPerformed
 
     private void bv11to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv11to12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv11to12, "bv11to12", 17, player.getCurrentRate(), 11, 12);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv11to12ActionPerformed
 
     private void bv14to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv14to15ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv14to15, "bv14to15", 17, player.getCurrentRate(), 14, 15);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv14to15ActionPerformed
 
     private void bv17to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv17to18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv17to18, "bv17to18", 17, player.getCurrentRate(), 17, 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv17to18ActionPerformed
 
     private void bv20to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv20to21ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv20to21, "bv20to21", 17, player.getCurrentRate(), 20, 21);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv20to21ActionPerformed
 
     private void bv23to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv23to24ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv23to24, "bv23to24", 17, player.getCurrentRate(), 23, 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv23to24ActionPerformed
 
     private void bv26to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv26to27ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv26to27, "bv26to27", 17, player.getCurrentRate(), 26, 27);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv26to27ActionPerformed
 
     private void bv29to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv29to30ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv29to30, "bv29to30", 17, player.getCurrentRate(), 29, 30);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv29to30ActionPerformed
 
     private void bv32to33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv32to33ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv32to33, "bv32to33", 17, player.getCurrentRate(), 32, 33);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv32to33ActionPerformed
 
     private void bv35to36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bv35to36ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bv35to36, "bv35to36", 17, player.getCurrentRate(), 35, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bv35to36ActionPerformed
 
     private void bc2_3_5_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc2_3_5_6ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc2_3_5_6, "bc2_3_5_6", 8, player.getCurrentRate(), 2, 3, 5, 6);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc2_3_5_6ActionPerformed
 
     private void bc5_6_8_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc5_6_8_9ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc5_6_8_9, "bc5_6_8_9", 8, player.getCurrentRate(), 5, 6, 8, 9);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc5_6_8_9ActionPerformed
 
     private void bc8_9_11_12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc8_9_11_12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc8_9_11_12, "bc8_9_11_12", 8, player.getCurrentRate(), 8, 9, 11, 12);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc8_9_11_12ActionPerformed
 
     private void bc11_12_14_15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc11_12_14_15ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc11_12_14_15, "bc11_12_14_15", 8, player.getCurrentRate(), 11, 12, 14, 15);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc11_12_14_15ActionPerformed
 
     private void bc14_15_17_18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc14_15_17_18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc14_15_17_18, "bc14_15_17_18", 8, player.getCurrentRate(), 14, 15, 17, 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc14_15_17_18ActionPerformed
 
     private void bc17_18_20_21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc17_18_20_21ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc17_18_20_21, "bc17_18_20_21", 8, player.getCurrentRate(), 17, 18, 20, 21);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc17_18_20_21ActionPerformed
 
     private void bc20_21_23_24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc20_21_23_24ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc20_21_23_24, "bc20_21_23_24", 8, player.getCurrentRate(), 20, 21, 23, 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc20_21_23_24ActionPerformed
 
     private void bc23_24_26_27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc23_24_26_27ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc23_24_26_27, "bc23_24_26_27", 8, player.getCurrentRate(), 23, 24, 26, 27);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc23_24_26_27ActionPerformed
 
     private void bc26_27_29_30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc26_27_29_30ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc26_27_29_30, "bc26_27_29_30", 8, player.getCurrentRate(), 26, 27, 29, 30);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc26_27_29_30ActionPerformed
 
     private void bc29_30_32_33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc29_30_32_33ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc29_30_32_33, "bc29_30_32_33", 8, player.getCurrentRate(), 29, 30, 32, 33);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc29_30_32_33ActionPerformed
 
     private void bc32_33_35_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bc32_33_35_36ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bc32_33_35_36, "bc32_33_35_36", 8, player.getCurrentRate(), 32, 33, 35, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bc32_33_35_36ActionPerformed
 
     private void b2to1_3_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_3_36ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b2to1_3_36, "b2to1_3_36", 2, player.getCurrentRate(), 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b2to1_3_36ActionPerformed
 
     private void b2to1_2_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_2_35ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b2to1_2_35, "b2to1_2_35", 2, player.getCurrentRate(), 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b2to1_2_35ActionPerformed
 
     private void b2to1_1_34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2to1_1_34ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b2to1_1_34, "b2to1_1_35", 2, player.getCurrentRate(), 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b2to1_1_34ActionPerformed
 
     private void b1st12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1st12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b1st12, "b1st12", 2, player.getCurrentRate(), 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+        winner.currentStavSetter();
 
     }//GEN-LAST:event_b1st12ActionPerformed
 
     private void b2nd12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2nd12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b2nd12, "b2nd12", 2, player.getCurrentRate(), 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b2nd12ActionPerformed
 
     private void b1of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b1of18, "b1of18", 1, player.getCurrentRate(), 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b1of18ActionPerformed
 
     private void b_evenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_evenActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b_even, "b_even", 1, player.getCurrentRate(), 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b_evenActionPerformed
 
     private void b_redActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_redActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b_red, "b_red", 1, player.getCurrentRate(), 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b_redActionPerformed
 
     private void b_blackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_blackActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b_black, "b_black", 1, player.getCurrentRate(), 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b_blackActionPerformed
 
     private void b_oddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_oddActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b_odd, "b_odd", 1, player.getCurrentRate(), 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b_oddActionPerformed
 
     private void b19of36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of36ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b19of36, "b19of36", 1, player.getCurrentRate(), 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b19of36ActionPerformed
 
     private void b31of33vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31of33vActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b31of33v, "b31of33v", 11, player.getCurrentRate(), 31, 32, 33);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b31of33vActionPerformed
 
     private void b31of36vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b31of36vvActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b31of36vv, "b31of36vv", 5, player.getCurrentRate(), 31, 32, 33, 34, 35, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b31of36vvActionPerformed
 
     private void b16of21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16of21ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b16of21, "b16of31", 5, player.getCurrentRate(), 16, 17, 18, 19, 20, 21);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b16of21ActionPerformed
 
     private void b7of9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7of9ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b7of9, "b7of9", 11, player.getCurrentRate(), 7, 8, 9);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b7of9ActionPerformed
 
     private void b19of24vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of24vvActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b19of24vv, "b19of24vv", 5, player.getCurrentRate(), 19, 20, 21, 22, 23, 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b19of24vvActionPerformed
 
     private void b10of15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10of15ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b10of15, "b10of15", 5, player.getCurrentRate(), 10, 11, 12, 13, 14, 15);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b10of15ActionPerformed
 
     private void b22of27vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22of27vvActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b22of27vv, "b16", 5, player.getCurrentRate(), 22, 23, 24, 25, 26, 27);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b22of27vvActionPerformed
 
     private void b34of36vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b34of36vActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b34of36v, "b34of36v", 11, player.getCurrentRate(), 34, 35, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b34of36vActionPerformed
 
     private void b28of33vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28of33vvActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b28of33vv, "b28of33vv", 5, player.getCurrentRate(), 28, 29, 30, 31, 32, 33);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b28of33vvActionPerformed
 
     private void b10of12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b10of12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b10of12, "b10of12", 11, player.getCurrentRate(), 10, 11, 12);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b10of12ActionPerformed
 
     private void b7of12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7of12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b7of12, "b7of12", 5, player.getCurrentRate(), 7, 8, 9, 10, 11, 12);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b7of12ActionPerformed
 
     private void b19of21vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b19of21vActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b19of21v, "b19of21v", 11, player.getCurrentRate(), 19, 20, 21);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b19of21vActionPerformed
 
     private void b25of27vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25of27vActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b25of27v, "b25of27v", 11, player.getCurrentRate(), 25, 26, 27);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b25of27vActionPerformed
 
     private void b13of15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13of15ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b13of15, "b13of15", 11, player.getCurrentRate(), 13, 14, 15);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b13of15ActionPerformed
 
     private void b4of6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4of6ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b4of6, "b4of6", 11, player.getCurrentRate(), 4, 5, 6);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b4of6ActionPerformed
 
     private void b28of30vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b28of30vActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b28of30v, "b28of30v", 11, player.getCurrentRate(), 28, 29, 30);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b28of30vActionPerformed
 
     private void b22of24vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b22of24vActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b22of24v, "b22of24v", 11, player.getCurrentRate(), 22, 23, 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b22of24vActionPerformed
 
     private void b16of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b16of18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b16of18, "b16of18", 11, player.getCurrentRate(), 16, 17, 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b16of18ActionPerformed
 
     private void b25of30vvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b25of30vvActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b25of30vv, "b25of30vv", 5, player.getCurrentRate(), 25, 26, 27, 28, 29, 30);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b25of30vvActionPerformed
 
     private void b1of6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of6ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b1of6, "b1of6", 5, player.getCurrentRate(), 1, 2, 3, 4, 5, 6);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b1of6ActionPerformed
 
     private void b1of3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1of3ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b1of3, "b1of3", 11, player.getCurrentRate(), 1, 2, 3);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b1of3ActionPerformed
 
     private void b13of18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b13of18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b13of18, "b13of18", 5, player.getCurrentRate(), 13, 14, 15, 16, 17, 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b13of18ActionPerformed
 
     private void b4of9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4of9ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b4of9, "b4of9", 5, player.getCurrentRate(), 4, 5, 6, 7, 8, 9);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b4of9ActionPerformed
 
     private void b0of3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0of3ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b0of3, "b0of3", 8, player.getCurrentRate(), 0, 1, 2, 3);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b0of3ActionPerformed
 
     private void bg3to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg3to6ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg3to6, "b3to6", 17, player.getCurrentRate(), 3, 6);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg3to6ActionPerformed
 
     private void bg6to9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg6to9ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg6to9, "bg6to9", 17, player.getCurrentRate(), 6, 9);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg6to9ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b9, "b9", 35, player.getCurrentRate(), 9);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b9ActionPerformed
 
     private void bg9to12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg9to12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg9to12, "bg9to12", 17, player.getCurrentRate(), 9, 12);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg9to12ActionPerformed
 
     private void b12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b12, "b12", 35, player.getCurrentRate(), 12);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b12ActionPerformed
 
     private void bg12to15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg12to15ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg12to15, "bg12to15", 17, player.getCurrentRate(), 12, 15);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg12to15ActionPerformed
 
     private void b15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b15ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b15, "b15", 35, player.getCurrentRate(), 15);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b15ActionPerformed
 
     private void bg15to18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg15to18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg15to18, "bg15to18", 17, player.getCurrentRate(), 15, 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg15to18ActionPerformed
 
     private void b18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b18ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b18, "b18", 35, player.getCurrentRate(), 18);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b18ActionPerformed
 
     private void bg18to21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg18to21ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg18to21, "bg18to21", 17, player.getCurrentRate(), 18, 21);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg18to21ActionPerformed
 
     private void b21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b21ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b21, "b21", 35, player.getCurrentRate(), 21);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b21ActionPerformed
 
     private void bg21to24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg21to24ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg21to24, "bg21to24", 17, player.getCurrentRate(), 21, 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg21to24ActionPerformed
 
     private void b24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b24ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b24, "b24", 35, player.getCurrentRate(), 24);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b24ActionPerformed
 
     private void bg24to27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg24to27ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg24to27, "bg24to27", 17, player.getCurrentRate(), 24, 27);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg24to27ActionPerformed
 
     private void b27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b27ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b27, "b27", 35, player.getCurrentRate(), 27);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b27ActionPerformed
 
     private void bg27to30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg27to30ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg27to30, "bg27to30", 17, player.getCurrentRate(), 27, 30);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg27to30ActionPerformed
 
     private void b30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b30ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b30, "b30", 35, player.getCurrentRate(), 30);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b30ActionPerformed
 
     private void bg30to33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg30to33ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg30to33, "b30to33", 17, player.getCurrentRate(), 30, 33);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg30to33ActionPerformed
 
     private void b33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b33ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b33, "b33", 35, player.getCurrentRate(), 33);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b33ActionPerformed
 
     private void bg33to36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bg33to36ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(bg33to36, "bg33to36", 17, player.getCurrentRate(), 33, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_bg33to36ActionPerformed
 
     private void b36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b36ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b36, "b36", 35, player.getCurrentRate(), 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b36ActionPerformed
 
     private void b3rd12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3rd12ActionPerformed
-        notif.setAllStavLabel(lPlayerCurrentStav);
         chipMngr.addChipInArrayAndPlusCounter(b3rd12, "b3rd12", 2, player.getCurrentRate(), 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36);
+        winner.currentStavSetter();
     }//GEN-LAST:event_b3rd12ActionPerformed
 
     private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
@@ -3701,17 +3701,18 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         winner.rollTheBall();
         winner.showBall(bollLabel);
+        winner.currentStavSetter();
+        winner.clearStavSetter();
         winner.logikaSravneniaStavok(chipMngr, player, notifLabel);
-        notif.setAllStavLabel(lPlayerCurrentStav);
+        winner.gameStatus();
         winner.luseStatus();
         notif.playerSetLabelText(lPlayerName, lPlayerButget);
-        notif.clearAllStavLabel(lPlayerCurrentStav);
         chipMngr.clearAllFields();
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
+        winner.clearStavSetter();
         chipMngr.clearAllFields();
-        notif.clearAllStavLabel(lPlayerCurrentStav);
     }//GEN-LAST:event_clearAllFieldActionPerformed
 // </editor-fold>
 
@@ -3884,7 +3885,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
     public javax.swing.JLabel lPlayerButget;
-    private javax.swing.JLabel lPlayerCurrentStav;
+    public javax.swing.JLabel lPlayerCurrentStav;
     public javax.swing.JLabel lPlayerName;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
