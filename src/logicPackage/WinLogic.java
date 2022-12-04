@@ -113,7 +113,7 @@ public class WinLogic {
 
     //Метод изменения значения величины текущей общей ставки
     public void currentStavSetter() {
-        if(mf.player.getBudget()>0){
+        if(mf.player.getBudget()>=mf.player.getCurrentRate()){
         mf.player.setAllStav(mf.player.getAllStav() + mf.player.getCurrentRate());
         mf.player.setBudget(mf.player.getBudget() - mf.player.getCurrentRate());
         gameStatus();

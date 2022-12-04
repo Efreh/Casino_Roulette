@@ -24,7 +24,7 @@ public class ChipManager {
     //Изменение иконки фишки и текстовое отображение счетчика нажатий на кнопку фишки
     public void addChipInArrayAndPlusCounter(JButton button, String nameChip, int coefficientChip, int currentRate, int... numberChip) {
         Chip sampleChip = new Chip(button, nameChip, coefficientChip, currentRate, numberChip);
-        if (player.getBudget() > 0) {
+        if (player.getBudget() >= currentRate) {
             if (currentChipArray.contains(sampleChip)) {
                 for (int i = 0; i < currentChipArray.size(); i++) {
                     if (currentChipArray.get(i).equals(sampleChip)) {
