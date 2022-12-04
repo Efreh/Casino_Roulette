@@ -3702,11 +3702,11 @@ public class MainFrame extends javax.swing.JFrame {
         winner.rollTheBall();
         winner.showBall(bollLabel);
         winner.currentStavSetter();
-        winner.clearStavSetter();
         winner.logikaSravneniaStavok(chipMngr, player, notifLabel);
         winner.gameStatus();
         winner.luseStatus();
         notif.playerSetLabelText(lPlayerName, lPlayerButget);
+        winner.clearStavSetter();
         chipMngr.clearAllFields();
     }//GEN-LAST:event_bRollBallActionPerformed
 
