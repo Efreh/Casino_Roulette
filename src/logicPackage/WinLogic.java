@@ -28,21 +28,32 @@ public class WinLogic {
     public void logikaSravneniaStavok(ChipManager chipManager, Player player, JLabel notifLabel) {
         ArrayList<ArrayList> bigList = chipManager.chipsArraysArray;
         int allWinCount = 0;
+        int allLuseCount = 0;
         for (ArrayList a : bigList) {
             for (Object c : a) {
                 Chip chip = (Chip) c;
                 if (chip.arraysChipNumbers.contains(numberBall)) {
+                    
+                    player.setBudget(player.getBudget()-chip.currentRate* chip.counterChip);
+                    
                     player.setWinAndLuseSize(chip.coefficientChip * chip.currentRate * chip.counterChip);
                     player.setBudget(player.getBudget() + player.getWinAndLuseSize());
                     allWinCount += player.getWinAndLuseSize();
-                    notifLabel.setText("Вы выиграли: " + Integer.toString(allWinCount));
                 } else {
                     player.setWinAndLuseSize(chip.currentRate * chip.counterChip);
                     player.setBudget(player.getBudget() - player.getWinAndLuseSize());
-                    allWinCount += player.getWinAndLuseSize();
-                    notifLabel.setText("Вы проиграли: " + Integer.toString(allWinCount));
+                    allLuseCount += player.getWinAndLuseSize();
                 }
             }
+        }
+        if (allWinCount > 0 && allLuseCount == 0) {
+            notifLabel.setText("Вы выиграли: " + Integer.toString(allWinCount));
+
+        } else if (allWinCount == 0 && allLuseCount > 0) {
+            notifLabel.setText("Вы проиграли: " + Integer.toString(allLuseCount));
+
+        } else if (allWinCount > 0 && allLuseCount > 0) {
+            notifLabel.setText("<html>Вы выиграли: " + Integer.toString(allWinCount)+"<br>"+"Проиграли: "+Integer.toString(allLuseCount));
         }
     }
 

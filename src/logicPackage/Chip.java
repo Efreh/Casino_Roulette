@@ -15,7 +15,7 @@ public class Chip {
     Chip(JButton button,String nameChip, int coefficientChip, int currentRate, int... numberChip) {
         this.button=button;
         this.nameChip = nameChip;
-        this.coefficientChip = coefficientChip;
+        this.coefficientChip = ++coefficientChip;                               //На кой-то хер коффицент +1 должен быть,если кооф 1:1, то для игры значение коофа 2
         this.currentRate = currentRate;
         for (int i : numberChip) {
             this.arraysChipNumbers.add(Integer.valueOf(i));

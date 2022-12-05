@@ -2884,7 +2884,7 @@ public class MainFrame extends javax.swing.JFrame {
         lPlayerCurrentStav.setText("Ставка");
         lPlayerCurrentStav.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerCurrentStav);
-        lPlayerCurrentStav.setBounds(550, 50, 160, 30);
+        lPlayerCurrentStav.setBounds(550, 50, 160, 60);
 
         notifLabel.setBackground(new java.awt.Color(51, 153, 0));
         notifLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3702,11 +3702,11 @@ public class MainFrame extends javax.swing.JFrame {
         winner.rollTheBall();
         winner.showBall(bollLabel);
         winner.currentStavSetter();
+        winner.clearStavSetter();
         winner.logikaSravneniaStavok(chipMngr, player, notifLabel);
         winner.gameStatus();
         winner.luseStatus();
         notif.playerSetLabelText(lPlayerName, lPlayerButget);
-        winner.clearStavSetter();
         chipMngr.clearAllFields();
     }//GEN-LAST:event_bRollBallActionPerformed
 
