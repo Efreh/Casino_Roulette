@@ -18,5 +18,9 @@ public class IconVariables {
     public String orangeChipsChoiseWindow100x100 = "/resources/orangeChipsChoiseWindow.png";
 
     public String fieldImage = "/resources/field";
-    public String playerIcon = "/resources/player50x54_icon.png";
+    
+    public String manPlayerIcon = "/resources/man_icon.png";
+    public String jokerPlayerIcon = "/resources/joker_icon.png";
+    public String rot_cazinoPlayerIcon = "/resources/rot_cazino.png";
+    public String womenPlayerIcon = "/resources/women_icon.png";
 }

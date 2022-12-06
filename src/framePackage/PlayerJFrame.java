@@ -1,11 +1,12 @@
 package framePackage;
 //Окно смены параметров Игрока
 
-import logicPackage.Player;
+import logicPackage.IconVariables;
 
 public class PlayerJFrame extends javax.swing.JFrame {
 
     MainFrame mf;
+    IconVariables icon = new IconVariables();
 
     //Стандартный конструктор для main метода этого окна
     public PlayerJFrame() {
@@ -18,6 +19,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
         this.mf = mf;
         tfName.setText(mf.player.getName());
         tfBetSize.setText(Integer.toString(mf.player.getBudget()));
+        iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource(mf.player.getProfileIcon())));
     }
 
     @SuppressWarnings("unchecked")
@@ -31,6 +33,8 @@ public class PlayerJFrame extends javax.swing.JFrame {
         tfBetSize = new javax.swing.JTextField();
         tfName = new javax.swing.JTextField();
         nameLabel = new javax.swing.JLabel();
+        iconLabel = new javax.swing.JLabel();
+        iconComboBox = new javax.swing.JComboBox<>();
         fountLabel = new javax.swing.JLabel();
 
         setAlwaysOnTop(true);
@@ -71,27 +75,44 @@ public class PlayerJFrame extends javax.swing.JFrame {
         errorLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         errorLabel.setOpaque(true);
         jPanel1.add(errorLabel);
-        errorLabel.setBounds(270, 20, 160, 60);
+        errorLabel.setBounds(270, 110, 160, 60);
 
+        tfBetSize.setBackground(new java.awt.Color(250, 250, 250));
         tfBetSize.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfBetSize.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(tfBetSize);
-        tfBetSize.setBounds(270, 80, 160, 60);
+        tfBetSize.setBounds(270, 170, 160, 30);
 
         tfName.setBackground(new java.awt.Color(250, 250, 250));
         tfName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tfName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(tfName);
-        tfName.setBounds(20, 80, 160, 60);
+        tfName.setBounds(20, 170, 160, 30);
 
         nameLabel.setBackground(new java.awt.Color(51, 153, 0));
         nameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nameLabel.setText("Ведите имя игрока");
+        nameLabel.setText("<html>Введите имя игрока.<br>Не более 20 символов");
         nameLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         nameLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         nameLabel.setOpaque(true);
         jPanel1.add(nameLabel);
-        nameLabel.setBounds(20, 20, 160, 60);
+        nameLabel.setBounds(20, 110, 160, 60);
+
+        iconLabel.setBackground(new java.awt.Color(51, 153, 0));
+        iconLabel.setText("Сменить иконку");
+        iconLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        iconLabel.setOpaque(true);
+        jPanel1.add(iconLabel);
+        iconLabel.setBounds(110, 30, 160, 60);
+
+        iconComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Иконка 1", "Иконка 2", "Иконка 3", "Иконка 4" }));
+        iconComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iconComboBoxActionPerformed(evt);
+            }
+        });
+        jPanel1.add(iconComboBox);
+        iconComboBox.setBounds(270, 30, 84, 60);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -113,22 +134,47 @@ public class PlayerJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
-        mf.player.setName(tfName.getText());
         try {
+            if (tfName.getText().length() <= 20) {
+                mf.player.setName(tfName.getText());
+            } else {
+                throw new ArrayIndexOutOfBoundsException();
+            }
             int butget = Integer.parseInt(tfBetSize.getText());
             if (butget >= 10 && butget <= 5000) {
                 mf.player.setBudget(butget);
                 mf.winner.gameStatus();
-                mf.notif.playerSetLabelText(mf.lPlayerName, mf.lPlayerButget);
+                mf.notif.playerSetLabelText(mf.lPlayerName, mf.lPlayerButget, mf.bPlayer);
             } else {
                 throw new NumberFormatException();
             }
             mf.setEnabled(true);
+            mf.bPlayer.setIcon(new javax.swing.ImageIcon(getClass().getResource(mf.player.getProfileIcon())));
             dispose();
         } catch (NumberFormatException e) {
             errorLabel.setText("<html>Введи число!<p>От 10 до 5000</html>");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            nameLabel.setText("<html>Имя игрока не должно" + "<br> превышать 20 символов");
         }
     }//GEN-LAST:event_bSaveActionPerformed
+
+    private void iconComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iconComboBoxActionPerformed
+        switch (iconComboBox.getSelectedIndex()) {
+            case 0:
+                mf.player.setProfileIcon(icon.jokerPlayerIcon);
+                break;
+            case 1:
+                mf.player.setProfileIcon(icon.womenPlayerIcon);
+                break;
+            case 2:
+                mf.player.setProfileIcon(icon.manPlayerIcon);
+                break;
+            case 3:
+                mf.player.setProfileIcon(icon.rot_cazinoPlayerIcon);
+                break;
+        }
+        iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource(mf.player.getProfileIcon())));
+    }//GEN-LAST:event_iconComboBoxActionPerformed
 
     public static void main(String args[]) {
 
@@ -143,6 +189,8 @@ public class PlayerJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bSave;
     private javax.swing.JLabel errorLabel;
     private javax.swing.JLabel fountLabel;
+    private javax.swing.JComboBox<String> iconComboBox;
+    private javax.swing.JLabel iconLabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField tfBetSize;

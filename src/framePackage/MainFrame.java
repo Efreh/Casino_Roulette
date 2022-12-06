@@ -14,7 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
         initComponents();
-        notif.playerSetLabelText(lPlayerName, lPlayerButget);
+        notif.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
     }
 
     @SuppressWarnings("unchecked")
@@ -2828,7 +2828,6 @@ public class MainFrame extends javax.swing.JFrame {
         clearAllField.setBounds(880, 440, 160, 60);
 
         bPlayer.setBackground(new java.awt.Color(51, 153, 0));
-        bPlayer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/player50x54_icon.png"))); // NOI18N
         bPlayer.setText("<html>Профиль<p>Игрока</html>");
         bPlayer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bPlayer.setFocusable(false);
@@ -3706,7 +3705,7 @@ public class MainFrame extends javax.swing.JFrame {
         winner.logikaSravneniaStavok(chipMngr, player, notifLabel);
         winner.gameStatus();
         winner.luseStatus();
-        notif.playerSetLabelText(lPlayerName, lPlayerButget);
+        notif.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
         chipMngr.clearAllFields();
     }//GEN-LAST:event_bRollBallActionPerformed
 
@@ -3797,7 +3796,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton b7of9;
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
-    private javax.swing.JButton bPlayer;
+    public javax.swing.JButton bPlayer;
     private javax.swing.JButton bRollBall;
     private javax.swing.JButton b_black;
     private javax.swing.JButton b_even;

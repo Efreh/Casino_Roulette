@@ -1,9 +1,8 @@
 package logicPackage;
 
-import javax.swing.JLabel;
-
 public class Player {
-
+    IconVariables iconVar = new IconVariables();
+    
     private String name = "Игрок";
     public String getName(){return name;}
     public void setName(String s){name= s;}
@@ -23,4 +22,8 @@ public class Player {
     private int allStav=0;
     public int getAllStav (){return allStav;}
     public void setAllStav(int i){allStav= i;}
+    
+    private String profileIcon=iconVar.jokerPlayerIcon;
+    public String getProfileIcon (){return profileIcon;}
+    public void setProfileIcon(String s){profileIcon= s;}
 }
