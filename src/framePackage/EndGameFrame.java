@@ -1,15 +1,16 @@
+//Окно проигрыша
 package framePackage;
-
-import logicPackage.*;
 
 public class EndGameFrame extends javax.swing.JFrame {
 
+    //Локальный адресс Главного окна
     MainFrame mf;
 
     public EndGameFrame() {
         initComponents();
     }
 
+    //Конструктор для получения данных с главного окна
     public EndGameFrame(MainFrame mf) {
         initComponents();
         this.mf = mf;
@@ -117,11 +118,11 @@ public class EndGameFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bExitActionPerformed
-        System.exit(0);
+        System.exit(0);                                                         //Выход из игры
     }//GEN-LAST:event_bExitActionPerformed
 
     private void bNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNewGameActionPerformed
-        new PlayerJFrame(mf).setVisible(true);
+        new PlayerJFrame(mf).setVisible(true);                                  //Запуск новой игры из окна профиля игрока
         dispose();
     }//GEN-LAST:event_bNewGameActionPerformed
 

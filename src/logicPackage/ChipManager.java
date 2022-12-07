@@ -86,4 +86,21 @@ public class ChipManager {
             newChipArrayInArray();
         }
     }
+
+    //Метод проверки на пустоту всех массивов
+    public boolean isEmptyArray() {
+        ArrayList<String> booleanArray = new ArrayList<String>();
+        for (ArrayList outerList : chipsArraysArray) {
+            if (outerList.isEmpty()) {
+                booleanArray.add("empty");
+            } else if (!outerList.isEmpty()) {
+                booleanArray.add("notEmpty");
+            }
+        }
+        if (booleanArray.contains("notEmpty")) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

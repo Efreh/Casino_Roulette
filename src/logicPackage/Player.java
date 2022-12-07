@@ -1,5 +1,8 @@
 package logicPackage;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 public class Player {
     IconVariables iconVar = new IconVariables();
     
@@ -26,4 +29,11 @@ public class Player {
     private String profileIcon=iconVar.jokerPlayerIcon;
     public String getProfileIcon (){return profileIcon;}
     public void setProfileIcon(String s){profileIcon= s;}
+    
+    //Установка имени, размера бюджета и иконки профиля на nainframe
+    public void playerSetLabelText(JLabel nameL, JLabel BetSizeL,JButton button){
+        nameL.setText(getName());
+        BetSizeL.setText("Бюджет: "+Integer.toString(getBudget()));
+        button.setIcon(new javax.swing.ImageIcon(getClass().getResource(getProfileIcon())));
+    }
 }

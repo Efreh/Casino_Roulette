@@ -1,20 +1,18 @@
+//Главное окно игры
 package framePackage;
 
-import java.awt.Color;
-import java.util.ArrayList;
 import logicPackage.*;
 
 public class MainFrame extends javax.swing.JFrame {
 
-    public Player player = new Player();
-    public ChipManager chipMngr = new ChipManager(player);
-    public WinLogic winner = new WinLogic(framePackage.MainFrame.this);
-    public Notification notif = new Notification(player);
-    public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);
+    public Player player = new Player();                                                        //Объект профиля игрока
+    public ChipManager chipMngr = new ChipManager(player);                                      //Объект менеджера полей ставок //Принимает данные профиля игрока
+    public WinLogic winner = new WinLogic(framePackage.MainFrame.this);                         //Объект логики игры // Принимает в параметр mainFrame
+    public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);//Создание фрейма SetChips как объекта для передачи параметров в него
 
     public MainFrame() {
         initComponents();
-        notif.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
+        player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);                         //В конструкторе выставляется параметры объекта игрока 
     }
 
     @SuppressWarnings("unchecked")
@@ -2825,7 +2823,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(clearAllField);
-        clearAllField.setBounds(880, 440, 160, 60);
+        clearAllField.setBounds(890, 440, 160, 60);
 
         bPlayer.setBackground(new java.awt.Color(51, 153, 0));
         bPlayer.setText("<html>Профиль<p>Игрока</html>");
@@ -2839,7 +2837,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(bPlayer);
-        bPlayer.setBounds(880, 50, 160, 60);
+        bPlayer.setBounds(970, 50, 160, 60);
 
         lPlayerName.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2847,14 +2845,14 @@ public class MainFrame extends javax.swing.JFrame {
         lPlayerName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lPlayerName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maskPanel.add(lPlayerName);
-        lPlayerName.setBounds(710, 50, 160, 30);
+        lPlayerName.setBounds(800, 50, 160, 30);
 
         lPlayerButget.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerButget.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lPlayerButget.setText("Бюджет");
         lPlayerButget.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerButget);
-        lPlayerButget.setBounds(710, 80, 160, 30);
+        lPlayerButget.setBounds(800, 80, 160, 30);
 
         bRollBall.setBackground(new java.awt.Color(51, 153, 0));
         bRollBall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/rollIcon.png"))); // NOI18N
@@ -2869,7 +2867,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(bRollBall);
-        bRollBall.setBounds(540, 440, 160, 60);
+        bRollBall.setBounds(530, 440, 160, 60);
 
         bollLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         bollLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2880,16 +2878,16 @@ public class MainFrame extends javax.swing.JFrame {
 
         lPlayerCurrentStav.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerCurrentStav.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lPlayerCurrentStav.setText("Ставка");
+        lPlayerCurrentStav.setText("Ставка: 0");
         lPlayerCurrentStav.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerCurrentStav);
-        lPlayerCurrentStav.setBounds(550, 50, 160, 60);
+        lPlayerCurrentStav.setBounds(630, 50, 160, 60);
 
         notifLabel.setBackground(new java.awt.Color(51, 153, 0));
         notifLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         notifLabel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(notifLabel);
-        notifLabel.setBounds(390, 50, 160, 60);
+        notifLabel.setBounds(460, 50, 160, 60);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -3677,18 +3675,17 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_b3rd12ActionPerformed
 
     private void setChipsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_setChipsActionPerformed
-        // При создании нового фрейма выбора фишки, передает в конструктор окна выбора фишки объект класса chipMngr и player
-        //Так же передаёт текущий фрейм в конструктор выбора фишки
+        //Создание окна выбора размера ставки
         setChipsFrame.setVisible(true);
 
-        //Блокировка окна на время выбора фишки
+        //Блокировка главного окна на время выбора фишки
         framePackage.MainFrame.this.setEnabled(false);
     }//GEN-LAST:event_setChipsActionPerformed
 
     private void bPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPlayerActionPerformed
-        // При создании нового фрейма выбора фишки, передает в конструктор окна выбора фишки объект класса player
-        //Так же передаёт текущий фрейм в конструктор выбора фишки
-        if (chipMngr.chipsArraysArray.size() == 1 && chipMngr.currentChipArray.size() == 0) {
+        //Создание окна настроек Игрока, при пустых полях ставок
+        //Передача mainFrame в параметр окна Игрока
+        if (chipMngr.isEmptyArray()) {
             new PlayerJFrame(framePackage.MainFrame.this).setVisible(true);
             //Блокировка окна на время выбора фишки
             framePackage.MainFrame.this.setEnabled(false);
@@ -3698,20 +3695,24 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bPlayerActionPerformed
 
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
-        winner.rollTheBall();
-        winner.showBall(bollLabel);
-        winner.currentStavSetter();
-        winner.clearStavSetter();
-        winner.logikaSravneniaStavok(chipMngr, player, notifLabel);
-        winner.gameStatus();
-        winner.luseStatus();
-        notif.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
-        chipMngr.clearAllFields();
+        //Кнопка запуска шара //Шар запускается при наличии ставки на столе
+        if (!chipMngr.isEmptyArray()) {
+            winner.rollTheBall();                                               //Запуск шара
+            winner.showBall(bollLabel);                                         //Индикация шара                                       
+            winner.clearStavSetter();                                           //Очистка поля "текущая ставка" и возврат значений "бюджета" для последующего расчета выигрыша
+            winner.logikaSravneniaStavok(chipMngr, player, notifLabel);         //Логика сравнения ставок и выигрыша/проигрыша
+            winner.gameStatus();                                                //Проверка на возможность выбора размера ставки в зависимости от размера бюджета
+            winner.luseStatus();                                                //Проверка на поражение путем проигрыша бюджета
+            player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);     //Установка новых значений бюджета
+            chipMngr.clearAllFields();                                          //Очистка всех полей ставок
+        } else {
+            notifLabel.setText("<html><font color='#9B1C00'>Сделайте ставку");  
+        }
     }//GEN-LAST:event_bRollBallActionPerformed
 
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
-        winner.clearStavSetter();
-        chipMngr.clearAllFields();
+        winner.clearStavSetter();                                               //Очистка поля "текущая ставка" и возврат значений "бюджета"
+        chipMngr.clearAllFields();                                              //Очистка всех полей ставок
     }//GEN-LAST:event_clearAllFieldActionPerformed
 // </editor-fold>
 

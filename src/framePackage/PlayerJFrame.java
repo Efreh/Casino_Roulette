@@ -1,5 +1,5 @@
-package framePackage;
 //Окно смены параметров Игрока
+package framePackage;
 
 import logicPackage.IconVariables;
 
@@ -105,14 +105,14 @@ public class PlayerJFrame extends javax.swing.JFrame {
         jPanel1.add(iconLabel);
         iconLabel.setBounds(110, 30, 160, 60);
 
-        iconComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Иконка 1", "Иконка 2", "Иконка 3", "Иконка 4" }));
+        iconComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Джокер", "Женщина", "Мужчина", "Этого казино" }));
         iconComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 iconComboBoxActionPerformed(evt);
             }
         });
         jPanel1.add(iconComboBox);
-        iconComboBox.setBounds(270, 30, 84, 60);
+        iconComboBox.setBounds(270, 30, 106, 60);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -144,7 +144,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
             if (butget >= 10 && butget <= 5000) {
                 mf.player.setBudget(butget);
                 mf.winner.gameStatus();
-                mf.notif.playerSetLabelText(mf.lPlayerName, mf.lPlayerButget, mf.bPlayer);
+                mf.player.playerSetLabelText(mf.lPlayerName, mf.lPlayerButget, mf.bPlayer);
             } else {
                 throw new NumberFormatException();
             }
