@@ -2,6 +2,8 @@
 package framePackage;
 
 import logicPackage.*;
+import animations.RouletteRun;
+import javax.swing.Timer;
 
 public class MainFrame extends javax.swing.JFrame {
 
@@ -21,6 +23,45 @@ public class MainFrame extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         maskPanel = new javax.swing.JPanel();
+        roulettePanel = new javax.swing.JPanel();
+        labOut00 = new javax.swing.JLabel();
+        labOut27 = new javax.swing.JLabel();
+        labOut10 = new javax.swing.JLabel();
+        labOut25 = new javax.swing.JLabel();
+        labOut29 = new javax.swing.JLabel();
+        labOut12 = new javax.swing.JLabel();
+        labOut8 = new javax.swing.JLabel();
+        labOut19 = new javax.swing.JLabel();
+        labOut31 = new javax.swing.JLabel();
+        labOut18 = new javax.swing.JLabel();
+        labOut6 = new javax.swing.JLabel();
+        labOut21 = new javax.swing.JLabel();
+        labOut33 = new javax.swing.JLabel();
+        labOut16 = new javax.swing.JLabel();
+        labOut4 = new javax.swing.JLabel();
+        labOut23 = new javax.swing.JLabel();
+        labOut35 = new javax.swing.JLabel();
+        labOut14 = new javax.swing.JLabel();
+        labOut2 = new javax.swing.JLabel();
+        labOut0 = new javax.swing.JLabel();
+        labOut28 = new javax.swing.JLabel();
+        labOut9 = new javax.swing.JLabel();
+        labOut26 = new javax.swing.JLabel();
+        labOut30 = new javax.swing.JLabel();
+        labOut11 = new javax.swing.JLabel();
+        labOut7 = new javax.swing.JLabel();
+        labOut20 = new javax.swing.JLabel();
+        labOut32 = new javax.swing.JLabel();
+        labOut17 = new javax.swing.JLabel();
+        labOut5 = new javax.swing.JLabel();
+        labOut22 = new javax.swing.JLabel();
+        labOut34 = new javax.swing.JLabel();
+        labOut15 = new javax.swing.JLabel();
+        labOut3 = new javax.swing.JLabel();
+        labOut24 = new javax.swing.JLabel();
+        labOut36 = new javax.swing.JLabel();
+        labOut13 = new javax.swing.JLabel();
+        labOut1 = new javax.swing.JLabel();
         b00 = new javax.swing.JButton();
         b0 = new javax.swing.JButton();
         b1 = new javax.swing.JButton();
@@ -192,6 +233,164 @@ public class MainFrame extends javax.swing.JFrame {
 
         maskPanel.setOpaque(false);
         maskPanel.setLayout(null);
+
+        roulettePanel.setOpaque(false);
+        roulettePanel.setLayout(null);
+
+        labOut00.setName("37"); // NOI18N
+        roulettePanel.add(labOut00);
+        labOut00.setBounds(155, 20, 15, 15);
+
+        labOut27.setName("27"); // NOI18N
+        roulettePanel.add(labOut27);
+        labOut27.setBounds(180, 20, 15, 15);
+
+        labOut10.setName("10"); // NOI18N
+        roulettePanel.add(labOut10);
+        labOut10.setBounds(200, 20, 15, 15);
+
+        labOut25.setName("25"); // NOI18N
+        roulettePanel.add(labOut25);
+        labOut25.setBounds(220, 30, 15, 15);
+
+        labOut29.setName("29"); // NOI18N
+        roulettePanel.add(labOut29);
+        labOut29.setBounds(240, 40, 15, 15);
+
+        labOut12.setName("12"); // NOI18N
+        roulettePanel.add(labOut12);
+        labOut12.setBounds(260, 60, 15, 15);
+
+        labOut8.setName("8"); // NOI18N
+        roulettePanel.add(labOut8);
+        labOut8.setBounds(270, 80, 15, 15);
+
+        labOut19.setName("19"); // NOI18N
+        roulettePanel.add(labOut19);
+        labOut19.setBounds(280, 100, 15, 15);
+
+        labOut31.setName("31"); // NOI18N
+        roulettePanel.add(labOut31);
+        labOut31.setBounds(290, 120, 15, 15);
+
+        labOut18.setName("18"); // NOI18N
+        roulettePanel.add(labOut18);
+        labOut18.setBounds(290, 145, 15, 15);
+
+        labOut6.setName("6"); // NOI18N
+        roulettePanel.add(labOut6);
+        labOut6.setBounds(290, 170, 15, 15);
+
+        labOut21.setName("21"); // NOI18N
+        roulettePanel.add(labOut21);
+        labOut21.setBounds(290, 190, 15, 15);
+
+        labOut33.setName("33"); // NOI18N
+        roulettePanel.add(labOut33);
+        labOut33.setBounds(280, 210, 15, 15);
+
+        labOut16.setName("16"); // NOI18N
+        roulettePanel.add(labOut16);
+        labOut16.setBounds(270, 230, 15, 15);
+
+        labOut4.setName("4"); // NOI18N
+        roulettePanel.add(labOut4);
+        labOut4.setBounds(260, 250, 15, 15);
+
+        labOut23.setName("23"); // NOI18N
+        roulettePanel.add(labOut23);
+        labOut23.setBounds(240, 260, 15, 15);
+
+        labOut35.setName("35"); // NOI18N
+        roulettePanel.add(labOut35);
+        labOut35.setBounds(220, 270, 15, 15);
+
+        labOut14.setName("14"); // NOI18N
+        roulettePanel.add(labOut14);
+        labOut14.setBounds(200, 280, 15, 15);
+
+        labOut2.setName("2"); // NOI18N
+        roulettePanel.add(labOut2);
+        labOut2.setBounds(180, 290, 15, 15);
+
+        labOut0.setName("0"); // NOI18N
+        roulettePanel.add(labOut0);
+        labOut0.setBounds(155, 290, 15, 15);
+
+        labOut28.setName("28"); // NOI18N
+        roulettePanel.add(labOut28);
+        labOut28.setBounds(130, 290, 15, 15);
+
+        labOut9.setName("9"); // NOI18N
+        roulettePanel.add(labOut9);
+        labOut9.setBounds(110, 280, 15, 15);
+
+        labOut26.setName("26"); // NOI18N
+        roulettePanel.add(labOut26);
+        labOut26.setBounds(90, 270, 15, 15);
+
+        labOut30.setName("30"); // NOI18N
+        roulettePanel.add(labOut30);
+        labOut30.setBounds(70, 260, 15, 15);
+
+        labOut11.setName("11"); // NOI18N
+        roulettePanel.add(labOut11);
+        labOut11.setBounds(50, 250, 15, 15);
+
+        labOut7.setName("7"); // NOI18N
+        roulettePanel.add(labOut7);
+        labOut7.setBounds(40, 230, 15, 15);
+
+        labOut20.setName("20"); // NOI18N
+        roulettePanel.add(labOut20);
+        labOut20.setBounds(30, 210, 15, 15);
+
+        labOut32.setName("32"); // NOI18N
+        roulettePanel.add(labOut32);
+        labOut32.setBounds(20, 190, 15, 15);
+
+        labOut17.setName("17"); // NOI18N
+        roulettePanel.add(labOut17);
+        labOut17.setBounds(20, 170, 15, 15);
+
+        labOut5.setName("5"); // NOI18N
+        roulettePanel.add(labOut5);
+        labOut5.setBounds(20, 140, 15, 15);
+
+        labOut22.setName("22"); // NOI18N
+        roulettePanel.add(labOut22);
+        labOut22.setBounds(20, 120, 15, 15);
+
+        labOut34.setName("34"); // NOI18N
+        roulettePanel.add(labOut34);
+        labOut34.setBounds(30, 100, 15, 15);
+
+        labOut15.setName("15"); // NOI18N
+        roulettePanel.add(labOut15);
+        labOut15.setBounds(40, 80, 15, 15);
+
+        labOut3.setName("3"); // NOI18N
+        roulettePanel.add(labOut3);
+        labOut3.setBounds(50, 60, 15, 15);
+
+        labOut24.setName("24"); // NOI18N
+        roulettePanel.add(labOut24);
+        labOut24.setBounds(70, 50, 15, 15);
+
+        labOut36.setName("36"); // NOI18N
+        roulettePanel.add(labOut36);
+        labOut36.setBounds(90, 40, 15, 15);
+
+        labOut13.setName("13"); // NOI18N
+        roulettePanel.add(labOut13);
+        labOut13.setBounds(110, 30, 15, 15);
+
+        labOut1.setName("1"); // NOI18N
+        roulettePanel.add(labOut1);
+        labOut1.setBounds(130, 20, 15, 15);
+
+        maskPanel.add(roulettePanel);
+        roulettePanel.setBounds(110, 110, 330, 330);
 
         b00.setToolTipText("00");
         b00.setBorder(null);
@@ -2874,7 +3073,7 @@ public class MainFrame extends javax.swing.JFrame {
         bollLabel.setText("Номер шара");
         bollLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maskPanel.add(bollLabel);
-        bollLabel.setBounds(210, 220, 120, 100);
+        bollLabel.setBounds(400, 410, 120, 100);
 
         lPlayerCurrentStav.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerCurrentStav.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3697,16 +3896,20 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         //Кнопка запуска шара //Шар запускается при наличии ставки на столе
         if (!chipMngr.isEmptyArray()) {
-            winner.rollTheBall();                                               //Запуск шара
-            winner.showBall(bollLabel);                                         //Индикация шара                                       
-            winner.clearStavSetter();                                           //Очистка поля "текущая ставка" и возврат значений "бюджета" для последующего расчета выигрыша
-            winner.logikaSravneniaStavok(chipMngr, player, notifLabel);         //Логика сравнения ставок и выигрыша/проигрыша
-            winner.gameStatus();                                                //Проверка на возможность выбора размера ставки в зависимости от размера бюджета
-            winner.luseStatus();                                                //Проверка на поражение путем проигрыша бюджета
-            player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);     //Установка новых значений бюджета
-            chipMngr.clearAllFields();                                          //Очистка всех полей ставок
+            winner.rollTheBall();                                               //Рандом значения шара
+            
+            //Новый поток с анимацией движения шара
+            RouletteRun rRun = new RouletteRun();
+            rRun.setBall(winner.getBall());
+            rRun.getLabelArr(labOut00, labOut27, labOut10, labOut25, labOut29, labOut12, labOut8, labOut19, labOut31, labOut18, labOut6, labOut21, labOut33, labOut16, labOut4, labOut23, labOut35, labOut14, labOut2, labOut0, labOut28, labOut9, labOut26, labOut30, labOut11, labOut7, labOut20, labOut32, labOut17, labOut5, labOut22, labOut34, labOut15, labOut3, labOut24, labOut36, labOut13, labOut1);
+            rRun.start();
+            //
+            //Новый поток,запускаемый по таймеру. Таймер должен быть больше времени анимации шара
+            //В потоке основные расчеты игры
+            RollBallThread rbt = new RollBallThread(MainFrame.this);
+            rbt.start();
         } else {
-            notifLabel.setText("<html><font color='#9B1C00'>Сделайте ставку");  
+            notifLabel.setText("<html><font color='#9B1C00'>Сделайте ставку");
         }
     }//GEN-LAST:event_bRollBallActionPerformed
 
@@ -3858,7 +4061,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bg7to10;
     private javax.swing.JButton bg8to11;
     private javax.swing.JButton bg9to12;
-    private javax.swing.JLabel bollLabel;
+    public javax.swing.JLabel bollLabel;
     private javax.swing.JButton bv10to11;
     private javax.swing.JButton bv11to12;
     private javax.swing.JButton bv13to14;
@@ -3887,9 +4090,48 @@ public class MainFrame extends javax.swing.JFrame {
     public javax.swing.JLabel lPlayerButget;
     public javax.swing.JLabel lPlayerCurrentStav;
     public javax.swing.JLabel lPlayerName;
+    private javax.swing.JLabel labOut0;
+    private javax.swing.JLabel labOut00;
+    private javax.swing.JLabel labOut1;
+    private javax.swing.JLabel labOut10;
+    private javax.swing.JLabel labOut11;
+    private javax.swing.JLabel labOut12;
+    private javax.swing.JLabel labOut13;
+    private javax.swing.JLabel labOut14;
+    private javax.swing.JLabel labOut15;
+    private javax.swing.JLabel labOut16;
+    private javax.swing.JLabel labOut17;
+    private javax.swing.JLabel labOut18;
+    private javax.swing.JLabel labOut19;
+    private javax.swing.JLabel labOut2;
+    private javax.swing.JLabel labOut20;
+    private javax.swing.JLabel labOut21;
+    private javax.swing.JLabel labOut22;
+    private javax.swing.JLabel labOut23;
+    private javax.swing.JLabel labOut24;
+    private javax.swing.JLabel labOut25;
+    private javax.swing.JLabel labOut26;
+    private javax.swing.JLabel labOut27;
+    private javax.swing.JLabel labOut28;
+    private javax.swing.JLabel labOut29;
+    private javax.swing.JLabel labOut3;
+    private javax.swing.JLabel labOut30;
+    private javax.swing.JLabel labOut31;
+    private javax.swing.JLabel labOut32;
+    private javax.swing.JLabel labOut33;
+    private javax.swing.JLabel labOut34;
+    private javax.swing.JLabel labOut35;
+    private javax.swing.JLabel labOut36;
+    private javax.swing.JLabel labOut4;
+    private javax.swing.JLabel labOut5;
+    private javax.swing.JLabel labOut6;
+    private javax.swing.JLabel labOut7;
+    private javax.swing.JLabel labOut8;
+    private javax.swing.JLabel labOut9;
     private javax.swing.JLabel mainFountLabel;
     private javax.swing.JPanel maskPanel;
-    private javax.swing.JLabel notifLabel;
+    public javax.swing.JLabel notifLabel;
+    public javax.swing.JPanel roulettePanel;
     public javax.swing.JButton setChips;
     // End of variables declaration//GEN-END:variables
 // </editor-fold>

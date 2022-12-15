@@ -14,6 +14,10 @@ public class WinLogic {
 
 // <editor-fold desc="БЛОК ЗАПУСКА ШАРА">
     int numberBall;                                                             //Номер шара
+
+    public int getBall() {
+        return numberBall;
+    }
     Random random = new Random();                                               //Рандом шара
 
     public void rollTheBall() {                                                 //Рандом номера шара //37й номер = 00
@@ -33,9 +37,9 @@ public class WinLogic {
             for (Object c : a) {
                 Chip chip = (Chip) c;
                 if (chip.arraysChipNumbers.contains(numberBall)) {
-                    
-                    player.setBudget(player.getBudget()-chip.currentRate* chip.counterChip);
-                    
+
+                    player.setBudget(player.getBudget() - chip.currentRate * chip.counterChip);
+
                     player.setWinAndLuseSize(chip.coefficientChip * chip.currentRate * chip.counterChip);
                     player.setBudget(player.getBudget() + player.getWinAndLuseSize());
                     allWinCount += player.getWinAndLuseSize();
@@ -53,7 +57,7 @@ public class WinLogic {
             notifLabel.setText("Вы проиграли: " + Integer.toString(allLuseCount));
 
         } else if (allWinCount > 0 && allLuseCount > 0) {
-            notifLabel.setText("<html>Вы выиграли: " + Integer.toString(allWinCount)+"<br>"+"Проиграли: "+Integer.toString(allLuseCount));
+            notifLabel.setText("<html>Вы выиграли: " + Integer.toString(allWinCount) + "<br>" + "Проиграли: " + Integer.toString(allLuseCount));
         }
     }
 

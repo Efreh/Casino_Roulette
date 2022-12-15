@@ -23,4 +23,6 @@ public class IconVariables {
     public String jokerPlayerIcon = "/resources/joker_icon.png";
     public String rot_cazinoPlayerIcon = "/resources/rot_cazino.png";
     public String womenPlayerIcon = "/resources/women_icon.png";
+    
+    public String ballIcon = "/resources/ballIcon.png";
 }
