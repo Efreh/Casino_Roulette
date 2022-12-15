@@ -12,6 +12,11 @@ public class RouletteRun extends Thread {
 
     @Override
     public void run() {
+        //Очистка иконок у массива
+        for (JLabel lab : labArr) {
+            lab.setIcon(null);
+        }
+
         //Первый цикл для движения шара 2 раза по тарелке
         for (int i = 0; i < 2; i++) {
             for (JLabel lab : labArr) {
@@ -27,10 +32,10 @@ public class RouletteRun extends Thread {
         // Второй цикл для перемешения шара до соответсвующего значения на тарелке
         for (JLabel lab : labArr) {
             if (!lab.getName().equals(numberBall)) {
-                slowCoef+=5;
+                slowCoef += 10;
                 lab.setIcon(new javax.swing.ImageIcon(getClass().getResource(iconVar.ballIcon)));
                 try {
-                    Thread.sleep(100+slowCoef);
+                    Thread.sleep(100 + slowCoef);
                 } catch (InterruptedException e) {
                 }
                 lab.setIcon(null);

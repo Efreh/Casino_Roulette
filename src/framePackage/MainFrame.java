@@ -3897,16 +3897,16 @@ public class MainFrame extends javax.swing.JFrame {
         //Кнопка запуска шара //Шар запускается при наличии ставки на столе
         if (!chipMngr.isEmptyArray()) {
             winner.rollTheBall();                                               //Рандом значения шара
-            
+
             //Новый поток с анимацией движения шара
             RouletteRun rRun = new RouletteRun();
             rRun.setBall(winner.getBall());
-            rRun.getLabelArr(labOut00, labOut27, labOut10, labOut25, labOut29, labOut12, labOut8, labOut19, labOut31, labOut18, labOut6, labOut21, labOut33, labOut16, labOut4, labOut23, labOut35, labOut14, labOut2, labOut0, labOut28, labOut9, labOut26, labOut30, labOut11, labOut7, labOut20, labOut32, labOut17, labOut5, labOut22, labOut34, labOut15, labOut3, labOut24, labOut36, labOut13, labOut1);
+            rRun.getLabelArr(labOut00, labOut1, labOut13, labOut36, labOut24, labOut3, labOut15, labOut34, labOut22, labOut5, labOut17, labOut32, labOut20, labOut7, labOut11, labOut30, labOut26, labOut9, labOut28, labOut0, labOut2, labOut14, labOut35, labOut23, labOut4, labOut16, labOut33, labOut21, labOut6, labOut18, labOut31, labOut19, labOut8, labOut12, labOut29, labOut25, labOut10, labOut27);
             rRun.start();
             //
             //Новый поток,запускаемый по таймеру. Таймер должен быть больше времени анимации шара
             //В потоке основные расчеты игры
-            RollBallThread rbt = new RollBallThread(MainFrame.this);
+            RollBallThread rbt = new RollBallThread(MainFrame.this, rRun);
             rbt.start();
         } else {
             notifLabel.setText("<html><font color='#9B1C00'>Сделайте ставку");
