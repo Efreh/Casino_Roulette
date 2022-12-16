@@ -243,23 +243,23 @@ public class MainFrame extends javax.swing.JFrame {
 
         labOut27.setName("27"); // NOI18N
         roulettePanel.add(labOut27);
-        labOut27.setBounds(180, 20, 15, 15);
+        labOut27.setBounds(177, 21, 15, 15);
 
         labOut10.setName("10"); // NOI18N
         roulettePanel.add(labOut10);
-        labOut10.setBounds(200, 20, 15, 15);
+        labOut10.setBounds(198, 25, 15, 15);
 
         labOut25.setName("25"); // NOI18N
         roulettePanel.add(labOut25);
-        labOut25.setBounds(220, 30, 15, 15);
+        labOut25.setBounds(220, 33, 15, 15);
 
         labOut29.setName("29"); // NOI18N
         roulettePanel.add(labOut29);
-        labOut29.setBounds(240, 40, 15, 15);
+        labOut29.setBounds(240, 45, 15, 15);
 
         labOut12.setName("12"); // NOI18N
         roulettePanel.add(labOut12);
-        labOut12.setBounds(260, 60, 15, 15);
+        labOut12.setBounds(257, 61, 15, 15);
 
         labOut8.setName("8"); // NOI18N
         roulettePanel.add(labOut8);
@@ -267,7 +267,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         labOut19.setName("19"); // NOI18N
         roulettePanel.add(labOut19);
-        labOut19.setBounds(280, 100, 15, 15);
+        labOut19.setBounds(282, 100, 15, 15);
 
         labOut31.setName("31"); // NOI18N
         roulettePanel.add(labOut31);
@@ -275,67 +275,67 @@ public class MainFrame extends javax.swing.JFrame {
 
         labOut18.setName("18"); // NOI18N
         roulettePanel.add(labOut18);
-        labOut18.setBounds(290, 145, 15, 15);
+        labOut18.setBounds(291, 145, 15, 15);
 
         labOut6.setName("6"); // NOI18N
         roulettePanel.add(labOut6);
-        labOut6.setBounds(290, 170, 15, 15);
+        labOut6.setBounds(291, 165, 15, 15);
 
         labOut21.setName("21"); // NOI18N
         roulettePanel.add(labOut21);
-        labOut21.setBounds(290, 190, 15, 15);
+        labOut21.setBounds(289, 188, 15, 15);
 
         labOut33.setName("33"); // NOI18N
         roulettePanel.add(labOut33);
-        labOut33.setBounds(280, 210, 15, 15);
+        labOut33.setBounds(283, 208, 15, 15);
 
         labOut16.setName("16"); // NOI18N
         roulettePanel.add(labOut16);
-        labOut16.setBounds(270, 230, 15, 15);
+        labOut16.setBounds(272, 230, 15, 15);
 
         labOut4.setName("4"); // NOI18N
         roulettePanel.add(labOut4);
-        labOut4.setBounds(260, 250, 15, 15);
+        labOut4.setBounds(259, 249, 15, 15);
 
         labOut23.setName("23"); // NOI18N
         roulettePanel.add(labOut23);
-        labOut23.setBounds(240, 260, 15, 15);
+        labOut23.setBounds(240, 263, 15, 15);
 
         labOut35.setName("35"); // NOI18N
         roulettePanel.add(labOut35);
-        labOut35.setBounds(220, 270, 15, 15);
+        labOut35.setBounds(223, 274, 15, 15);
 
         labOut14.setName("14"); // NOI18N
         roulettePanel.add(labOut14);
-        labOut14.setBounds(200, 280, 15, 15);
+        labOut14.setBounds(200, 285, 15, 15);
 
         labOut2.setName("2"); // NOI18N
         roulettePanel.add(labOut2);
-        labOut2.setBounds(180, 290, 15, 15);
+        labOut2.setBounds(178, 290, 15, 15);
 
         labOut0.setName("0"); // NOI18N
         roulettePanel.add(labOut0);
-        labOut0.setBounds(155, 290, 15, 15);
+        labOut0.setBounds(155, 291, 15, 15);
 
         labOut28.setName("28"); // NOI18N
         roulettePanel.add(labOut28);
-        labOut28.setBounds(130, 290, 15, 15);
+        labOut28.setBounds(132, 290, 15, 15);
 
         labOut9.setName("9"); // NOI18N
         roulettePanel.add(labOut9);
-        labOut9.setBounds(110, 280, 15, 15);
+        labOut9.setBounds(111, 285, 15, 15);
 
         labOut26.setName("26"); // NOI18N
         roulettePanel.add(labOut26);
-        labOut26.setBounds(90, 270, 15, 15);
+        labOut26.setBounds(90, 275, 15, 15);
 
         labOut30.setName("30"); // NOI18N
         roulettePanel.add(labOut30);
-        labOut30.setBounds(70, 260, 15, 15);
+        labOut30.setBounds(70, 264, 15, 15);
 
         labOut11.setName("11"); // NOI18N
         roulettePanel.add(labOut11);
-        labOut11.setBounds(50, 250, 15, 15);
+        labOut11.setBounds(52, 248, 15, 15);
 
         labOut7.setName("7"); // NOI18N
         roulettePanel.add(labOut7);
@@ -343,23 +343,23 @@ public class MainFrame extends javax.swing.JFrame {
 
         labOut20.setName("20"); // NOI18N
         roulettePanel.add(labOut20);
-        labOut20.setBounds(30, 210, 15, 15);
+        labOut20.setBounds(29, 210, 15, 15);
 
         labOut32.setName("32"); // NOI18N
         roulettePanel.add(labOut32);
-        labOut32.setBounds(20, 190, 15, 15);
+        labOut32.setBounds(22, 189, 15, 15);
 
         labOut17.setName("17"); // NOI18N
         roulettePanel.add(labOut17);
-        labOut17.setBounds(20, 170, 15, 15);
+        labOut17.setBounds(20, 166, 15, 15);
 
         labOut5.setName("5"); // NOI18N
         roulettePanel.add(labOut5);
-        labOut5.setBounds(20, 140, 15, 15);
+        labOut5.setBounds(20, 145, 15, 15);
 
         labOut22.setName("22"); // NOI18N
         roulettePanel.add(labOut22);
-        labOut22.setBounds(20, 120, 15, 15);
+        labOut22.setBounds(22, 122, 15, 15);
 
         labOut34.setName("34"); // NOI18N
         roulettePanel.add(labOut34);
@@ -371,23 +371,23 @@ public class MainFrame extends javax.swing.JFrame {
 
         labOut3.setName("3"); // NOI18N
         roulettePanel.add(labOut3);
-        labOut3.setBounds(50, 60, 15, 15);
+        labOut3.setBounds(54, 63, 15, 15);
 
         labOut24.setName("24"); // NOI18N
         roulettePanel.add(labOut24);
-        labOut24.setBounds(70, 50, 15, 15);
+        labOut24.setBounds(71, 48, 15, 15);
 
         labOut36.setName("36"); // NOI18N
         roulettePanel.add(labOut36);
-        labOut36.setBounds(90, 40, 15, 15);
+        labOut36.setBounds(91, 35, 15, 15);
 
         labOut13.setName("13"); // NOI18N
         roulettePanel.add(labOut13);
-        labOut13.setBounds(110, 30, 15, 15);
+        labOut13.setBounds(112, 26, 15, 15);
 
         labOut1.setName("1"); // NOI18N
         roulettePanel.add(labOut1);
-        labOut1.setBounds(130, 20, 15, 15);
+        labOut1.setBounds(135, 20, 15, 15);
 
         maskPanel.add(roulettePanel);
         roulettePanel.setBounds(110, 110, 330, 330);
