@@ -2,8 +2,9 @@ package logicPackage;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import java.io.*;
 
-public class Player {
+public class Player implements Serializable{
     IconVariables iconVar = new IconVariables();
     
     private String name = "Игрок";
@@ -30,7 +31,7 @@ public class Player {
     public String getProfileIcon (){return profileIcon;}
     public void setProfileIcon(String s){profileIcon= s;}
     
-    //Установка имени, размера бюджета и иконки профиля на nainframe
+    //Установка имени, размера бюджета и иконки профиля на mainframe
     public void playerSetLabelText(JLabel nameL, JLabel BetSizeL,JButton button){
         nameL.setText(getName());
         BetSizeL.setText("Бюджет: "+Integer.toString(getBudget()));

@@ -1,6 +1,8 @@
 package logicPackage;
 
-public class IconVariables {
+import java.io.Serializable;
+
+public class IconVariables implements Serializable{
 
     public String redChipsIcon30x30 = "/resources/redChips.png";
     public String greenChipsIcon30x30 = "/resources/greenChips.png";

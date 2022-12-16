@@ -3,7 +3,7 @@ package framePackage;
 
 import logicPackage.*;
 import animations.RouletteRun;
-import javax.swing.Timer;
+import java.io.*;
 
 public class MainFrame extends javax.swing.JFrame {
 
@@ -224,6 +224,9 @@ public class MainFrame extends javax.swing.JFrame {
         bollLabel = new javax.swing.JLabel();
         lPlayerCurrentStav = new javax.swing.JLabel();
         notifLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        bSaveProfile = new javax.swing.JButton();
+        bLoadProfile = new javax.swing.JButton();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -3036,7 +3039,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         maskPanel.add(bPlayer);
-        bPlayer.setBounds(970, 50, 160, 60);
+        bPlayer.setBounds(930, 50, 160, 60);
 
         lPlayerName.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -3044,14 +3047,14 @@ public class MainFrame extends javax.swing.JFrame {
         lPlayerName.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lPlayerName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maskPanel.add(lPlayerName);
-        lPlayerName.setBounds(800, 50, 160, 30);
+        lPlayerName.setBounds(780, 50, 130, 30);
 
         lPlayerButget.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerButget.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lPlayerButget.setText("Бюджет");
         lPlayerButget.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerButget);
-        lPlayerButget.setBounds(800, 80, 160, 30);
+        lPlayerButget.setBounds(780, 80, 130, 30);
 
         bRollBall.setBackground(new java.awt.Color(51, 153, 0));
         bRollBall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/rollIcon.png"))); // NOI18N
@@ -3073,20 +3076,48 @@ public class MainFrame extends javax.swing.JFrame {
         bollLabel.setText("Номер шара");
         bollLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maskPanel.add(bollLabel);
-        bollLabel.setBounds(400, 410, 120, 100);
+        bollLabel.setBounds(1050, 340, 120, 100);
 
         lPlayerCurrentStav.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerCurrentStav.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lPlayerCurrentStav.setText("Ставка: 0");
         lPlayerCurrentStav.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(lPlayerCurrentStav);
-        lPlayerCurrentStav.setBounds(630, 50, 160, 60);
+        lPlayerCurrentStav.setBounds(590, 50, 130, 60);
 
         notifLabel.setBackground(new java.awt.Color(51, 153, 0));
         notifLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         notifLabel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         maskPanel.add(notifLabel);
-        notifLabel.setBounds(460, 50, 160, 60);
+        notifLabel.setBounds(460, 50, 130, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/man_icon.png"))); // NOI18N
+        maskPanel.add(jLabel1);
+        jLabel1.setBounds(400, 50, 50, 54);
+
+        bSaveProfile.setBackground(new java.awt.Color(51, 153, 0));
+        bSaveProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/save_icon30x30.png"))); // NOI18N
+        bSaveProfile.setToolTipText("Сохранить");
+        bSaveProfile.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bSaveProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSaveProfileActionPerformed(evt);
+            }
+        });
+        maskPanel.add(bSaveProfile);
+        bSaveProfile.setBounds(1090, 50, 30, 30);
+
+        bLoadProfile.setBackground(new java.awt.Color(51, 153, 0));
+        bLoadProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/load_icon30x30.png"))); // NOI18N
+        bLoadProfile.setToolTipText("Загрузить");
+        bLoadProfile.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bLoadProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bLoadProfileActionPerformed(evt);
+            }
+        });
+        maskPanel.add(bLoadProfile);
+        bLoadProfile.setBounds(1090, 80, 30, 30);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -3917,6 +3948,32 @@ public class MainFrame extends javax.swing.JFrame {
         winner.clearStavSetter();                                               //Очистка поля "текущая ставка" и возврат значений "бюджета"
         chipMngr.clearAllFields();                                              //Очистка всех полей ставок
     }//GEN-LAST:event_clearAllFieldActionPerformed
+
+    private void bSaveProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveProfileActionPerformed
+        try {
+            ObjectOutputStream saveStream = new ObjectOutputStream(new FileOutputStream("gamerProfile.out"));
+            saveStream.writeObject(player);
+            saveStream.close();
+        } catch (IOException e) {
+            notifLabel.setText("Ошибка сохранения");
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_bSaveProfileActionPerformed
+
+    private void bLoadProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoadProfileActionPerformed
+        try {
+            ObjectInputStream loadStream = new ObjectInputStream(new FileInputStream("gamerProfile.out"));
+            player = (Player) loadStream.readObject();
+            loadStream.close();
+            player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
+        } catch (IOException e) {
+            notifLabel.setText("Ошибка Загрузки");
+            System.out.println(e);
+        } catch (ClassNotFoundException e) {
+            notifLabel.setText("Ошибка Класса");
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_bLoadProfileActionPerformed
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -4000,8 +4057,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton b7of9;
     private javax.swing.JButton b8;
     private javax.swing.JButton b9;
+    private javax.swing.JButton bLoadProfile;
     public javax.swing.JButton bPlayer;
     private javax.swing.JButton bRollBall;
+    private javax.swing.JButton bSaveProfile;
     private javax.swing.JButton b_black;
     private javax.swing.JButton b_even;
     private javax.swing.JButton b_odd;
@@ -4087,6 +4146,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bv7to8;
     private javax.swing.JButton bv8to9;
     private javax.swing.JButton clearAllField;
+    private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel lPlayerButget;
     public javax.swing.JLabel lPlayerCurrentStav;
     public javax.swing.JLabel lPlayerName;
