@@ -23,10 +23,7 @@ public class WinLogic {
     public void rollTheBall() {                                                 //Рандом номера шара //37й номер = 00
         numberBall = random.nextInt(38);
     }
-
-    public void showBall(JLabel label) {                                        //Индикация выпавшего шара
-        label.setText(Integer.toString(numberBall));
-    }
+    
 // </editor-fold>   
 
     public void logikaSravneniaStavok(ChipManager chipManager, Player player, JLabel notifLabel) {

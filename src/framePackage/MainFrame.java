@@ -2,7 +2,7 @@
 package framePackage;
 
 import logicPackage.*;
-import animations.RouletteRun;
+import animationsSounds.*;
 import java.io.*;
 
 public class MainFrame extends javax.swing.JFrame {
@@ -11,6 +11,7 @@ public class MainFrame extends javax.swing.JFrame {
     public ChipManager chipMngr = new ChipManager(player);                                      //Объект менеджера полей ставок //Принимает данные профиля игрока
     public WinLogic winner = new WinLogic(framePackage.MainFrame.this);                         //Объект логики игры // Принимает в параметр mainFrame
     public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);//Создание фрейма SetChips как объекта для передачи параметров в него
+    
 
     public MainFrame() {
         initComponents();
@@ -221,7 +222,6 @@ public class MainFrame extends javax.swing.JFrame {
         lPlayerName = new javax.swing.JLabel();
         lPlayerButget = new javax.swing.JLabel();
         bRollBall = new javax.swing.JButton();
-        bollLabel = new javax.swing.JLabel();
         lPlayerCurrentStav = new javax.swing.JLabel();
         notifLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -3071,13 +3071,6 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(bRollBall);
         bRollBall.setBounds(530, 440, 160, 60);
 
-        bollLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        bollLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bollLabel.setText("Номер шара");
-        bollLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        maskPanel.add(bollLabel);
-        bollLabel.setBounds(1050, 340, 120, 100);
-
         lPlayerCurrentStav.setBackground(new java.awt.Color(51, 153, 0));
         lPlayerCurrentStav.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lPlayerCurrentStav.setText("Ставка: 0");
@@ -3087,13 +3080,19 @@ public class MainFrame extends javax.swing.JFrame {
 
         notifLabel.setBackground(new java.awt.Color(51, 153, 0));
         notifLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        notifLabel.setToolTipText("Очистить уведомления");
         notifLabel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        notifLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                notifLabelMouseClicked(evt);
+            }
+        });
         maskPanel.add(notifLabel);
         notifLabel.setBounds(460, 50, 130, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/man_icon.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dealer_icon44x60.png"))); // NOI18N
         maskPanel.add(jLabel1);
-        jLabel1.setBounds(400, 50, 50, 54);
+        jLabel1.setBounds(400, 50, 43, 60);
 
         bSaveProfile.setBackground(new java.awt.Color(51, 153, 0));
         bSaveProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/save_icon30x30.png"))); // NOI18N
@@ -3927,6 +3926,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         //Кнопка запуска шара //Шар запускается при наличии ставки на столе
         if (!chipMngr.isEmptyArray()) {
+            notifLabel.setText(null);
             winner.rollTheBall();                                               //Рандом значения шара
 
             //Новый поток с анимацией движения шара
@@ -3934,6 +3934,7 @@ public class MainFrame extends javax.swing.JFrame {
             rRun.setBall(winner.getBall());
             rRun.getLabelArr(labOut00, labOut1, labOut13, labOut36, labOut24, labOut3, labOut15, labOut34, labOut22, labOut5, labOut17, labOut32, labOut20, labOut7, labOut11, labOut30, labOut26, labOut9, labOut28, labOut0, labOut2, labOut14, labOut35, labOut23, labOut4, labOut16, labOut33, labOut21, labOut6, labOut18, labOut31, labOut19, labOut8, labOut12, labOut29, labOut25, labOut10, labOut27);
             rRun.start();
+            
             //
             //Новый поток,запускаемый по таймеру. Таймер должен быть больше времени анимации шара
             //В потоке основные расчеты игры
@@ -3947,33 +3948,50 @@ public class MainFrame extends javax.swing.JFrame {
     private void clearAllFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearAllFieldActionPerformed
         winner.clearStavSetter();                                               //Очистка поля "текущая ставка" и возврат значений "бюджета"
         chipMngr.clearAllFields();                                              //Очистка всех полей ставок
+        notifLabel.setText(null);
+
     }//GEN-LAST:event_clearAllFieldActionPerformed
 
     private void bSaveProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveProfileActionPerformed
-        try {
-            ObjectOutputStream saveStream = new ObjectOutputStream(new FileOutputStream("gamerProfile.out"));
-            saveStream.writeObject(player);
-            saveStream.close();
-        } catch (IOException e) {
-            notifLabel.setText("Ошибка сохранения");
-            System.out.println(e);
+        if (chipMngr.isEmptyArray()) {
+            try {
+                ObjectOutputStream saveStream = new ObjectOutputStream(new FileOutputStream("gamerProfile.out"));
+                saveStream.writeObject(player);
+                saveStream.close();
+                notifLabel.setText("Профиль сохранён");
+            } catch (IOException e) {
+                notifLabel.setText("Ошибка сохранения");
+                System.out.println(e);
+            }
+        } else {
+            notifLabel.setText("<html><font color='#9B1C00'>Для сохранения профиля<p>очистите все поля</font></html>");
         }
     }//GEN-LAST:event_bSaveProfileActionPerformed
 
     private void bLoadProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoadProfileActionPerformed
-        try {
-            ObjectInputStream loadStream = new ObjectInputStream(new FileInputStream("gamerProfile.out"));
-            player = (Player) loadStream.readObject();
-            loadStream.close();
-            player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
-        } catch (IOException e) {
-            notifLabel.setText("Ошибка Загрузки");
-            System.out.println(e);
-        } catch (ClassNotFoundException e) {
-            notifLabel.setText("Ошибка Класса");
-            System.out.println(e);
+        if (chipMngr.isEmptyArray()) {
+            try {
+                ObjectInputStream loadStream = new ObjectInputStream(new FileInputStream("gamerProfile.out"));
+                player = (Player) loadStream.readObject();
+                loadStream.close();
+                player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
+                notifLabel.setText("Профиль загружен");
+
+            } catch (IOException e) {
+                notifLabel.setText("Ошибка Загрузки");
+                System.out.println(e);
+            } catch (ClassNotFoundException e) {
+                notifLabel.setText("Ошибка Класса");
+                System.out.println(e);
+            }
+        } else {
+            notifLabel.setText("<html><font color='#9B1C00'>Для загрузки профиля<p>очистите все поля</font></html>");
         }
     }//GEN-LAST:event_bLoadProfileActionPerformed
+
+    private void notifLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_notifLabelMouseClicked
+        notifLabel.setText(null);
+    }//GEN-LAST:event_notifLabelMouseClicked
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3981,6 +3999,8 @@ public class MainFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainFrame().setVisible(true);
+                SoundsPlayer soundsPlayer = new SoundsPlayer();
+                soundsPlayer.fountMusic();
             }
         });
 
@@ -4120,7 +4140,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton bg7to10;
     private javax.swing.JButton bg8to11;
     private javax.swing.JButton bg9to12;
-    public javax.swing.JLabel bollLabel;
     private javax.swing.JButton bv10to11;
     private javax.swing.JButton bv11to12;
     private javax.swing.JButton bv13to14;

@@ -1,6 +1,6 @@
 package logicPackage;
 
-import animations.RouletteRun;
+import animationsSounds.RouletteRun;
 import framePackage.MainFrame;
 
 public class RollBallThread extends Thread {
@@ -19,7 +19,6 @@ public class RollBallThread extends Thread {
         //Если поток помирает,запускается тело этого потока
         while (true) {
             if (!r.isAlive()) {
-                mf.winner.showBall(mf.bollLabel);                                               //Индикация шара                                       
                 mf.winner.clearStavSetter();                                                    //Очистка поля "текущая ставка" и возврат значений "бюджета" для последующего расчета выигрыша
                 mf.winner.logikaSravneniaStavok(mf.chipMngr, mf.player, mf.notifLabel);         //Логика сравнения ставок и выигрыша/проигрыша
                 mf.winner.gameStatus();                                                         //Проверка на возможность выбора размера ставки в зависимости от размера бюджета

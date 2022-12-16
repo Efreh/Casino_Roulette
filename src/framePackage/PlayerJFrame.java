@@ -152,9 +152,9 @@ public class PlayerJFrame extends javax.swing.JFrame {
             mf.bPlayer.setIcon(new javax.swing.ImageIcon(getClass().getResource(mf.player.getProfileIcon())));
             dispose();
         } catch (NumberFormatException e) {
-            errorLabel.setText("<html>Введи число!<p>От 10 до 5000</html>");
+            errorLabel.setText("<html><font color='#9B1C00'>Введи число!<p>От 10 до 5000</html>");
         } catch (ArrayIndexOutOfBoundsException e) {
-            nameLabel.setText("<html>Имя игрока не должно" + "<br> превышать 20 символов");
+            nameLabel.setText("<html><font color='#9B1C00'>Имя игрока не должно" + "<br> превышать 20 символов");
         }
     }//GEN-LAST:event_bSaveActionPerformed
 
