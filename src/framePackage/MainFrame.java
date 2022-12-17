@@ -3930,8 +3930,7 @@ public class MainFrame extends javax.swing.JFrame {
             winner.rollTheBall();                                               //Рандом значения шара
 
             //Новый поток с анимацией движения шара
-            RouletteRun rRun = new RouletteRun();
-            rRun.setBall(winner.getBall());
+            RouletteRun rRun = new RouletteRun(winner.getBall(),bRollBall);
             rRun.getLabelArr(labOut00, labOut1, labOut13, labOut36, labOut24, labOut3, labOut15, labOut34, labOut22, labOut5, labOut17, labOut32, labOut20, labOut7, labOut11, labOut30, labOut26, labOut9, labOut28, labOut0, labOut2, labOut14, labOut35, labOut23, labOut4, labOut16, labOut33, labOut21, labOut6, labOut18, labOut31, labOut19, labOut8, labOut12, labOut29, labOut25, labOut10, labOut27);
             rRun.start();
             

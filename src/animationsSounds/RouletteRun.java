@@ -1,17 +1,28 @@
 package animationsSounds;
 
 import javax.swing.JLabel;
+import javax.swing.JButton;
 import logicPackage.IconVariables;
 
 public class RouletteRun extends Thread {
+
+    public RouletteRun() {
+    }
+
+    public RouletteRun(int ballNumber, JButton runButton) {
+        this.numberBall = Integer.toString(ballNumber);
+        this.button = runButton;
+    }
 
     IconVariables iconVar = new IconVariables();
     JLabel[] labArr;
     String numberBall;
     long slowCoef = 0L;
+    JButton button;
 
     @Override
     public void run() {
+        button.setEnabled(false);
         //Очистка иконок у массива
         for (JLabel lab : labArr) {
             lab.setIcon(null);
@@ -44,13 +55,11 @@ public class RouletteRun extends Thread {
                 break;
             }
         }
+        button.setEnabled(true);
+
     }
 
     public void getLabelArr(JLabel... labArr) {
         this.labArr = labArr;
-    }
-
-    public void setBall(int i) {
-        numberBall = Integer.toString(i);
     }
 }
