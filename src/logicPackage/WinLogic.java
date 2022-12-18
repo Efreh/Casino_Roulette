@@ -52,6 +52,7 @@ public class WinLogic {
 
         } else if (allWinCount == 0 && allLuseCount > 0) {
             notifLabel.setText("Вы проиграли: " + Integer.toString(allLuseCount));
+            mf.effectPlayer.runLuse();
 
         } else if (allWinCount > 0 && allLuseCount > 0) {
             notifLabel.setText("<html>Вы выиграли: " + Integer.toString(allWinCount) + "<br>" + "Проиграли: " + Integer.toString(allLuseCount));

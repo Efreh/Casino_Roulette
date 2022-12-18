@@ -22,7 +22,7 @@ public class RouletteRun extends Thread {
 
     @Override
     public void run() {
-        button.setEnabled(false);
+        button.setEnabled(false);                                               //Отключение кнопки запуска шара на время работы
         //Очистка иконок у массива
         for (JLabel lab : labArr) {
             lab.setIcon(null);
@@ -40,7 +40,7 @@ public class RouletteRun extends Thread {
             }
         }
 
-        // Второй цикл для перемешения шара до соответсвующего значения на тарелке
+        // Второй цикл для перемешения шара до выпавшего значения на тарелке
         for (JLabel lab : labArr) {
             if (!lab.getName().equals(numberBall)) {
                 slowCoef += 10;
@@ -55,7 +55,7 @@ public class RouletteRun extends Thread {
                 break;
             }
         }
-        button.setEnabled(true);
+        button.setEnabled(true);                                                //Включение кнопки запуска шара после работы
 
     }
 

@@ -11,11 +11,14 @@ public class MainFrame extends javax.swing.JFrame {
     public ChipManager chipMngr = new ChipManager(player);                                      //Объект менеджера полей ставок //Принимает данные профиля игрока
     public WinLogic winner = new WinLogic(framePackage.MainFrame.this);                         //Объект логики игры // Принимает в параметр mainFrame
     public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);//Создание фрейма SetChips как объекта для передачи параметров в него
-    
+    FountSoundsPlayer soundsPlayer = new FountSoundsPlayer();
+    public EffectsSoundPlayer effectPlayer = new EffectsSoundPlayer();
+    SettingsFrame settingsFrame = new SettingsFrame(framePackage.MainFrame.this);
 
     public MainFrame() {
         initComponents();
         player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);                         //В конструкторе выставляется параметры объекта игрока 
+
     }
 
     @SuppressWarnings("unchecked")
@@ -227,11 +230,17 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         bSaveProfile = new javax.swing.JButton();
         bLoadProfile = new javax.swing.JButton();
+        bSettings = new javax.swing.JButton();
         mainFountLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Casino Roulette");
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new java.awt.GridBagLayout());
 
         maskPanel.setOpaque(false);
@@ -3118,6 +3127,17 @@ public class MainFrame extends javax.swing.JFrame {
         maskPanel.add(bLoadProfile);
         bLoadProfile.setBounds(1090, 80, 30, 30);
 
+        bSettings.setBackground(new java.awt.Color(51, 153, 0));
+        bSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/prop_icon30x26.png"))); // NOI18N
+        bSettings.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bSettings.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSettingsActionPerformed(evt);
+            }
+        });
+        maskPanel.add(bSettings);
+        bSettings.setBounds(1120, 80, 30, 30);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -3926,14 +3946,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         //Кнопка запуска шара //Шар запускается при наличии ставки на столе
         if (!chipMngr.isEmptyArray()) {
+            effectPlayer.runRoulettRun();
             notifLabel.setText(null);
             winner.rollTheBall();                                               //Рандом значения шара
 
             //Новый поток с анимацией движения шара
-            RouletteRun rRun = new RouletteRun(winner.getBall(),bRollBall);
+            RouletteRun rRun = new RouletteRun(winner.getBall(), bRollBall);
             rRun.getLabelArr(labOut00, labOut1, labOut13, labOut36, labOut24, labOut3, labOut15, labOut34, labOut22, labOut5, labOut17, labOut32, labOut20, labOut7, labOut11, labOut30, labOut26, labOut9, labOut28, labOut0, labOut2, labOut14, labOut35, labOut23, labOut4, labOut16, labOut33, labOut21, labOut6, labOut18, labOut31, labOut19, labOut8, labOut12, labOut29, labOut25, labOut10, labOut27);
             rRun.start();
-            
+
             //
             //Новый поток,запускаемый по таймеру. Таймер должен быть больше времени анимации шара
             //В потоке основные расчеты игры
@@ -3991,6 +4012,16 @@ public class MainFrame extends javax.swing.JFrame {
     private void notifLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_notifLabelMouseClicked
         notifLabel.setText(null);
     }//GEN-LAST:event_notifLabelMouseClicked
+
+    private void bSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSettingsActionPerformed
+        framePackage.MainFrame.this.settingsFrame.setVisible(true);
+        framePackage.MainFrame.this.setEnabled(false);
+    }//GEN-LAST:event_bSettingsActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        //Фоновая музыка при открытии главного окна
+        soundsPlayer.runFountMusic();
+    }//GEN-LAST:event_formWindowOpened
 // </editor-fold>
 
     public static void main(String args[]) {
@@ -3998,8 +4029,7 @@ public class MainFrame extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainFrame().setVisible(true);
-                SoundsPlayer soundsPlayer = new SoundsPlayer();
-                soundsPlayer.fountMusic();
+
             }
         });
 
@@ -4080,6 +4110,7 @@ public class MainFrame extends javax.swing.JFrame {
     public javax.swing.JButton bPlayer;
     private javax.swing.JButton bRollBall;
     private javax.swing.JButton bSaveProfile;
+    private javax.swing.JButton bSettings;
     private javax.swing.JButton b_black;
     private javax.swing.JButton b_even;
     private javax.swing.JButton b_odd;
