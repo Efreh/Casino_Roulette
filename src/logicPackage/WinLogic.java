@@ -3,6 +3,7 @@ package logicPackage;
 import java.util.*;
 import javax.swing.JLabel;
 import framePackage.*;
+import animationsSounds.*;
 
 public class WinLogic {
 
@@ -11,6 +12,7 @@ public class WinLogic {
     }
     MainFrame mf;
     IconVariables iconPath = new IconVariables();
+    SoundVariables sv = new SoundVariables();
 
 // <editor-fold desc="БЛОК ЗАПУСКА ШАРА">
     int numberBall;                                                             //Номер шара
@@ -49,13 +51,15 @@ public class WinLogic {
         }
         if (allWinCount > 0 && allLuseCount == 0) {
             notifLabel.setText("Вы выиграли: " + Integer.toString(allWinCount));
+            SoundsPlayer sp = new SoundsPlayer(sv.getWinClip());
 
         } else if (allWinCount == 0 && allLuseCount > 0) {
             notifLabel.setText("Вы проиграли: " + Integer.toString(allLuseCount));
-            mf.effectPlayer.runLuse();
+            SoundsPlayer sp = new SoundsPlayer(sv.getLuseClip());
 
         } else if (allWinCount > 0 && allLuseCount > 0) {
             notifLabel.setText("<html>Вы выиграли: " + Integer.toString(allWinCount) + "<br>" + "Проиграли: " + Integer.toString(allLuseCount));
+            SoundsPlayer sp = new SoundsPlayer(sv.getWinClip());
         }
     }
 

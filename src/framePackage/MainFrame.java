@@ -11,9 +11,8 @@ public class MainFrame extends javax.swing.JFrame {
     public ChipManager chipMngr = new ChipManager(player);                                      //Объект менеджера полей ставок //Принимает данные профиля игрока
     public WinLogic winner = new WinLogic(framePackage.MainFrame.this);                         //Объект логики игры // Принимает в параметр mainFrame
     public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);//Создание фрейма SetChips как объекта для передачи параметров в него
-    FountSoundsPlayer soundsPlayer = new FountSoundsPlayer();
-    public EffectsSoundPlayer effectPlayer = new EffectsSoundPlayer();
     SettingsFrame settingsFrame = new SettingsFrame(framePackage.MainFrame.this);
+    SoundVariables sv = new SoundVariables();
 
     public MainFrame() {
         initComponents();
@@ -3946,7 +3945,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void bRollBallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRollBallActionPerformed
         //Кнопка запуска шара //Шар запускается при наличии ставки на столе
         if (!chipMngr.isEmptyArray()) {
-            effectPlayer.runRoulettRun();
+            SoundsPlayer ballRunEff = new SoundsPlayer(sv.getBallRun());
             notifLabel.setText(null);
             winner.rollTheBall();                                               //Рандом значения шара
 
@@ -4020,7 +4019,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         //Фоновая музыка при открытии главного окна
-        soundsPlayer.runFountMusic();
+        SoundsPlayer soundsPlayer = new SoundsPlayer();
+        settingsFrame.getMusicObject(soundsPlayer);
     }//GEN-LAST:event_formWindowOpened
 // </editor-fold>
 

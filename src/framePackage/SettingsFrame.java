@@ -1,8 +1,11 @@
 package framePackage;
 
+import animationsSounds.SoundsPlayer;
+
 public class SettingsFrame extends javax.swing.JFrame {
 
     MainFrame mf;
+    SoundsPlayer sp;
 
     public SettingsFrame() {
         initComponents();
@@ -11,6 +14,10 @@ public class SettingsFrame extends javax.swing.JFrame {
     public SettingsFrame(MainFrame mf) {
         initComponents();
         this.mf = mf;
+    }
+
+    public void getMusicObject(SoundsPlayer sp) {
+        this.sp = sp;
     }
 
     @SuppressWarnings("unchecked")
@@ -119,9 +126,9 @@ public class SettingsFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bClose_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClose_SaveActionPerformed
-        mf.soundsPlayer.setFountMusicVolume(musicSlider.getValue());
-        mf.effectPlayer.setEffectMusicVolume(effectSlider.getValue());
-
+        sp.setFountMusicVolume(musicSlider.getValue());
+        animationsSounds.SoundsPlayer.setEffectMusicVolume(effectSlider.getValue());
+        
         mf.setEnabled(true);
         hide();
     }//GEN-LAST:event_bClose_SaveActionPerformed
