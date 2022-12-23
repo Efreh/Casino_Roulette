@@ -1,28 +1,28 @@
 package animationsSounds;
 
 import javax.swing.JLabel;
-import javax.swing.JButton;
 import logicPackage.IconVariables;
+import framePackage.MainFrame;
 
 public class RouletteRun extends Thread {
 
     public RouletteRun() {
     }
 
-    public RouletteRun(int ballNumber, JButton runButton) {
+    public RouletteRun(int ballNumber, MainFrame mf) {
         this.numberBall = Integer.toString(ballNumber);
-        this.button = runButton;
+        this.mf = mf;
     }
 
     IconVariables iconVar = new IconVariables();
     JLabel[] labArr;
     String numberBall;
     long slowCoef = 0L;
-    JButton button;
+    MainFrame mf;
 
     @Override
     public void run() {
-        button.setEnabled(false);                                               //Отключение кнопки запуска шара на время работы
+        mf.setEnabled(false);
         //Очистка иконок у массива
         for (JLabel lab : labArr) {
             lab.setIcon(null);
@@ -55,7 +55,7 @@ public class RouletteRun extends Thread {
                 break;
             }
         }
-        button.setEnabled(true);                                                //Включение кнопки запуска шара после работы
+        mf.setEnabled(true);
 
     }
 
