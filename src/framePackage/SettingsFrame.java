@@ -130,7 +130,7 @@ public class SettingsFrame extends javax.swing.JFrame {
         animationsSounds.SoundsPlayer.setEffectMusicVolume(effectSlider.getValue());
         
         mf.setEnabled(true);
-        hide();
+        this.setVisible(false);
     }//GEN-LAST:event_bClose_SaveActionPerformed
 
     public static void main(String args[]) {

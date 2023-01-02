@@ -12,7 +12,6 @@ public class WinLogic {
     }
     MainFrame mf;
     IconVariables iconPath = new IconVariables();
-    SoundVariables sv = new SoundVariables();
 
 // <editor-fold desc="БЛОК ЗАПУСКА ШАРА">
     int numberBall;                                                             //Номер шара
@@ -25,9 +24,8 @@ public class WinLogic {
     public void rollTheBall() {                                                 //Рандом номера шара //37й номер = 00
         numberBall = random.nextInt(38);
     }
-    
-// </editor-fold>   
 
+// </editor-fold>   
     public void logikaSravneniaStavok(ChipManager chipManager, Player player, JLabel notifLabel) {
         ArrayList<ArrayList> bigList = chipManager.chipsArraysArray;
         int allWinCount = 0;
@@ -51,15 +49,19 @@ public class WinLogic {
         }
         if (allWinCount > 0 && allLuseCount == 0) {
             notifLabel.setText("Вы выиграли: " + Integer.toString(allWinCount));
-            SoundsPlayer sp = new SoundsPlayer(sv.getWinClip());
+            SoundsPlayer sp = new SoundsPlayer(mf.sv.getWinClip());
+
+        } else if (allWinCount == 0 && allLuseCount > 0 && mf.player.getBudget() < 10) {
+            notifLabel.setText("Вы проиграли: " + Integer.toString(allLuseCount));
+            SoundsPlayer sp = new SoundsPlayer(mf.sv.getGameOverClip());
 
         } else if (allWinCount == 0 && allLuseCount > 0) {
             notifLabel.setText("Вы проиграли: " + Integer.toString(allLuseCount));
-            SoundsPlayer sp = new SoundsPlayer(sv.getLuseClip());
+            SoundsPlayer sp = new SoundsPlayer(mf.sv.getLuseClip());
 
         } else if (allWinCount > 0 && allLuseCount > 0) {
             notifLabel.setText("<html>Вы выиграли: " + Integer.toString(allWinCount) + "<br>" + "Проиграли: " + Integer.toString(allLuseCount));
-            SoundsPlayer sp = new SoundsPlayer(sv.getWinClip());
+            SoundsPlayer sp = new SoundsPlayer(mf.sv.getWinClip());
         }
     }
 
@@ -139,6 +141,7 @@ public class WinLogic {
             gameStatus();
             mf.lPlayerCurrentStav.setText("Ставка: " + Integer.toString(mf.player.getAllStav()));
             mf.lPlayerButget.setText("Бюджет: " + Integer.toString(mf.player.getBudget()));
+            SoundsPlayer sp = new SoundsPlayer(mf.sv.getChipClip());
         }
     }
 

@@ -66,7 +66,7 @@ public class ChipManager {
     }
 
     //Создание единичного массива полей ставок и добавление его к массиву массивов
-    public void newChipArrayInArray() {
+    public final void newChipArrayInArray() {
         chipsArraysArray.add(new ArrayList<Chip>());                            //Новый массив фишек в МассивеМассивов
         currentChipArray = chipsArraysArray.get(chipsArraysArray.size() - 1);   //Назначеное текущего Массива последним добавленным к МассивуМассивов
     }
@@ -89,7 +89,7 @@ public class ChipManager {
 
     //Метод проверки на пустоту всех массивов
     public boolean isEmptyArray() {
-        ArrayList<String> booleanArray = new ArrayList<String>();
+        ArrayList<String> booleanArray = new ArrayList<>();
         for (ArrayList outerList : chipsArraysArray) {
             if (outerList.isEmpty()) {
                 booleanArray.add("empty");

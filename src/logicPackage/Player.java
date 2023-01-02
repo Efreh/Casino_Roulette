@@ -1,10 +1,15 @@
 package logicPackage;
 
+import animationsSounds.SoundVariables;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.io.*;
 
 public class Player implements Serializable{
+    public Player(SoundVariables sv){
+        this.sv = sv;
+    }
+    SoundVariables sv;
     IconVariables iconVar = new IconVariables();
     
     private String name = "Игрок";
@@ -30,6 +35,10 @@ public class Player implements Serializable{
     private String profileIcon=iconVar.jokerPlayerIcon;
     public String getProfileIcon (){return profileIcon;}
     public void setProfileIcon(String s){profileIcon= s;}
+    
+    private int indexBox;
+    public int getIndexBox(){return indexBox;}
+    public void setIndexBox(int i){indexBox= i;}
     
     //Установка имени, размера бюджета и иконки профиля на mainframe
     public void playerSetLabelText(JLabel nameL, JLabel BetSizeL,JButton button){

@@ -8,16 +8,16 @@ public class SoundsPlayer {
     SoundVariables sv = new SoundVariables();
     private float fountVolume = 0.7f;
     private static float effectVolume = 0.7f;
-    private File file;
+    private InputStream bufferedIn;
     private AudioInputStream ais;
     private Clip clip;
     private FloatControl volumeControl;
 
     public SoundsPlayer() {
         try {
-            file = new File(sv.getFountMusic());
+            bufferedIn = new BufferedInputStream(SoundsPlayer.class.getResourceAsStream(sv.getFountMusic()));
 
-            ais = AudioSystem.getAudioInputStream(file);
+            ais = AudioSystem.getAudioInputStream(bufferedIn);
 
             clip = AudioSystem.getClip();
 
@@ -35,9 +35,9 @@ public class SoundsPlayer {
 
     public SoundsPlayer(String path) {
         try {
-            file = new File(path);
+            bufferedIn = new BufferedInputStream(SoundsPlayer.class.getResourceAsStream(path));
 
-            ais = AudioSystem.getAudioInputStream(file);
+            ais = AudioSystem.getAudioInputStream(bufferedIn);
 
             clip = AudioSystem.getClip();
 

@@ -20,6 +20,7 @@ public class PlayerJFrame extends javax.swing.JFrame {
         tfName.setText(mf.player.getName());
         tfBetSize.setText(Integer.toString(mf.player.getBudget()));
         iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource(mf.player.getProfileIcon())));
+        iconComboBox.setSelectedIndex(mf.player.getIndexBox());
     }
 
     @SuppressWarnings("unchecked")
@@ -162,15 +163,23 @@ public class PlayerJFrame extends javax.swing.JFrame {
         switch (iconComboBox.getSelectedIndex()) {
             case 0:
                 mf.player.setProfileIcon(icon.jokerPlayerIcon);
+                mf.sv.standartSoundProfile();
+                mf.player.setIndexBox(0);
                 break;
             case 1:
                 mf.player.setProfileIcon(icon.womenPlayerIcon);
+                mf.sv.standartSoundProfile();
+                mf.player.setIndexBox(1);
                 break;
             case 2:
                 mf.player.setProfileIcon(icon.manPlayerIcon);
+                mf.sv.standartSoundProfile();
+                mf.player.setIndexBox(2);
                 break;
             case 3:
                 mf.player.setProfileIcon(icon.rot_cazinoPlayerIcon);
+                mf.sv.rotCasinoSoundProfile();
+                mf.player.setIndexBox(3);
                 break;
         }
         iconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource(mf.player.getProfileIcon())));

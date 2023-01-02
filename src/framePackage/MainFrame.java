@@ -7,12 +7,12 @@ import java.io.*;
 
 public class MainFrame extends javax.swing.JFrame {
 
-    public Player player = new Player();                                                        //Объект профиля игрока
+    public SoundVariables sv = new SoundVariables();
+    public Player player = new Player(sv);                                                      //Объект профиля игрока
     public ChipManager chipMngr = new ChipManager(player);                                      //Объект менеджера полей ставок //Принимает данные профиля игрока
     public WinLogic winner = new WinLogic(framePackage.MainFrame.this);                         //Объект логики игры // Принимает в параметр mainFrame
     public SetChips setChipsFrame = new SetChips(framePackage.MainFrame.this, chipMngr, player);//Создание фрейма SetChips как объекта для передачи параметров в него
     SettingsFrame settingsFrame = new SettingsFrame(framePackage.MainFrame.this);
-    SoundVariables sv = new SoundVariables();
 
     public MainFrame() {
         initComponents();
@@ -3995,6 +3995,11 @@ public class MainFrame extends javax.swing.JFrame {
                 loadStream.close();
                 player.playerSetLabelText(lPlayerName, lPlayerButget, bPlayer);
                 notifLabel.setText("Профиль загружен");
+                if (player.getProfileIcon().equals("/resources/rot_cazino.png")) {
+                    sv.rotCasinoSoundProfile();
+                } else {
+                    sv.standartSoundProfile();
+                }
 
             } catch (IOException e) {
                 notifLabel.setText("Ошибка Загрузки");
