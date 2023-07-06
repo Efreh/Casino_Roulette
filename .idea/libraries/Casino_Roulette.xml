@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Casino_Roulette">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Casino_Roulette.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
