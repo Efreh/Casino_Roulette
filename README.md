@@ -10,8 +10,6 @@
 
 <br clear="both">
 
-<p align="center">Мой первый серьезный проект на Java.</p>
-
 ###
 
 <img align="right" height="300" src="https://raw.githubusercontent.com/Efreh/Casino_Roulette/main/roulettePic/readMeImg2.png"  />
